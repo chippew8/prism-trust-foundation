@@ -26,17 +26,11 @@ namespace prism_trust_foundation.Models
         [Required]
         public string Gender { get; set; }
         public string PhoneNum { get; set; }
-        public string Role { get; set; }
         public int PostalCode { get; set; }
         [Required]
         public string UnitNumber { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
-
-        public string Specialisation { get; set; }
-        public string HospitalAddress { get; set; }
-
-
     }
 }

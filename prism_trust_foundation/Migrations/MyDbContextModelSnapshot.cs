@@ -44,10 +44,6 @@ namespace prismtrustfoundation.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("HospitalAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Lname")
                         .IsRequired()
                         .HasMaxLength(25)
@@ -63,14 +59,6 @@ namespace prismtrustfoundation.Migrations
 
                     b.Property<int>("PostalCode")
                         .HasColumnType("int");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Specialisation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UnitNumber")
                         .IsRequired()

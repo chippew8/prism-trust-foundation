@@ -12,8 +12,8 @@ using prism_trust_foundation;
 namespace prismtrustfoundation.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20230109090523_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230111074401_initialCreate")]
+    partial class initialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,10 +47,6 @@ namespace prismtrustfoundation.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("HospitalAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Lname")
                         .IsRequired()
                         .HasMaxLength(25)
@@ -66,14 +62,6 @@ namespace prismtrustfoundation.Migrations
 
                     b.Property<int>("PostalCode")
                         .HasColumnType("int");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Specialisation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UnitNumber")
                         .IsRequired()
