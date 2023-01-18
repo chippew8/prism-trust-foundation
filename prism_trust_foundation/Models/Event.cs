@@ -12,13 +12,15 @@ namespace prism_trust_foundation.Models
 
         [Required]
         [Key]
+        public string EventId { get; set; } = string.Empty;
+        [Required]
         public string EventName { get; set; } = string.Empty;
 
-        [Required, MaxLength(25)]
+        [Required]
         public string EventType { get; set; } = string.Empty;
-        [Required, MaxLength(25)]
+        [Required]
         public string Description { get; set; } = string.Empty;
-        [Required, MaxLength(50)]
+        [Required]
         public string EventVenue { get; set; } = string.Empty;
         [Required]
         public string EventDate { get; set; } = string.Empty;

@@ -6,8 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
 builder.Services.AddDbContext<MyDbContext>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<EventService>();
 
 var app = builder.Build();
 

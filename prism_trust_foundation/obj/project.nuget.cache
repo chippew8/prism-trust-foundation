@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XfM+RBGH5TIqkDhpWwrR9MxHXFVrI4MEMEP/VGsNHa2roOGdsrchAyGLC2FDbjCmmlwVZVHyyi8BZd6wIRcM6w==",
+  "dgSpecHash": "c8nxGaPuvCve8T5k798c/9oL0jDQYyzLG6VyMKoxFilIW7JPXO6CswaEtG8EZ71TvfDjem1QsoOiv1FXEEsW7A==",
   "success": true,
-  "projectFilePath": "C:\\School_Work\\prism_trust_foundation\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+  "projectFilePath": "C:\\School_Work\\Prism_Trust_Foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xuanx\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\xuanx\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
