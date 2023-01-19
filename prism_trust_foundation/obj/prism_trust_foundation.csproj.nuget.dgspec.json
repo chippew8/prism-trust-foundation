@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\School_Work\\Prism_Trust_Foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {}
+    "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {}
   },
   "projects": {
-    "C:\\School_Work\\Prism_Trust_Foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {
+    "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\School_Work\\Prism_Trust_Foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+        "projectUniqueName": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
         "projectName": "prism_trust_foundation",
-        "projectPath": "C:\\School_Work\\Prism_Trust_Foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+        "projectPath": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
         "packagesPath": "C:\\Users\\xuanx\\.nuget\\packages\\",
-        "outputPath": "C:\\School_Work\\Prism_Trust_Foundation\\prism_trust_foundation\\obj\\",
+        "outputPath": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xuanx\\AppData\\Roaming\\NuGet\\NuGet.Config",
