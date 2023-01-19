@@ -5,6 +5,7 @@ using prism_trust_foundation.Services;
 
 namespace prism_trust_foundation.Pages.Events
 {
+
     public class AddModel : PageModel
     {
         private readonly EventService _eventService;
@@ -25,7 +26,6 @@ namespace prism_trust_foundation.Pages.Events
             if (ModelState.IsValid)
             {
                 Event? events = _eventService.GetEventById(MyEvent.EventId);
-                return Redirect("/Events/EventList");
                 if (events != null)
                 {
                     TempData["FlashMessage.Type"] = "danger";

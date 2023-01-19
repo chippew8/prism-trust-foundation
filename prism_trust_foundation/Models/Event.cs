@@ -10,7 +10,6 @@ namespace prism_trust_foundation.Models
     public class Event
     {
 
-        [Required]
         [Key]
         public string EventId { get; set; } = string.Empty;
         [Required]
@@ -24,6 +23,7 @@ namespace prism_trust_foundation.Models
         public string EventVenue { get; set; } = string.Empty;
         [Required]
         public string EventDate { get; set; } = string.Empty;
+        //public List<VolunteerShift> VolunteerShifts { get; set; }
        
     }
 }
