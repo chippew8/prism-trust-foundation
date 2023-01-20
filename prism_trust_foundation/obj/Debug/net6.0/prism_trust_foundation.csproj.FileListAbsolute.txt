@@ -408,3 +408,4 @@ C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\re
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.pdb
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.genruntimeconfig.cache
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\ref\prism_trust_foundation.dll
+C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout2.cshtml.rz.scp.css
