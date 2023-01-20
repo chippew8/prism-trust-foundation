@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using prism_trust_foundation;
+using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
 
 var builder = WebApplication.CreateBuilder(args);

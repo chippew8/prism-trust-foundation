@@ -21,9 +21,10 @@ namespace prism_trust_foundation.Pages
         }
 
         [BindProperty]
-        public User MyUser { get; set; }
+        public Models.User MyUser { get; set; }
+
         [BindProperty]
-        public string MyMessage { get; set; }
+        public string? MyMessage { get; set; }
 
         public void OnGet()
         {
@@ -38,7 +39,7 @@ namespace prism_trust_foundation.Pages
                 }
                 else
                 {
-                    MyMessage = "User Id already exist!";
+                    MyMessage = "User already exist!";
                     return Page();
                 }
             }
