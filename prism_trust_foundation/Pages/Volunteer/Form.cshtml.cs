@@ -22,7 +22,7 @@ namespace prism_trust_foundation.Pages.Volunteer
         public Event BookingEvent { get; set; } = new();
 
 
-        public IActionResult OnGet(string id)
+        public IActionResult OnGet(int id)
         {
             Event? myEvent = _eventService.GetEventById(id);
             if(myEvent != null)

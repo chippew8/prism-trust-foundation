@@ -9,12 +9,14 @@
 
 @foreach (var item in Model.EventList)
 {
-    <div style="border:solid 1px black">
-        Event Name: @item.EventName <br>
-        Description: @item.Description <br>
-        Event Type: @item.EventType <br>
-        Event Venue:@item.EventVenue <br>
-        Event Date:@item.EventDate
-    </div>
+    <a asp-page="/Events/Update" asp-route-id="@item.EventId">
+        <div style="border:solid 1px black">
+            Event Name: @item.EventName <br>
+            Description: @item.Description <br>
+            Event Type: @item.EventType <br>
+            Event Venue:@item.EventVenue <br>
+            Event Date:@item.EventDate
+        </div>
+    </a>
     <br>
 }

@@ -14,7 +14,7 @@ namespace prism_trust_foundation.Services
         {
             return _context.Event.OrderBy(d => d.EventName).ToList();
         }
-        public Event? GetEventById(string Id)
+        public Event? GetEventById(int Id)
         {
             Event? myEvent = _context.Event.FirstOrDefault(x => x.EventId.Equals(Id));
             return myEvent;

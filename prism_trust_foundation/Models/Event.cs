@@ -11,7 +11,7 @@ namespace prism_trust_foundation.Models
     {
 
         [Key]
-        public string EventId { get; set; } = string.Empty;
+        public int EventId { get; set; } 
         [Required]
         public string EventName { get; set; } = string.Empty;
 
