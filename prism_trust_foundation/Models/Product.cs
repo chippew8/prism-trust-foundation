@@ -19,4 +19,4 @@ namespace prism_trust_foundation.Models
         public string Description { get; set; } = string.Empty;
     }
 }
-}
+

@@ -1,5 +1,4 @@
 ﻿using prism_trust_foundation.Models;
-using LearnASPNETCoreRazorPagesWithRealApps.Entities;
 using System.Collections.Generic;
 using System.Linq;
 
