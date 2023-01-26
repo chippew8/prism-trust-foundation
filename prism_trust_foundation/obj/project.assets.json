@@ -3511,19 +3511,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zoyoq\\.nuget\\packages\\": {}
+    "C:\\Users\\65910\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+      "projectUniqueName": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
       "projectName": "prism_trust_foundation",
-      "projectPath": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
-      "packagesPath": "C:\\Users\\zoyoq\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
+      "projectPath": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+      "packagesPath": "C:\\Users\\65910\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\zoyoq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\65910\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

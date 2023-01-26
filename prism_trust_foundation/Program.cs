@@ -9,6 +9,10 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<MyDbContext>();
 builder.Services.AddScoped<UserService>();
 
+
+builder.Services.AddScoped<CartService>();
+builder.Services.AddScoped<requestitemsService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -21,5 +21,7 @@ namespace prism_trust_foundation
             optionsBuilder.UseSqlServer(connectionString);
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Item> Cart { get; set; }
+        public DbSet<Product> Product { get; set; }
     }
 }
