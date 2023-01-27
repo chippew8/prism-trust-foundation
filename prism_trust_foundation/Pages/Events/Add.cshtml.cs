@@ -9,19 +9,22 @@ namespace prism_trust_foundation.Pages.Events
     public class AddModel : PageModel
     {
         private readonly EventService _eventService;
-
-        public AddModel(EventService eventService)
+        private IWebHostEnvironment _environment;
+        public AddModel(EventService eventService, IWebHostEnvironment environment)
         {
             _eventService = eventService;
+            _environment = environment;
+            
         }
         [BindProperty]
         public Event MyEvent { get; set; } = new();
-
+        [BindProperty]
+        public IFormFile? Upload { get; set; }
         public void OnGet()
         {
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
             if (ModelState.IsValid)
             {
@@ -31,6 +34,20 @@ namespace prism_trust_foundation.Pages.Events
                     TempData["FlashMessage.Type"] = "danger";
                     TempData["FlashMessage.Text"] = string.Format("Event already exists");
                     return Page();
+                }
+                if (Upload != null)
+                {
+                    if(Upload.Length >2 * 1024 * 1024)
+                    {
+                        ModelState.AddModelError("Upload", "File size cannot exceed 2MB");
+                        return Page();
+                    }
+                    var uploadsFolder = "uploads";
+                    var imageFile = Guid.NewGuid() + Path.GetExtension(Upload.FileName);
+                    var imagePath = Path.Combine(_environment.ContentRootPath, "wwwroot", uploadsFolder, imageFile);
+                    using var fileStream = new FileStream(imagePath, FileMode.Create);
+                    await Upload.CopyToAsync(fileStream);
+                    MyEvent.ImageURL = String.Format("/{0}/{1}", uploadsFolder, imageFile);l
                 }
                 _eventService.AddEvent(MyEvent);
                 TempData["FlashMessage.Type"] = "success";

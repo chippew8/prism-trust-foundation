@@ -24,6 +24,9 @@ namespace prism_trust_foundation.Models
         [Required]
         public string EventDate { get; set; } = string.Empty;
         //public List<VolunteerShift> VolunteerShifts { get; set; }
-       
+        [MaxLength(50)]
+        public string? ImageURL { get; set; }
+        public Boolean IsActive { get; set; } = false;
+
     }
 }
