@@ -47,7 +47,7 @@ namespace prism_trust_foundation.Pages.Events
                     var imagePath = Path.Combine(_environment.ContentRootPath, "wwwroot", uploadsFolder, imageFile);
                     using var fileStream = new FileStream(imagePath, FileMode.Create);
                     await Upload.CopyToAsync(fileStream);
-                    MyEvent.ImageURL = String.Format("/{0}/{1}", uploadsFolder, imageFile);l
+                    MyEvent.ImageURL = String.Format("/{0}/{1}", uploadsFolder, imageFile);
                 }
                 _eventService.AddEvent(MyEvent);
                 TempData["FlashMessage.Type"] = "success";
