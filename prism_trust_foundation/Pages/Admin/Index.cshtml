@@ -1,0 +1,44 @@
+﻿@page
+@model prism_trust_foundation.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "User List";
+}
+
+<h1 class="display-4">@ViewData["Title"]</h1>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].Email)</th>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].NRIC)</th>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].Fname)</th>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].Lname)</th>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].PhoneNum)</th>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].Role)</th>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].Status)</th>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].BirthDate)</th>
+            <th>@Html.DisplayNameFor(model => model.UserList[0].Gender)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            @foreach (var item in Model.UserList)
+            {
+                <tr>
+                    <td>@item.Email</td>
+                    <td>@item.NRIC</td>
+                    <td>@item.Fname</td>
+                    <td>@item.Lname</td>
+                    <td>@item.PhoneNum</td>
+                    <td>@item.Role</td>
+                    <td>@item.Status</td>
+                    <td>@item.BirthDate.ToShortDateString()</td>
+                    <td>@item.Gender</td>
+                    <td>
+                        <a asp-page="/Admin/AdminUserDetails" asp-route-id="@item.Email">View</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

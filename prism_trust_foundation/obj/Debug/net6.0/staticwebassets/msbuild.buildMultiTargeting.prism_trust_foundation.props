@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\prism_trust_foundation.props" />
+</Project>
