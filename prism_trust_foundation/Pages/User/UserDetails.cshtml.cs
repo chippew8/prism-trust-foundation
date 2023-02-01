@@ -30,14 +30,25 @@ namespace prism_trust_foundation.Pages.User
                 return Page();
             }
         }
-        public IActionResult OnPost()
+        public IActionResult OnPost(int sessionCount)
         {
             Models.User? user = _svc.GetUserById(HomeUser.Email);
             if (user != null)
             {
                 if (user.Password == HomeUser.Password)
                 {
-                    return RedirectToPage("UpdateDetails", new { CurrentID = HomeUser.Email });
+                    if (sessionCount == 1)
+                    {
+                        return RedirectToPage("ChangePass", new { CurrentID = HomeUser.Email });
+                    }
+                    else if (sessionCount == 2)
+                    {
+                        return RedirectToPage("UpdateDetails", new { CurrentID = HomeUser.Email });
+                    }
+                    else
+                    {
+                        return Page();
+                    }
                 }
                 else
                 {

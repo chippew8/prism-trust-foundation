@@ -25,6 +25,9 @@ namespace prism_trust_foundation.Pages
         [BindProperty]
         public Models.User CurrentUser { get; set; } = new();
 
+        [BindProperty]
+        public string? MyMessage { get; set; }
+
         public void OnGet()
         {
         }
@@ -35,16 +38,37 @@ namespace prism_trust_foundation.Pages
             {
                 if(user.Password == CurrentUser.Password)
                 {
-                    return RedirectToPage("User/UserDetails", new { CurrentID = CurrentUser.Email});
+                    if (user.Status == "Activated")
+                    {
+                        if (user.Role == "User")
+                        {
+                            return RedirectToPage("User/UserDetails", new { CurrentID = CurrentUser.Email });
+                        }
+                        else if (user.Role == "Admin")
+                        {
+                            return RedirectToPage("Admin/Index", new { CurrentID = CurrentUser.Email });
+                        }
+                        else
+                        {
+                            return Page();
+                        }
+                    }
+                    else
+                    {
+                        MyMessage = "Your account has been deactivated!";
+                        return Page();
+                    }
                 }
                 else
                 {
+                    MyMessage = "Wrong Password!";
                     return Page();
                 }
                 
             }
             else
             {
+                MyMessage = "Your account does not exist, please register and account if you don't have!";
                 return Page();
             }
         }

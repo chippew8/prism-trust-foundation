@@ -39,10 +39,15 @@ namespace prism_trust_foundation.Services
             return user;
         }
 
-        public void UpdateEmployee(User user)
+        public void UpdateUser(User user)
         {
             _context.Users.Update(user);
             _context.SaveChanges();
+        }
+
+        public List<User> GetAll()
+        {
+            return _context.Users.OrderBy(m => m.Email).ToList();
         }
     }
 }

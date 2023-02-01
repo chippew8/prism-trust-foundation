@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/zoyoq/OneDrive/文档/GitHub/My_FSDP/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AdminUserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5Vc2VyRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zoyoq/OneDrive/文档/GitHub/My_FSDP/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/zoyoq/OneDrive/文档/GitHub/My_FSDP/prism-trust-foundation/prism_trust_foundation/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -37,6 +45,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/zoyoq/OneDrive/文档/GitHub/My_FSDP/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zoyoq/OneDrive/文档/GitHub/My_FSDP/prism-trust-foundation/prism_trust_foundation/Pages/User/ChangePass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxDaGFuZ2VQYXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/zoyoq/OneDrive/文档/GitHub/My_FSDP/prism-trust-foundation/prism_trust_foundation/Pages/User/UpdateDetails.cshtml]

@@ -31,9 +31,16 @@ namespace prism_trust_foundation.Pages
         }
         public IActionResult OnPost()
         {
+            MyUser.Role = "User";
+            MyUser.Status = "Activated";
+            var confirmPass = Request.Form["confirmPass"];
             if (ModelState.IsValid)
             {
-                if (_svc.AddUser(MyUser))
+                if (MyUser.Password != confirmPass)
+                {
+                    MyMessage = "Password are not matched!";
+                }
+                else if (_svc.AddUser(MyUser))
                 {
                     return RedirectToPage("login");
                 }

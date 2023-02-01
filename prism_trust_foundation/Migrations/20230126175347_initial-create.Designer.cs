@@ -12,8 +12,8 @@ using prism_trust_foundation.Models;
 namespace prismtrustfoundation.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20230120023559_initialCreate")]
-    partial class initialCreate
+    [Migration("20230126175347_initial-create")]
+    partial class initialcreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,6 +57,12 @@ namespace prismtrustfoundation.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNum")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Email");

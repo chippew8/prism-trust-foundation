@@ -1,0 +1,88 @@
+﻿@page
+@model prism_trust_foundation.Pages.Admin.AdminUserDetailsModel
+@{
+    ViewData["Title"] = "Admin User Details page";
+}
+
+<h2>Admin View User Account Details</h2>
+<form class="mt-3" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.NRIC">NRIC: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.NRIC" readonly />
+                    <span asp-validation-for="AdminHomeUser.NRIC" class="text-danger"></span>
+                </div>
+            </div>
+            <!-- Add your code -->
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.Fname">First Name: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.Fname" readonly />
+                    <span asp-validation-for="AdminHomeUser.Fname" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.Lname">Last Name: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.Lname" readonly />
+                    <span asp-validation-for="AdminHomeUser.Lname" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.Email">Email: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.Email" readonly />
+                    <span asp-validation-for="AdminHomeUser.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.Gender">Gender: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.Gender" readonly />
+                    <span asp-validation-for="AdminHomeUser.Gender" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.PhoneNum">Phone Number: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.PhoneNum" readonly />
+                    <span asp-validation-for="AdminHomeUser.PhoneNum" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.BirthDate">Brithday Date: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.BirthDate" readonly />
+                    <span asp-validation-for="AdminHomeUser.BirthDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3" style="display:none">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.Password"></label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.Password" readonly />
+                    <span asp-validation-for="AdminHomeUser.Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.Role"></label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.Role" readonly />
+                    <span asp-validation-for="AdminHomeUser.Role" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.Status"></label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="AdminHomeUser.Status" readonly />
+                    <span asp-validation-for="AdminHomeUser.Status" class="text-danger"></span>
+                </div>
+            </div>
+    </div>
+    <div>
+            <input type="submit" asp-route-sessioncount="1" value="Change Status" class="btn btn-primary" />
+            <input type="submit" asp-route-sessioncount="2" value="Change Role" class="btn btn-primary" />
+    </div>
+</form>

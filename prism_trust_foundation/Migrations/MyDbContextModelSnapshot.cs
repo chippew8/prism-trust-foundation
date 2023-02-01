@@ -56,6 +56,12 @@ namespace prismtrustfoundation.Migrations
                     b.Property<string>("PhoneNum")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Email");
 
                     b.ToTable("Users");

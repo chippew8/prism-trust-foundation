@@ -29,6 +29,10 @@ namespace prism_trust_foundation.Models
         [Required]
         public string Gender { get; set; }
 
+        public string? Role { get; set; }
+
+        public string? Status { get; set; }
+
         public string? PhoneNum { get; set; }
 
         [DataType(DataType.Date)]
