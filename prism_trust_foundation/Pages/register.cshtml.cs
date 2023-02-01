@@ -21,32 +21,24 @@ namespace prism_trust_foundation.Pages
         }
 
         [BindProperty]
-        public Models.User MyUser { get; set; }
-
+        public User MyUser { get; set; }
         [BindProperty]
-        public string? MyMessage { get; set; }
+        public string MyMessage { get; set; }
 
         public void OnGet()
         {
         }
         public IActionResult OnPost()
         {
-            MyUser.Role = "User";
-            MyUser.Status = "Activated";
-            var confirmPass = Request.Form["confirmPass"];
             if (ModelState.IsValid)
             {
-                if (MyUser.Password != confirmPass)
-                {
-                    MyMessage = "Password are not matched!";
-                }
-                else if (_svc.AddUser(MyUser))
+                if (_svc.AddUser(MyUser))
                 {
                     return RedirectToPage("login");
                 }
                 else
                 {
-                    MyMessage = "User already exist!";
+                    MyMessage = "User Id already exist!";
                     return Page();
                 }
             }

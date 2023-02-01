@@ -19,7 +19,7 @@ namespace prism_trust_foundation.Services
 
         public bool AddUser(User newuser)
         {
-            if (UserExists(newuser.Email))
+            if (UserExists(newuser.NRIC))
             {
                 return false;
             }
@@ -27,27 +27,10 @@ namespace prism_trust_foundation.Services
             _context.SaveChanges();
             return true;
         }
-        public bool UserExists(string id)
+        private bool UserExists(string id)
         {
-            return _context.Users.Any(e => e.Email == id);
+            return _context.Users.Any(e => e.NRIC == id);
         }
 
-        public User? GetUserById(string id)
-        {
-            User? user = _context.Users.FirstOrDefault(
-            x => x.Email.Equals(id));
-            return user;
-        }
-
-        public void UpdateUser(User user)
-        {
-            _context.Users.Update(user);
-            _context.SaveChanges();
-        }
-
-        public List<User> GetAll()
-        {
-            return _context.Users.OrderBy(m => m.Email).ToList();
-        }
     }
 }
