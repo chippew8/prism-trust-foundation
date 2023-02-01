@@ -1,13 +1,17 @@
 using Microsoft.EntityFrameworkCore;
-using prism_trust_foundation;
+using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
 builder.Services.AddDbContext<MyDbContext>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<EventService>();
+builder.Services.AddScoped<VolunteerShiftService>();
+builder.Services.AddScoped<VolunteerShiftBookingService>();
 
 
 builder.Services.AddScoped<CartService>();
