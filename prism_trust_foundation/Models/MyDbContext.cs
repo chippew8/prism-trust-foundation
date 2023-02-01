@@ -20,5 +20,9 @@ namespace prism_trust_foundation.Models
             optionsBuilder.UseSqlServer(connectionString);
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Event> Event { get; set; }
+        public DbSet<VolunteerShift> VolunteerShift { get; set; }
+        public DbSet<VolunteerShiftBook> VolunteerShiftBook { get; set; }
+
     }
 }
