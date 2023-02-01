@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fx6PCe4R6k7jzo2xbtO4BafuH9v5aqIdVqYsv6Z8PAqvXpuETihIOfiDhmLNeZLJ3M3f9QavWROcsbeA+0wfsQ==",
+  "dgSpecHash": "yUuEv6J38Y7x/76ScBob9oKhFjrNVoPVjqD6WN9nb70y9pDNoPju1IfmAj3DTIJG2cuIhX2gdKT/pPfEojJAtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ngyew\\Documents\\NYP\\NYP - Year 2\\Sem 2\\Enterprise Dev\\EDP Project\\EDP Project\\EDP Project.csproj",
+  "projectFilePath": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\EDP Project\\EDP Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ngyew\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ngyew\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

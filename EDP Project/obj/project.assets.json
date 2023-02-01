@@ -3515,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ngyew\\Documents\\NYP\\NYP - Year 2\\Sem 2\\Enterprise Dev\\EDP Project\\EDP Project\\EDP Project.csproj",
+      "projectUniqueName": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\EDP Project\\EDP Project.csproj",
       "projectName": "EDP Project",
-      "projectPath": "C:\\Users\\ngyew\\Documents\\NYP\\NYP - Year 2\\Sem 2\\Enterprise Dev\\EDP Project\\EDP Project\\EDP Project.csproj",
+      "projectPath": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\EDP Project\\EDP Project.csproj",
       "packagesPath": "C:\\Users\\ngyew\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ngyew\\Documents\\NYP\\NYP - Year 2\\Sem 2\\Enterprise Dev\\EDP Project\\EDP Project\\obj\\",
+      "outputPath": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\EDP Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ngyew\\AppData\\Roaming\\NuGet\\NuGet.Config",
