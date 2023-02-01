@@ -1,0 +1,88 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<link rel="stylesheet" href="~/css/voucher.css" asp-append-version="true" />
+
+<div class="col-md-12 text-center">
+    <p class="h3 mt-4">Vouchers</p>
+</div>
+
+<div class="row">
+    <div class="col-12 col-xs-12 col-md-12 col-lg-6 col-xl-6 ">
+        <div class="voucher-container">
+            <div class="vouchers">
+                <div class="face front" onclick="addclass(this)" style="cursor: pointer;">
+                    <div class="voucher-body bg-blue-gradient">
+                        <div class="voucher-text">
+                            <h5 class="text-white mb-0 font-weight-bold">Threads In Time</h5>
+                            <p class="text-white mb-0" style="line-height: 1;"><strong style="font-size: 1.25rem">{{this.name}}</strong><br>Voucher</p>
+                        </div>
+                        <div class="voucher-border-left"></div>
+                        <div class="voucher-border-right"></div>
+                    </div>
+                    <div class="voucher-footer">
+                        <div class="voucher-details">
+                            <div class="details-icon">
+                                <i class='bx bx-time'></i>
+                            </div>
+                            <div class="details-text">
+                                <div class="text-title">Valid till</div>
+                                <div class="text-description text-primary"></div>
+                            </div>
+                        </div>
+                        <div class="voucher-details">
+                            <div class="details-icon">
+                                <i class='bx bx-money'></i>
+                            </div>
+                            <div class="details-text">
+                                <div class="text-title" style="width: 90px;">Minimum spend</div>
+                                <div class="text-description text-primary">None</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face back">
+                    <div class="voucher-body bg-blue-gradient" onclick="removeclass(this)" style="cursor: pointer;">
+                        <div class="voucher-text">
+                            <h5 class="text-white mb-0 font-weight-bold">T&C</h5>
+                            <p class="text-white mb-0" style="line-height: 1;">{{this.description}}</p>
+                        </div>
+                        <div class="voucher-border-left"></div>
+                        <div class="voucher-border-right"></div>
+                    </div>
+                    <div class="voucher-footer">
+                        <div class="voucher-details">
+                            <div class="details-icon">
+                                <i class='bx bx-time'></i>
+                            </div>
+                            <div class="details-text">
+                                <div class="text-title">Valid till</div>
+                                <div class="text-description text-primary">{{this.expiry_date}}</div>
+                            </div>
+                        </div>
+                        <div class="voucher-details" style="cursor: pointer;">
+                            <div class="details-icon">
+                                <i class='bx bx-copy'></i>
+                            </div>
+                            <div class="details-text">
+                                <div class="text-title">Discount Code</div>
+                                <div class="text-description text-primary" onclick="copycode(this)">{{this.voucher_code}}</div>
+                            </div>
+                        </div>
+                        <div class="voucher-details">
+                            <div class="details-icon">
+                                <i class='bx bx-coin-stack'></i>
+                            </div>
+                            <div class="details-text">
+                                <div class="text-title" style="width: 90px;">Spools Needed</div>
+                                <div class="text-description text-primary">{{this.spools_needed}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

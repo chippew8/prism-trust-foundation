@@ -1,0 +1,244 @@
+﻿@page
+@model EDP_Project.Pages.CouponRedeemModel
+@{
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @*    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Impact Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    *@
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+
+    <!-- =======================================================
+    * Template Name: Impact - v1.2.0
+    * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+
+    <header id="header" class="header d-flex align-items-center">
+
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1>Prism Trust Foundation<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="/Index">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/CouponRedeem">Coupon Redeem</a></li>
+                    <li><a href="/CouponAdmin/Admin">Admin</a></li>
+                    <li><img src="/Picture/User.png" width="40px" height="40px" /></li>
+
+                </ul>
+            </nav><!-- .navbar -->
+
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        </div>
+    </header><!-- End Header -->
+    <!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+        @{
+            var couponListCount = Model.CouponList.Count;
+            var todays_date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+        }
+        @if (couponListCount.Equals(0))
+        {
+            <h1 class="display-4">There are no coupons</h1>
+            @*<div class="wrapper">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark_check" fill="none" d="M14.1 14.1l23.8 23.8 m0,-23.8 l-23.8,23.8" /></svg>
+        </div>*@
+            <img src="/Picture/sad.png" width="300px" height="300px" class="center" />
+            <br />
+
+        }
+        else
+        {
+            <h1 class="display-4" style="text-align:center;color:white;">Current coupons created</h1>
+
+
+            <div class="container">
+                <div class="card card-body">
+
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.CouponList[0].Coupon_Name)</th>
+                                <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.CouponList[0].Percentage_Discount)</th>
+                                <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.CouponList[0].Expiry_Date)</th>
+                                <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.CouponList[0].Current_Coupon_Quantity)</th>
+                                <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.CouponList[0].Points_to_redeem)</th>
+                                <th style="background-color: lightgray;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model.CouponList)
+                            {
+
+                                <tr>
+                                    <td>@item.Coupon_Name</td>
+                                    <td>@item.Percentage_Discount</td>
+                                    <td>@item.Expiry_Date.ToShortDateString()</td>
+                                    <td>@item.Current_Coupon_Quantity</td>
+                                    <td>@item.Points_to_redeem</td>
+                                    <td>
+                                        @if(@item.Current_Coupon_Quantity == 0){
+                                            <p style="color:black">No more of this coupon available</p>
+                                        }
+                                        else{
+                                            if (@item.Expiry_Date < todays_date){
+                                                <p style="color:black">Coupon has expired</p>
+                                            }
+                                            else{
+                                                <form method="post">
+                                                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+
+                                                    <div class="AddPopUp">
+                                                        <input class="form-control" asp-for="MyCoupon.CouponId" type="hidden" value="@item.CouponId" />
+                                                        <a class="btn btn-primary savodel" data-bs-toggle="modal" data-bs-target="#MyPopUp_@item.CouponId">Redeem</a>
+                                                    </div>
+
+                                                    <div class="modal fade" id="MyPopUp_@item.CouponId" role="alert">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <h4>Are you sure you want to redeem coupon: @item.CouponId</h4>
+                                                                    <br>
+                                                                    <a class="btn btn-secondary poppy" href="/CouponAdmin/CouponRead">Cancel</a>
+                                                                    <input class="form-control" asp-for="MyCoupon.CouponId" type="hidden" value="@item.CouponId" />
+                                                                    <input type="submit" value="Redeem" class="btn btn-primary savodelconfirm" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            }
+                                        }
+                                        
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        }
+        </section>
+    <!-- End Hero Section -->
+
+    
+    
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="https://kit.fontawesome.com/3336a4ae8e.js" crossorigin="anonymous"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+<style>
+    body{
+        background-color:#008374;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .savodel {
+        border-color:black;
+        background-color:white;
+        color:black;
+    }
+
+    .savodel:hover {
+        border-color:#198754;
+        background-color:#198754;
+        color:white;
+    }
+
+    .poppy{
+        border-color:black;
+        background-color:white;
+        color:black;
+    }
+
+    .poppy:hover{
+        border-color:#BEBEBE;
+        background-color:#BEBEBE;
+        color:white;
+    }
+
+    .savodelconfirm{
+        border-color:black;
+        background-color:white;
+        color:black;
+    }
+
+    .savodelconfirm:hover{
+        border-color:#198754;
+        background-color:#198754;
+        color:white;
+    }
+</style>

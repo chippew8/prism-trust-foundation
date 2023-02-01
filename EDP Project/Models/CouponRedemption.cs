@@ -1,0 +1,19 @@
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EDP_Project.Models
+{
+    public class CouponRedemption
+    {
+        //[Display(Name = "Coupon Redemption ID")]
+        //public string CouponRedemptionId { get; set; }
+        [Display(Name = "Coupon Redemption IDs")]
+        public int CouponRedemptionId { get; set; }
+        [DataType(DataType.Date)]
+        [Column(TypeName = "date")]
+        public DateTime Date_of_Redemption { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+        public Coupon Coupon { get; set; }
+    }
+}
