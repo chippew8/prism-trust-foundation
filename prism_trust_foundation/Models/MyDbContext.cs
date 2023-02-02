@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using EDP_Project.Models;
 
 namespace prism_trust_foundation.Models
 {
@@ -23,6 +24,8 @@ namespace prism_trust_foundation.Models
         public DbSet<Event> Event { get; set; }
         public DbSet<VolunteerShift> VolunteerShift { get; set; }
         public DbSet<VolunteerShiftBook> VolunteerShiftBook { get; set; }
+        public DbSet<Coupon> Coupons { get; set; }
+        public DbSet<CouponRedemption> CouponRedemptions { get; set; }
 
     }
 }

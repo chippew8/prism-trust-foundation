@@ -1,3 +1,4 @@
+using EDP_Project.Services;
 using Microsoft.EntityFrameworkCore;
 using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
@@ -12,6 +13,8 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<EventService>();
 builder.Services.AddScoped<VolunteerShiftService>();
 builder.Services.AddScoped<VolunteerShiftBookingService>();
+builder.Services.AddScoped<CouponService>();
+builder.Services.AddScoped<CouponRedemptionService>();
 
 var app = builder.Build();
 
