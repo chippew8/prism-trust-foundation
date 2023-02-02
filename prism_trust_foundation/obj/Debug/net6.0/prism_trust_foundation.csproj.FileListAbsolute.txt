@@ -399,7 +399,6 @@ C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\pr
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.RazorAssemblyInfo.cs
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets.build.json
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets.development.json
-C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\bundle\prism_trust_foundation.styles.css
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\projectbundle\prism_trust_foundation.bundle.scp.css
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.csproj.CopyComplete
