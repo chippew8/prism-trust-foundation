@@ -17,6 +17,9 @@ namespace prism_trust_foundation.Pages.User
         [BindProperty]
         public Models.User HomeUser { get; set; } = new();
 
+        [BindProperty]
+        public string? MyMessage { get; set; }
+
         public IActionResult OnGet(string CurrentID)
         {
             Models.User? user = _svc.GetUserById(CurrentID);

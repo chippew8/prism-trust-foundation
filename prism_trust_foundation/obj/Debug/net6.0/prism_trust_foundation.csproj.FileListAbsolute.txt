@@ -153,7 +153,6 @@ C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust
 C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.RazorAssemblyInfo.cs
 C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\bundle\prism_trust_foundation.styles.css
 C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\projectbundle\prism_trust_foundation.bundle.scp.css
 C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.csproj.CopyComplete
@@ -496,3 +495,4 @@ C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\ob
 C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.pdb
 C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.genruntimeconfig.cache
 C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\ref\prism_trust_foundation.dll
+C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout2.cshtml.rz.scp.css

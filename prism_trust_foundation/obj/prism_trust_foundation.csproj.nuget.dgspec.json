@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {}
+    "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {
+    "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+        "projectUniqueName": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
         "projectName": "prism_trust_foundation",
-        "projectPath": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
-        "packagesPath": "C:\\Users\\ngyew\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
+        "projectPath": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+        "packagesPath": "C:\\Users\\zoyoq\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ngyew\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zoyoq\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

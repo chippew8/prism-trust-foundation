@@ -2,43 +2,81 @@
 @model prism_trust_foundation.Pages.Admin.IndexModel
 @{
     ViewData["Title"] = "User List";
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
 
-<h1 class="display-4">@ViewData["Title"]</h1>
-<table class="table mt-3">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Email)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].NRIC)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Fname)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Lname)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].PhoneNum)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Role)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Status)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].BirthDate)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Gender)</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            @foreach (var item in Model.UserList)
-            {
-                <tr>
-                    <td>@item.Email</td>
-                    <td>@item.NRIC</td>
-                    <td>@item.Fname</td>
-                    <td>@item.Lname</td>
-                    <td>@item.PhoneNum</td>
-                    <td>@item.Role</td>
-                    <td>@item.Status</td>
-                    <td>@item.BirthDate.ToShortDateString()</td>
-                    <td>@item.Gender</td>
-                    <td>
-                        <a asp-page="/Admin/AdminUserDetails" asp-route-id="@item.Email">View</a>
-                    </td>
-                </tr>
+<body>
+    <header id="header" class="header d-flex align-items-center">
+
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1>Prism Trust Foundation<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="/Index">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Recycle</a></li>
+                    <li><a href="">Donation</a></li>
+                    <li><a href="">Volunteer</a></li>
+                    <li><a href="">Require Assistance</a></li>
+                    <li><img src="/Picture/User.png" width="40px" height="40px" /></li>
+
+                </ul>
+            </nav><!-- .navbar -->
+
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        </div>
+    </header>
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].Email)</th>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].NRIC)</th>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].Fname)</th>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].Lname)</th>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].PhoneNum)</th>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].Role)</th>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].Status)</th>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].BirthDate)</th>
+                <th>@Html.DisplayNameFor(model => model.UserList[0].Gender)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                @foreach (var item in Model.UserList)
+                {
+                    <tr>
+                        <td>@item.Email</td>
+                        <td>@item.NRIC</td>
+                        <td>@item.Fname</td>
+                        <td>@item.Lname</td>
+                        <td>@item.PhoneNum</td>
+                        <td>@item.Role</td>
+                        <td>@item.Status</td>
+                        <td>@item.BirthDate.ToShortDateString()</td>
+                        <td>@item.Gender</td>
+                        <td>
+                            <a asp-page="/Admin/AdminUserDetails" asp-route-id="@item.Email">View</a>
+                        </td>
+                    </tr>
+                }
             }
-        }
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</body>

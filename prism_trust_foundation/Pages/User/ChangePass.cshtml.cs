@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
 
 namespace prism_trust_foundation.Pages.User
@@ -20,6 +21,9 @@ namespace prism_trust_foundation.Pages.User
         [BindProperty]
         public Models.User PassUser { get; set; } = new();
 
+        [BindProperty]
+        public string? MyMessage { get; set; }
+
         public IActionResult OnGet(string CurrentID)
         {
             Models.User? user = _svc.GetUserById(CurrentID);
@@ -34,15 +38,40 @@ namespace prism_trust_foundation.Pages.User
             }
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(int sessionCount)
         {
+            var confirmPass = Request.Form["confirmPass"];
             if (ModelState.IsValid)
             {
-                _svc.UpdateUser(PassUser);
-                TempData["FlashMessage.Type"] = "success";
-                TempData["FlashMessage.Text"] = string.Format("User {0} is updated", PassUser.Email);
+                if (sessionCount == 1)
+                {
+                    if (PassUser.Password != confirmPass)
+                    {
+                        MyMessage = "Password are not matched!";
+                        return Page();
+                    }
+                    else
+                    {
+                        _svc.UpdateUser(PassUser);
+                        TempData["FlashMessage.Type"] = "success";
+                        TempData["FlashMessage.Text"] = string.Format("User {0} is updated", PassUser.Email);
+                        return RedirectToPage("UserDetails", new { CurrentID = PassUser.Email });
+                    }
+                }
+                else if (sessionCount == 2)
+                {
+                    return RedirectToPage("UserDetails", new { CurrentID = PassUser.Email });
+                }
+                else
+                {
+                    return Page();
+                }
+
             }
-            return RedirectToPage("UserDetails", new { CurrentID = PassUser.Email });
+            else
+            {
+                return Page();
+            }
         }
     }
 }
