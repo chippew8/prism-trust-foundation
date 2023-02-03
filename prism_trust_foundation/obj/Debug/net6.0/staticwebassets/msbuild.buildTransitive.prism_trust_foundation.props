@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\prism_trust_foundation.props" />
-</Project>

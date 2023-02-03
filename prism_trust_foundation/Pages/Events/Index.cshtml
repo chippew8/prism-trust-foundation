@@ -11,17 +11,15 @@
 @foreach (var item in Model.EventList)
 {
     if(item.IsActive){
-        <a asp-page="/Events/Update" asp-route-id="@item.EventId">
-            <div class=""
-             style="border:solid 1px black">
-                Event Name: @item.EventName <br>
-                Description: @item.Description <br>
-                Event Type: @item.EventType <br>
-                Event Venue:@item.EventVenue <br>
-                Event Date:@item.EventDate <br>
-                Event Status:@item.IsActive
-            </div>
-        </a>
+        <div class=""
+            style="border:solid 1px black">
+            Event Name: @item.EventName <br>
+            Description: @item.Description <br>
+            Event Type: @item.EventType <br>
+            Event Venue:@item.EventVenue <br>
+            Event Date:@item.EventDate <br>
+            Event Status:@item.IsActive
+        </div>
 
         <br>
     }

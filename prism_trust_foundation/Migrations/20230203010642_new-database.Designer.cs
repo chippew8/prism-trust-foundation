@@ -12,8 +12,8 @@ using prism_trust_foundation.Models;
 namespace prismtrustfoundation.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20230202074901_yes")]
-    partial class yes
+    [Migration("20230203010642_new-database")]
+    partial class newdatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
