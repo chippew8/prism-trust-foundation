@@ -20,9 +20,6 @@ namespace prism_trust_foundation.Pages.User
         [BindProperty]
         public Models.User UpdateUser { get; set; } = new();
 
-        [BindProperty]
-        public string? MyMessage { get; set; }
-
         public IActionResult OnGet(string CurrentID)
         {
             Models.User? user = _svc.GetUserById(CurrentID);
@@ -37,31 +34,15 @@ namespace prism_trust_foundation.Pages.User
             }
         }
 
-        public IActionResult OnPost(int sessionCount)
+        public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
-                if (sessionCount == 1)
-                {
-                    _svc.UpdateUser(UpdateUser);
-                    TempData["FlashMessage.Type"] = "success";
-                    TempData["FlashMessage.Text"] = string.Format("User {0} is updated", UpdateUser.Email);
-                    return RedirectToPage("UserDetails", new { CurrentID = UpdateUser.Email });
-                }
-                else if (sessionCount == 2)
-                {
-                    return RedirectToPage("UserDetails", new { CurrentID = UpdateUser.Email });
-                }
-                else
-                {
-                    return Page();
-                }
-
+                _svc.UpdateUser(UpdateUser);
+                TempData["FlashMessage.Type"] = "success";
+                TempData["FlashMessage.Text"] = string.Format("User {0} is updated", UpdateUser.Email);
             }
-            else
-            {
-                return Page();
-            }
+            return RedirectToPage("UserDetails", new { CurrentID = UpdateUser.Email });
         }
     }
 }

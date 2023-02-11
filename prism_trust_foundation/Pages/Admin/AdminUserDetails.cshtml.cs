@@ -9,12 +9,10 @@ namespace prism_trust_foundation.Pages.Admin
     {
         private readonly ILogger<AdminUserDetailsModel> _logger;
         private UserService _svc;
-        private UserService _user;
         public AdminUserDetailsModel(ILogger<AdminUserDetailsModel> logger, UserService service)
         {
             _logger = logger;
             _svc = service;
-            _user = service;
         }
 
         [BindProperty]
@@ -35,56 +33,73 @@ namespace prism_trust_foundation.Pages.Admin
         }
         public IActionResult OnPost(int sessionCount)
         {
+            Models.User? user = _svc.GetUserById(AdminHomeUser.Email);
             if (ModelState.IsValid)
             {
-                if (sessionCount == 1)
+                if (user != null)
                 {
-                    if (AdminHomeUser.Status == "Activated")
+                    if (user.Password == AdminHomeUser.Password)
                     {
-                        AdminHomeUser.Status = "Deactivated";
-                        _user.UpdateUser(AdminHomeUser);
-                        TempData["FlashMessage.Type"] = "success";
-                        TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", AdminHomeUser.Email);
-                        return RedirectToPage("Index");
+                        if (sessionCount == 1)
+                        {
+                            if (AdminHomeUser.Status == "Activated")
+                            {
+                                AdminHomeUser.Status = "Deactivated";
+                                _svc.UpdateUser(AdminHomeUser);
+                                TempData["FlashMessage.Type"] = "success";
+                                TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", AdminHomeUser.Email);
+                                return RedirectToPage("Index");
+                            }
+                            else
+                            {
+                                AdminHomeUser.Status = "Activated";
+                                _svc.UpdateUser(AdminHomeUser);
+                                TempData["FlashMessage.Type"] = "success";
+                                TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", AdminHomeUser.Email);
+                                return RedirectToPage("Index");
+                            }
+                        }
+                        else if (sessionCount == 2)
+                        {
+                            if(AdminHomeUser.Role == "User")
+                            {
+                                AdminHomeUser.Role = "Admin";
+                                _svc.UpdateUser(AdminHomeUser);
+                                TempData["FlashMessage.Type"] = "success";
+                                TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);
+                                return RedirectToPage("Index");
+                            }
+                            else
+                            {
+                                AdminHomeUser.Role = "User";
+                                _svc.UpdateUser(AdminHomeUser);
+                                TempData["FlashMessage.Type"] = "success";
+                                TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);
+                                return RedirectToPage("Index");
+                            }
+                            
+                        }
+                        else
+                        {
+                            return Page();
+                        }
                     }
                     else
                     {
-                        AdminHomeUser.Status = "Activated";
-                        _user.UpdateUser(AdminHomeUser);
-                        TempData["FlashMessage.Type"] = "success";
-                        TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", AdminHomeUser.Email);
-                        return RedirectToPage("Index");
-                    }
-                }
-                else if (sessionCount == 2)
-                {
-                    if (AdminHomeUser.Role == "User")
-                    {
-                        AdminHomeUser.Role = "Admin";
-                        _user.UpdateUser(AdminHomeUser);
-                        TempData["FlashMessage.Type"] = "success";
-                        TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);
-                        return RedirectToPage("Index");
-                    }
-                    else
-                    {
-                        AdminHomeUser.Role = "User";
-                        _user.UpdateUser(AdminHomeUser);
-                        TempData["FlashMessage.Type"] = "success";
-                        TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);
-                        return RedirectToPage("Index");
+                        return Page();
                     }
 
                 }
                 else
                 {
-                    _svc.UpdateUser(AdminHomeUser);
-                    TempData["FlashMessage.Type"] = "success";
-                    TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);
-                    return RedirectToPage("Index");
+                    return Page();
                 }
             }
-            return Page();
+            else
+            {
+                return Page();
+            }
+
         }
     }
 }
