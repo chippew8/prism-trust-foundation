@@ -4,7 +4,6 @@
     ViewData["Title"] = "Update Details page";
 }
 
-<<<<<<< HEAD
 <head>
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -47,71 +46,6 @@
 
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-=======
-<h2>Update Account Details</h2>
-<form class="mt-3" method="post" enctype="multipart/form-data">
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="UpdateUser.NRIC">NRIC: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="UpdateUser.NRIC" />
-                    <span asp-validation-for="UpdateUser.NRIC" class="text-danger"></span>
-                </div>
-            </div>
-            <!-- Add your code -->
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Fname">First Name: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="UpdateUser.Fname" />
-                    <span asp-validation-for="UpdateUser.Fname" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Lname">Last Name: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="UpdateUser.Lname" />
-                    <span asp-validation-for="UpdateUser.Lname" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Email">Email: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="UpdateUser.Email" />
-                    <span asp-validation-for="UpdateUser.Email" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Gender">Gender: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="UpdateUser.Gender" />
-                    <span asp-validation-for="UpdateUser.Gender" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="UpdateUser.PhoneNum">Phone Number: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="UpdateUser.PhoneNum" />
-                    <span asp-validation-for="UpdateUser.PhoneNum" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="UpdateUser.BirthDate">Birthday Date: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="UpdateUser.BirthDate" />
-                    <span asp-validation-for="UpdateUser.BirthDate" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3" style="display:none">
-                <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Password">Password: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="UpdateUser.Password" />
-                    <span asp-validation-for="UpdateUser.Password" class="text-danger"></span>
-                </div>
-            </div>
->>>>>>> parent of 426e19f (FinishUser&Admin)
         </div>
         <div>
             <input type="submit" value="Update" class="btn btn-primary" />
