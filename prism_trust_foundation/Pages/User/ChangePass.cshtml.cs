@@ -16,9 +16,6 @@ namespace prism_trust_foundation.Pages.User
         }
 
         [BindProperty]
-        public IFormFile? Upload { get; set; }
-
-        [BindProperty]
         public Models.User PassUser { get; set; } = new();
 
         [BindProperty]

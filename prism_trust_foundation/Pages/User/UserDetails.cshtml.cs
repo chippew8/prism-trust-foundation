@@ -48,6 +48,10 @@ namespace prism_trust_foundation.Pages.User
                     {
                         return RedirectToPage("UpdateDetails", new { CurrentID = HomeUser.Email });
                     }
+                    else if (sessionCount == 3)
+                    {
+                        return RedirectToPage("UpdateAvatar", new { CurrentID = HomeUser.Email });
+                    }
                     else
                     {
                         return Page();
