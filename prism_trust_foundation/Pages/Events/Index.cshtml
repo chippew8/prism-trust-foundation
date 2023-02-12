@@ -1,0 +1,26 @@
+﻿@page
+@model prism_trust_foundation.Pages.Events.EventListModel
+@{
+    ViewData["Title"] = "List of Events";
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
+}
+
+<h1 class="display-4">@ViewData["Title"]</h1>
+
+
+@foreach (var item in Model.EventList)
+{
+    if(item.IsActive){
+        <div class=""
+            style="border:solid 1px black">
+            Event Name: @item.EventName <br>
+            Description: @item.Description <br>
+            Event Type: @item.EventType <br>
+            Event Venue:@item.EventVenue <br>
+            Event Date:@item.EventDate <br>
+            Event Status:@item.IsActive
+        </div>
+
+        <br>
+    }
+}
