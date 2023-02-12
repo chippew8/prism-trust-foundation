@@ -22,14 +22,14 @@ namespace prism_trust_foundation.Pages.User
         public IFormFile? Upload { get; set; }
 
         [BindProperty]
-        public Models.User AvatarUser { get; set; } = new();
+        public ApplicationUser AvatarUser { get; set; } = new();
 
         [BindProperty]
         public string? MyMessage { get; set; }
 
         public IActionResult OnGet(string CurrentID)
         {
-            Models.User? user = _svc.GetUserById(CurrentID);
+            ApplicationUser? user = _svc.GetUserByEmail(CurrentID);
             if (user != null)
             {
                 AvatarUser = user;

@@ -17,8 +17,6 @@ namespace prism_trust_foundation.ViewModels
 
         public string? PhoneNum { get; set; }
 
-        public string? Role { get; set; }
-
         public string? Status { get; set; }
 
         [DataType(DataType.Date)]

@@ -16,11 +16,11 @@ namespace prism_trust_foundation.Pages.Admin
         }
 
         [BindProperty]
-        public Models.User AdminHomeUser { get; set; } = new();
+        public ApplicationUser AdminHomeUser { get; set; } = new();
 
         public IActionResult OnGet(string id)
         {
-            Models.User? user = _svc.GetUserById(id);
+            ApplicationUser? user = _svc.GetUserByEmail(id);
             if (user != null)
             {
                 AdminHomeUser = user;
@@ -33,18 +33,18 @@ namespace prism_trust_foundation.Pages.Admin
         }
         public IActionResult OnPost(int sessionCount)
         {
-            Models.User? user = _svc.GetUserById(AdminHomeUser.Email);
+            ApplicationUser? user = _svc.GetUserByEmail(AdminHomeUser.Email);
             if (ModelState.IsValid)
             {
                 if (user != null)
                 {
-                    if (user.Password == AdminHomeUser.Password)
+                    if (user.Email == AdminHomeUser.Email)
                     {
                         if (sessionCount == 1)
                         {
-                            if (AdminHomeUser.Status == "Activated")
+                            if (AdminHomeUser.Ban_Status == false)
                             {
-                                AdminHomeUser.Status = "Deactivated";
+                                AdminHomeUser.Ban_Status = true;
                                 _svc.UpdateUser(AdminHomeUser);
                                 TempData["FlashMessage.Type"] = "success";
                                 TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", AdminHomeUser.Email);
@@ -52,7 +52,7 @@ namespace prism_trust_foundation.Pages.Admin
                             }
                             else
                             {
-                                AdminHomeUser.Status = "Activated";
+                                AdminHomeUser.Ban_Status = false;
                                 _svc.UpdateUser(AdminHomeUser);
                                 TempData["FlashMessage.Type"] = "success";
                                 TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", AdminHomeUser.Email);
@@ -61,9 +61,9 @@ namespace prism_trust_foundation.Pages.Admin
                         }
                         else if (sessionCount == 2)
                         {
-                            if(AdminHomeUser.Role == "User")
+                            if(AdminHomeUser.Admin_Role == false)
                             {
-                                AdminHomeUser.Role = "Admin";
+                                AdminHomeUser.Admin_Role = true;
                                 _svc.UpdateUser(AdminHomeUser);
                                 TempData["FlashMessage.Type"] = "success";
                                 TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);
@@ -71,7 +71,7 @@ namespace prism_trust_foundation.Pages.Admin
                             }
                             else
                             {
-                                AdminHomeUser.Role = "User";
+                                AdminHomeUser.Admin_Role = false;
                                 _svc.UpdateUser(AdminHomeUser);
                                 TempData["FlashMessage.Type"] = "success";
                                 TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);

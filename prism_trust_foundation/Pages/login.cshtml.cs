@@ -1,15 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
-using Microsoft.Extensions.Logging;
-using System.Diagnostics;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using prism_trust_foundation.ViewModels;
 
 namespace prism_trust_foundation.Pages
@@ -22,11 +15,13 @@ namespace prism_trust_foundation.Pages
         public ApplicationUser MyUser { get; set; }
 
         private readonly SignInManager<ApplicationUser> signinManager;
+
         public LoginModel(SignInManager<ApplicationUser> signInManager, UserService registerService)
         {
             _registerService = registerService;
             this.signinManager = signInManager;
         }
+
         public void OnGet()
         {
         }
@@ -35,8 +30,13 @@ namespace prism_trust_foundation.Pages
         {
             if (ModelState.IsValid)
             {
+                //ApplicationUser? applicationUser = _registerService.GetUserByNRIC(MyUser.NRIC);
                 var identityResult = await signinManager.PasswordSignInAsync(LModel.Email, LModel.Password, LModel.RememberMe, false);
-
+                /*if (identityResult.Succeeded)
+                {
+                    return RedirectToPage("/Admin/Index");
+                }
+                else */
                 if (identityResult.Succeeded)
                 {
                     return RedirectToPage("/Index");
