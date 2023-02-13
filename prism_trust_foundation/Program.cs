@@ -46,10 +46,10 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Lockout.MaxFailedAccessAttempts = 3;
 
 });
+builder.Services.AddScoped<ProductServices>();
 
-
-builder.Services.AddScoped<CartService>();
-builder.Services.AddScoped<requestitemsService>();
+builder.Services.AddScoped<cartService>();
+builder.Services.AddScoped<itemRequestService>();
 
 var app = builder.Build();
 

@@ -1,26 +1,51 @@
-﻿using prism_trust_foundation.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using prism_trust_foundation.Models;
 
 namespace prism_trust_foundation.Services
 {
-    public class CartService
+    public class cartService
     {
-        private static List<Item> cart = new()
+        private readonly AuthDbContext _context;
+        public cartService(AuthDbContext context)
         {
-            
-        };
-
-        public List<Item> GetAll()
+            _context = context;
+        }
+        public List<cart> GetAll()
         {
-            return cart.ToList();
+            return _context.cart.OrderBy(d => d.Id).ToList();
+        }
+        public void AddCart(cart cart)
+        {
+            _context.cart.Add(cart);
+            _context.SaveChanges();
+        }
+        public void removeAll()
+        {
+            _context.cart.ExecuteDelete();
+            _context.SaveChanges();
         }
 
-        public void RemoveItem(Item x)
+        public cart CheckProductById(string id)
         {
-            cart.Remove(x);
+            try
+            {
+                cart product = _context.cart.FirstOrDefault(x => x.productId.Equals(id));
+                return product;
+            }
+            catch
+            {
+                return null;
+            }
+
+
         }
-        public void AddItem(Item x)
+
+
+        public void UpdateCart(cart cart)
         {
-            cart.Add(x);
+            _context.cart.Update(cart);
+            _context.SaveChanges();
         }
+
     }
 }
