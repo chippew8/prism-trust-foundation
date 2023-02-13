@@ -12,7 +12,7 @@ using prism_trust_foundation.Models;
 namespace prismtrustfoundation.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20230213133143_hi")]
+    [Migration("20230213140558_hi")]
     partial class hi
     {
         /// <inheritdoc />
@@ -287,6 +287,30 @@ namespace prismtrustfoundation.Migrations
                     b.HasKey("EventId");
 
                     b.ToTable("Event");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.Inventory", b =>
+                {
+                    b.Property<int>("InventoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InventoryId"));
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("InventoryId");
+
+                    b.ToTable("Inventory");
                 });
 
             modelBuilder.Entity("prism_trust_foundation.Models.Product", b =>
