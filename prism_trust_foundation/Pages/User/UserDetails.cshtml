@@ -1,8 +1,10 @@
 ﻿@page
 @model prism_trust_foundation.Pages.User.UserDetailsModel
 @{
-    ViewData["Title"] = "Details page";
+    ViewData["Title"] = "Prism Trust Foundation";
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
+
 <head>
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -11,6 +13,7 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
 </head>
+
 <body>
     <header id="header" class="header d-flex align-items-center">
 
@@ -37,7 +40,13 @@
                     <li><a href="">Donation</a></li>
                     <li><a href="">Volunteer</a></li>
                     <li><a href="">Require Assistance</a></li>
-                    <li><img src="@(string.IsNullOrEmpty(Model.HomeUser.ImageURL) ?"/Picture/User.png" : Model.HomeUser.ImageURL)" width="40px" height="40px" /></li>
+                    <li class="dropdown">
+                        <img src="@(string.IsNullOrEmpty(Model.HomeUser.ImageURL) ?"/Picture/User.png" : Model.HomeUser.ImageURL)" width="40px" height="40px" />
+                        <ul>
+                            <li><a href="/User/UserDetails">Details</a></li>
+                            <li><a href="/Logout">Logout</a></li>
+                        </ul>
+                    </li>
 
                 </ul>
             </nav><!-- .navbar -->
@@ -101,38 +110,6 @@
                 <input type="submit" asp-route-sessioncount="2" value="Update Details" class="btn btn-primary" />
                 <input type="submit" asp-route-sessioncount="3" value="Upload Avatar" class="btn btn-primary" />
             </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="HomeUser.Email">Email: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="HomeUser.Email" readonly />
-                    <span asp-validation-for="HomeUser.Email" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="HomeUser.Gender">Gender: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="HomeUser.Gender" readonly />
-                    <span asp-validation-for="HomeUser.Gender" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="HomeUser.PhoneNum">Phone Number: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="HomeUser.PhoneNum" readonly />
-                    <span asp-validation-for="HomeUser.PhoneNum" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" asp-for="HomeUser.BirthDate">Brithday Date: </label>
-                <div class="col-sm-10">
-                    <input class="form-control" asp-for="HomeUser.BirthDate" readonly />
-                    <span asp-validation-for="HomeUser.BirthDate" class="text-danger"></span>
-                </div>
-            </div>
-    </div>
-    <div>
-            <input type="submit" asp-route-sessioncount="1" value="Change Password" class="btn btn-primary" />
-            <input type="submit" asp-route-sessioncount="2" value="Update Details" class="btn btn-primary" />
     </div>
 </form>
 </body>

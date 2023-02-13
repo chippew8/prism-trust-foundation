@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using prism_trust_foundation.Models;
@@ -7,28 +8,35 @@ namespace prism_trust_foundation.Pages.Admin
 {
     public class AdminUserDetailsModel : PageModel
     {
-        private readonly ILogger<AdminUserDetailsModel> _logger;
+        private readonly SignInManager<ApplicationUser> signinManager;
+
+        private readonly IHttpContextAccessor contxt;
+
         private UserService _svc;
-        public AdminUserDetailsModel(ILogger<AdminUserDetailsModel> logger, UserService service)
+
+        public AdminUserDetailsModel(UserService service, SignInManager<ApplicationUser> signInManager, IHttpContextAccessor httpContextAccessor)
         {
-            _logger = logger;
+            this.signinManager = signInManager;
             _svc = service;
+            contxt = httpContextAccessor;
         }
 
         [BindProperty]
         public ApplicationUser AdminHomeUser { get; set; } = new();
 
-        public IActionResult OnGet(string id)
+        public IActionResult OnGet()
         {
-            ApplicationUser? user = _svc.GetUserByEmail(id);
+            string Email = contxt.HttpContext.Session.GetString("Email");
+            ApplicationUser? user = _svc.GetUserByEmail(Email);
             if (user != null)
             {
-                AdminHomeUser = user;
                 return Page();
             }
             else
             {
-                return Page();
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("You have not login yet.");
+                return RedirectToPage("/Index");
             }
         }
         public IActionResult OnPost(int sessionCount)

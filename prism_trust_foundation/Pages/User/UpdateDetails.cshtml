@@ -2,6 +2,7 @@
 @model prism_trust_foundation.Pages.User.UpdateDetailsModel
 @{
     ViewData["Title"] = "Update Details page";
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
 
 <head>
@@ -47,8 +48,58 @@
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         </div>
-        <div>
-            <input type="submit" value="Update" class="btn btn-primary" />
-            <a class="btn btn-secondary ms-2" href="/UserDetails">Cancel</a>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <h3><strong>Update Details</strong></h3>
+                            </div>
+                            <form method="post">
+                                <div class="mb-3">
+                                    <label class="form-label" asp-for="UdModel.Fname">New Full Name</label>
+                                    <input type="Text" asp-for="UdModel.Fname" class="form-control" />
+                                    <span asp-validaton-for="UdModel.Fname" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" asp-for="UdModel.PhoneNum">New Phone Number</label>
+                                    <input type="Text" asp-for="UdModel.PhoneNum" class="form-control" value="UpdateUser.PhoneNum"/>
+                                    <span asp-validaton-for="UdModel.PhoneNum" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" asp-for="UdModel.BirthDate">New Birhtday Date</label>
+                                    <input class="form-control" asp-for="UdModel.BirthDate" oninput="this.value = this.value.toUpperCase()" />
+                                    <span asp-validation-for="UdModel.BirthDate" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="form-outline">
+                                        <label class="form-label" asp-for="UdModel.Gender">New Gender</label><br />
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input type="radio" asp-for="UdModel.Gender" value="male" /> Male
+                                        </div>
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input type="radio" asp-for="UdModel.Gender" value="female" /> Female
+                                        </div>
+                                        <span asp-validaton-for="UdModel.Gender" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <input type="submit" asp-route-sessioncount="1" value="Cancel" class="btn btn-primary" />
+                                    <input type="submit" asp-route-sessioncount="2" value="Confirm" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 </body>

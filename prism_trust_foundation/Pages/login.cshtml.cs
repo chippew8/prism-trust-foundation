@@ -10,16 +10,21 @@ namespace prism_trust_foundation.Pages
     public class LoginModel : PageModel
     {
         private readonly UserService _registerService;
+
         [BindProperty]
         public Login LModel { get; set; }
+
         public ApplicationUser MyUser { get; set; }
 
         private readonly SignInManager<ApplicationUser> signinManager;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, UserService registerService)
+        private readonly IHttpContextAccessor contxt;
+
+        public LoginModel(SignInManager<ApplicationUser> signInManager, UserService registerService, IHttpContextAccessor httpContextAccessor)
         {
             _registerService = registerService;
             this.signinManager = signInManager;
+            contxt = httpContextAccessor;
         }
 
         public void OnGet()
@@ -39,7 +44,22 @@ namespace prism_trust_foundation.Pages
                 else */
                 if (identityResult.Succeeded)
                 {
-                    return RedirectToPage("/Index");
+                    contxt.HttpContext.Session.SetString("Email", LModel.Email);
+                    ApplicationUser? user = _registerService.GetUserByEmail( LModel.Email);
+                    if (user.Admin_Role == true)
+                    {
+                        return RedirectToPage("/Admin/Index");
+                    }
+                    else
+                    {
+                        return RedirectToPage("/User/UserDetails");
+                    }
+                }
+                else
+                {
+                    TempData["FlashMessage.Type"] = "danger";
+                    TempData["FlashMessage.Text"] = string.Format("You have not created an account yet.");
+                    return Page();
                 }
                 ModelState.AddModelError("", "Username or Password incorrect");
             }
