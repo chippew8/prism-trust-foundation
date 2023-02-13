@@ -28,7 +28,7 @@ namespace prism_trust_foundation.Pages.Admin
             {
                 TempData["FlashMessage.Type"] = "danger";
                 TempData["FlashMessage.Text"] = string.Format("Event does not exist");
-                return Redirect("/Events/EventList");
+                return Redirect("/Admin/EventList");
             }
         }
 
@@ -39,7 +39,7 @@ namespace prism_trust_foundation.Pages.Admin
                 _eventService.UpdateEvent(MyEvent);
                 TempData["FlashMessage.Type"] = "success";
                 TempData["FlashMessage.Text"] = string.Format("Event {0} is updated", MyEvent.EventName);
-                return Redirect("/Events/EventList");
+                return Redirect("/Admin/EventList");
             }
             return Page();
         }

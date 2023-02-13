@@ -28,7 +28,7 @@ namespace prism_trust_foundation.Pages.Events
         {
             if (ModelState.IsValid)
             {
-                Event? events = _eventService.GetEventById(MyEvent.EventId);
+                Event? events = _eventService.GetEventByName(MyEvent.EventName);
                 if (events != null)
                 {
                     TempData["FlashMessage.Type"] = "danger";
@@ -53,7 +53,7 @@ namespace prism_trust_foundation.Pages.Events
                 _eventService.AddEvent(MyEvent);
                 TempData["FlashMessage.Type"] = "success";
                 TempData["FlashMessage.Text"] = string.Format("Event {0} is added", MyEvent.EventName);
-                return Redirect("/Events/EventList");
+                return Redirect("/Admin/EventList");
             }
             return Page();
         }
