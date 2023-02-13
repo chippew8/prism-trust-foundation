@@ -3,63 +3,26 @@
 @{
     Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="~/css/register.css">
-<!------ Include the above in your HEAD tag ---------->
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    @*    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Impact Bootstrap Template - Index</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    *@
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
-
-    <!-- =======================================================
-    * Template Name: Impact - v1.2.0
-    * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/register.css">
 </head>
 
-<body>
-
-    <!-- ======= Header ======= -->
-
-    <header id="header" class="header d-flex align-items-center">
+<header id="header" class="header d-flex align-items-center">
 
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1>Impact<span>.</span></h1>
+                <h1>Prism Trust Foundation<span>.</span></h1>
             </a>
             <nav id="navbar" class="navbar">
                 <ul>
@@ -74,12 +37,8 @@
                         </ul>
                     </li>
                     <li><a href="">Events</a></li>
-                    <li><a href="">Recycle</a></li>
-                    <li><a href="">Donation</a></li>
-                    <li><a href="">Volunteer</a></li>
                     <li><a href="">Require Assistance</a></li>
-                    <li><img src="/Picture/User.png" width="40px" height="40px" /></li>
-
+                    <li><a href="Login"><img src="/Picture/User.png" width="40px" height="40px" /></a></li>
                 </ul>
             </nav><!-- .navbar -->
 
@@ -87,118 +46,111 @@
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
         </div>
-    </header><!-- End Header -->
-    <!-- End Header -->
-    <!-- ======= Hero Section ======= -->
-    <div class="container register">
-        <div class="row">
-            <div class="col-md-3 register-left">
-                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
-                <h3>Welcome</h3>
-                <p>You are only a few minutes away to get full access of our website!</p>
-                <input type="submit" asp-page="/login" value="Login" /><br />
-            </div>
-            <div class="col-md-9 register-right">
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <h3 class="register-heading">Register as an account</h3>
-                        <form method="post" class="row register-form">
-                            <div asp-validation-summary="All" class="text-danger"></div>
-                            <div> <label class="text-danger">@Model.MyMessage</label> </div>
+    </header>
+<div class="container mt-5">
 
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input asp-for="MyUser.NRIC" type="text" class="form-control" minlength="9" maxlength="9" placeholder="NRIC *" value="" />
-                                    <span asp-validation-for="MyUser.NRIC" class="text-danger"></span>
-                                </div>
+	<div class="row justify-content-center align-items-center">
+			<h1 class="mb-3">Register </h1>
 
-                                <div class="form-group">
-                                    <input asp-for="MyUser.Fname" type="text" class="form-control" placeholder="First Name *" value="" />
-                                    <span asp-validation-for="MyUser.Fname" class="text-danger"></span>
+			<form method="post" enctype="multipart/form-data" asp-antiforgery="true">
+				<div asp-validation-summary="All" class="text-danger"></div>
 
-                                </div>
-                                <div class="form-group">
-                                    <input asp-for="MyUser.Lname" type="text" class="form-control" placeholder="Last Name *" value="" />
-                                    <span asp-validation-for="MyUser.Lname" class="text-danger"></span>
+				<div class="col-md-4">
+					<div class="form-outline">
+						<label class="form-label" asp-for="Upload">Photo</label>
+						<input type="file" accept="image/*" asp-for="Upload" class="form-control" onchange="showImgPreview(this)" />
+						<span asp-validation-for="Upload" class="text-danger"></span>
+					</div>
+					<img id="imgPreview" class="rounded-circle" style="height:300px;width:300px;object-fit:cover" src="/uploads/user.png" />
+					<input class="form-control d-none" asp-for="RModel.ImageURL" />
+				</div>
 
-                                </div>
-                                <div class="form-group">
-                                    <input asp-for="MyUser.Password" type="password" class="form-control" placeholder="Password *" value="" />
-                                    <span asp-validation-for="MyUser.Password" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <input name="confirmPass" type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input asp-for="MyUser.Email" type="email" class="form-control" placeholder="Your Email *" value="" />
-                                    <span asp-validation-for="MyUser.Email" class="text-danger"></span>
+				<div class="mb-3">
+					<label class="form-label" asp-for="RModel.NRIC">NRIC</label>
+					<input type="Text" asp-for="RModel.NRIC" class="form-control" />
+					<span asp-validaton-for="RModel.NRIC" class="text-danger"></span>
+				</div>
 
-                                </div>
-                                <div class="form-group">
-                                    <input asp-for="MyUser.PhoneNum" type="text" minlength="8" maxlength="8" class="form-control" placeholder="Your Phone Number *" value="" />
-                                    <span asp-validation-for="MyUser.PhoneNum" class="text-danger"></span>
+				<div class="mb-3">
+					<label class="form-label" asp-for="RModel.Email">Email Address</label>
+					<input type="Text" asp-for="RModel.Email" class="form-control" />
+					<span asp-validaton-for="RModel.Email" class="text-danger"></span>
+				</div>
 
-                                </div>
-                                <div class="form-group">
-                                    <input asp-for="MyUser.BirthDate" type="date" class="form-control" placeholder="Date of Birth*" value="" />
-                                    <span asp-validation-for="MyUser.BirthDate" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <div class="maxl">
-                                        <label class="radio inline">
-                                            @Html.RadioButton("MyUser.Gender", "Male") <span>Male</span>
-                                        </label>
-                                        <br />
-                                        <label class="radio inline">
-                                            @Html.RadioButton("MyUser.Gender", "Female") <span>Female</span>
-                                            <span asp-validation-for="MyUser.Gender" class="text-danger"></span>
+				<div class="mb-3">
+					<label class="form-label" asp-for="RModel.Fname">Full Name</label>
+					<input type="Text" asp-for="RModel.Fname" class="form-control" />
+					<span asp-validaton-for="MyUser.Fname" class="text-danger"></span>
+				</div>
 
-                                        </label>
-                                    </div>
-                                </div>
-                                <input id="registerDoner" type="submit" class="btnRegister" value="Register" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Hero Section -->
+				<div class="mb-3">
+					<div class="form-outline">
+						<label class="form-label" asp-for="RModel.Gender">Gender</label><br />
+						<div class="form-check form-check-inline mb-0 me-4">
+							<input type="radio" asp-for="RModel.Gender" value="male" /> Male
+						</div>
+						<div class="form-check form-check-inline mb-0 me-4">
+							<input type="radio" asp-for="RModel.Gender" value="female" /> Female
+						</div>
+						<span asp-validaton-for="RModel.Gender" class="text-danger"></span>
+					</div>
+				</div>
 
+				<div class="mb-3">
+					<label class="form-label" asp-for="RModel.PhoneNum">Phone Number</label>
+					<input type="Text" asp-for="RModel.PhoneNum" class="form-control" />
+					<span asp-validaton-for="RModel.PhoneNum" class="text-danger"></span>
+				</div>
 
+				<div class="mb-3">
+					<label class="form-label" asp-for="RModel.BirthDate">Birhtday Date</label>
+					<input class="form-control" asp-for="RModel.BirthDate" oninput="this.value = this.value.toUpperCase()" />
+					<span asp-validation-for="RModel.BirthDate" class="text-danger"></span>
+				</div>
 
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+				<div class="mb-3">
+					<label class="form-label" asp-for="RModel.Password">Password</label>
+					<input type="Text" asp-for="RModel.Password" class="form-control" />
+					<span asp-validaton-for="RModel.Password" class="text-danger"></span>
+				</div>
 
+				<div class="mb-3">
+					<label class="form-label" asp-for="RModel.ConfirmPassword">Confirm Password</label>
+					<input type="Text" asp-for="RModel.ConfirmPassword" class="form-control" />
+					<span asp-validaton-for="RModel.ConfirmPassword" class="text-danger"></span>
+				</div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+				<div class="mb-3">
+					<button type="submit" class="btn btn-primary">Register</button>
+				</div>
+			</form>
+	</div>
+</div>
 
-    <script src="https://kit.fontawesome.com/3336a4ae8e.js" crossorigin="anonymous"></script>
+<script>
+	function showImgPreview(input) {
+		if (input.files[0]) {
+			var uploadimg = new FileReader();
+			uploadimg.onload = function (displayimg) {
+				$("#imgPreview").attr('src', displayimg.target.result);
+			}
+			uploadimg.readAsDataURL(input.files[0]);
+		}
+	}
+</script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
 
-</body>
+<script src="https://kit.fontawesome.com/3336a4ae8e.js" crossorigin="anonymous"></script>
 
-</html>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-    }
-
-    <style>
-    body {
-        background-color: #008374;
-    }
-</style>
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

@@ -1,0 +1,9 @@
+# Ignore Migrations
+Migrations
+
+# Ignore Caches
+obj
+
+Properties
+
+bin

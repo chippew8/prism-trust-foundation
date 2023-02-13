@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using prism_trust_foundation.Models;
@@ -8,16 +9,36 @@ namespace prism_trust_foundation.Pages.Admin
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<AdminUserDetailsModel> _logger;
+        private readonly SignInManager<ApplicationUser> signinManager;
+
+        private readonly IHttpContextAccessor contxt;
+
         private readonly UserService _svc;
-        public IndexModel(UserService employeeService)
+
+        public IndexModel(UserService service, SignInManager<ApplicationUser> signInManager, IHttpContextAccessor httpContextAccessor)
         {
-            _svc = employeeService;
+            this.signinManager = signInManager;
+            _svc = service;
+            contxt = httpContextAccessor;
         }
-        public List<Models.User> UserList { get; set; } = new();
-        public void OnGet()
+
+        public List<ApplicationUser> UserList { get; set; } = new();
+
+        public IActionResult OnGet()
         {
-            UserList = _svc.GetAll();
+            string Email = contxt.HttpContext.Session.GetString("Email");
+            ApplicationUser? user = _svc.GetUserByEmail(Email);
+            if (user != null)
+            {
+                UserList = _svc.GetAll();
+                return Page();
+            }
+            else
+            {
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("You have not login yet.");
+                return RedirectToPage("/Index");
+            }
         }
     }
 }

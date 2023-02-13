@@ -1,31 +1,37 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
+using prism_trust_foundation.ViewModels;
 
 namespace prism_trust_foundation.Pages.User
 {
     public class UpdateDetailsModel : PageModel
     {
-        private readonly ILogger<UpdateDetailsModel> _logger;
+        private readonly SignInManager<ApplicationUser> signinManager;
+
+        private readonly IHttpContextAccessor contxt;
+
         private UserService _svc;
-        public UpdateDetailsModel(ILogger<UpdateDetailsModel> logger, UserService service)
+
+        public UpdateDetailsModel(SignInManager<ApplicationUser> signInManager, UserService service, IHttpContextAccessor httpContextAccessor)
         {
-            _logger = logger;
+            this.signinManager = signInManager;
             _svc = service;
+            contxt = httpContextAccessor;
         }
 
         [BindProperty]
-        public IFormFile? Upload { get; set; }
+        public UpdateDetails UdModel { get; set; }
 
         [BindProperty]
-        public Models.User UpdateUser { get; set; } = new();
+        public ApplicationUser UpdateUser { get; set; } = new();
 
-        [BindProperty]
-        public string? MyMessage { get; set; }
-
-        public IActionResult OnGet(string CurrentID)
+        public IActionResult OnGet()
         {
-            Models.User? user = _svc.GetUserById(CurrentID);
+            string Email = contxt.HttpContext.Session.GetString("Email");
+            ApplicationUser? user = _svc.GetUserByEmail(Email);
             if (user != null)
             {
                 UpdateUser = user;
@@ -33,7 +39,9 @@ namespace prism_trust_foundation.Pages.User
             }
             else
             {
-                return Page();
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("You have not login yet.");
+                return RedirectToPage("/Index");
             }
         }
 
@@ -41,27 +49,27 @@ namespace prism_trust_foundation.Pages.User
         {
             if (ModelState.IsValid)
             {
-                if (sessionCount == 1)
+                if (sessionCount == 2)
                 {
-                    _svc.UpdateUser(UpdateUser);
+                    string Email = contxt.HttpContext.Session.GetString("Email");
+                    ApplicationUser? user = _svc.GetUserByEmail(Email);
+                    user.Fname = UdModel.Fname;
+                    user.PhoneNum = UdModel.PhoneNum;
+                    user.BirthDate = UdModel.BirthDate;
+                    user.Gender = UdModel.Gender;
+                    _svc.UpdateUser(user);
                     TempData["FlashMessage.Type"] = "success";
                     TempData["FlashMessage.Text"] = string.Format("User {0} is updated", UpdateUser.Email);
-                    return RedirectToPage("UserDetails", new { CurrentID = UpdateUser.Email });
                 }
-                else if (sessionCount == 2)
+                else if(sessionCount == 1)
                 {
-                    return RedirectToPage("UserDetails", new { CurrentID = UpdateUser.Email });
+                    TempData["FlashMessage.Type"] = "success";
+                    TempData["FlashMessage.Text"] = string.Format("You have canecel updating of details");
+                    return RedirectToPage("UserDetails");
                 }
-                else
-                {
-                    return Page();
-                }
-
+                return RedirectToPage("UserDetails");
             }
-            else
-            {
-                return Page();
-            }
+            return RedirectToPage("UserDetails");
         }
     }
 }

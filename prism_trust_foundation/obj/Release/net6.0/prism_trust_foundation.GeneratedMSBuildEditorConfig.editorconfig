@@ -8,45 +8,69 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = prism_trust_foundation
 build_property.RootNamespace = prism_trust_foundation
-build_property.ProjectDir = C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\
+build_property.ProjectDir = C:\Users\65910\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation
+build_property.MSBuildProjectDirectory = C:\Users\65910\Documents\GitHub\prism-trust-foundation\prism_trust_foundation
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Error.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AdminViewRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5WaWV3UmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/ApplicationForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Gb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipientInfoPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9uYXRpb25SZWNpcGllbnRJbmZvUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Index.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/login.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Privacy.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/register.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/requestitems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccmVxdWVzdGl0ZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/_ViewImports.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/SubmitEnquiry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VibWl0RW5xdWlyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/_ViewStart.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_Layout.cshtml]
+[C:/Users/65910/Documents/GitHub/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qkkc7demk2

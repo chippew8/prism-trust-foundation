@@ -5,6 +5,15 @@
     Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
 
+<head>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+</head>
+
 <body>
     <header id="header" class="header d-flex align-items-center">
 
@@ -31,97 +40,66 @@
                     <li><a href="">Donation</a></li>
                     <li><a href="">Volunteer</a></li>
                     <li><a href="">Require Assistance</a></li>
-                    <li><img src="/Picture/User.png" width="40px" height="40px" /></li>
+                    <li><img src="@(string.IsNullOrEmpty(Model.UpdateUser.ImageURL) ?"/Picture/User.png" : Model.UpdateUser.ImageURL)" width="40px" height="40px" /></li>
 
                 </ul>
             </nav><!-- .navbar -->
 
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
         </div>
     </header>
-    <h2>Update Account Details</h2>
-    <form class="mt-3" method="post" enctype="multipart/form-data">
-        <div> <label class="text-danger">@Model.MyMessage</label> </div>
-        <div asp-validation-summary="All" class="text-danger"></div>
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.NRIC">NRIC: </label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.NRIC" />
-                        <span asp-validation-for="UpdateUser.NRIC" class="text-danger"></span>
-                    </div>
-                </div>
-                <!-- Add your code -->
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Fname">First Name: </label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.Fname" />
-                        <span asp-validation-for="UpdateUser.Fname" class="text-danger"></span>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Lname">Last Name: </label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.Lname" />
-                        <span asp-validation-for="UpdateUser.Lname" class="text-danger"></span>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Email">Email: </label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.Email" />
-                        <span asp-validation-for="UpdateUser.Email" class="text-danger"></span>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Gender">Gender: </label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.Gender" />
-                        <span asp-validation-for="UpdateUser.Gender" class="text-danger"></span>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.PhoneNum">Phone Number: </label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.PhoneNum" />
-                        <span asp-validation-for="UpdateUser.PhoneNum" class="text-danger"></span>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.BirthDate">Birthday Date: </label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.BirthDate" />
-                        <span asp-validation-for="UpdateUser.BirthDate" class="text-danger"></span>
-                    </div>
-                </div>
-                <div class="row mb-3" style="display:none">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Password">Password: </label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.Password" />
-                        <span asp-validation-for="UpdateUser.Password" class="text-danger"></span>
-                    </div>
-                </div>
-                <div class="row mb-3" style="display:none">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Role"></label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.Role" readonly />
-                        <span asp-validation-for="UpdateUser.Role" class="text-danger"></span>
-                    </div>
-                </div>
-                <div class="row mb-3" style="display:none">
-                    <label class="col-sm-2 col-form-label" asp-for="UpdateUser.Status"></label>
-                    <div class="col-sm-10">
-                        <input class="form-control" asp-for="UpdateUser.Status" readonly />
-                        <span asp-validation-for="UpdateUser.Status" class="text-danger"></span>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <h3><strong>Update Details</strong></h3>
+                            </div>
+                            <form method="post">
+                                <div class="mb-3">
+                                    <label class="form-label" asp-for="UdModel.Fname">New Full Name</label>
+                                    <input type="Text" asp-for="UdModel.Fname" class="form-control" />
+                                    <span asp-validaton-for="UdModel.Fname" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" asp-for="UdModel.PhoneNum">New Phone Number</label>
+                                    <input type="Text" asp-for="UdModel.PhoneNum" class="form-control" value="UpdateUser.PhoneNum"/>
+                                    <span asp-validaton-for="UdModel.PhoneNum" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" asp-for="UdModel.BirthDate">New Birhtday Date</label>
+                                    <input class="form-control" asp-for="UdModel.BirthDate" oninput="this.value = this.value.toUpperCase()" />
+                                    <span asp-validation-for="UdModel.BirthDate" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="form-outline">
+                                        <label class="form-label" asp-for="UdModel.Gender">New Gender</label><br />
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input type="radio" asp-for="UdModel.Gender" value="male" /> Male
+                                        </div>
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input type="radio" asp-for="UdModel.Gender" value="female" /> Female
+                                        </div>
+                                        <span asp-validaton-for="UdModel.Gender" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <input type="submit" asp-route-sessioncount="1" value="Cancel" class="btn btn-primary" />
+                                    <input type="submit" asp-route-sessioncount="2" value="Confirm" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <input type="submit" asp-route-sessioncount="1"  value="Update" class="btn btn-primary" />
-                <input type="submit" asp-route-sessioncount="2" value="Cancel" class="btn btn-primary">
-            </div>
-    </form>
+        </div>
+    </div>
 </body>

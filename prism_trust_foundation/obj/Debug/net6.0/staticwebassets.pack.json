@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\prism_trust_foundation.bundle.scp.css"
     },
     {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\CannedFood.jpg",
+      "PackagePath": "staticwebassets\\Picture\\CannedFood.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Coffee.webp",
+      "PackagePath": "staticwebassets\\Picture\\Coffee.webp"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Shirt.jpg",
+      "PackagePath": "staticwebassets\\Picture\\Shirt.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Stationary.jpg",
+      "PackagePath": "staticwebassets\\Picture\\Stationary.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Umbrella.jpg",
+      "PackagePath": "staticwebassets\\Picture\\Umbrella.jpg"
+    },
+    {
       "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\User.png",
       "PackagePath": "staticwebassets\\Picture\\User.png"
     },
@@ -267,6 +287,74 @@
     {
       "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\16da8e5d-abae-43b9-9802-73ed0b1cf0a4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\16da8e5d-abae-43b9-9802-73ed0b1cf0a4.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\16e3c539-c3e5-4f89-a127-3d8c81bdfa7a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\16e3c539-c3e5-4f89-a127-3d8c81bdfa7a.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\275f7a2c-a845-40f6-bffe-0fd5659a3e4f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\275f7a2c-a845-40f6-bffe-0fd5659a3e4f.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\344463d0-7e41-447b-8523-d7ff272bb8a1.png",
+      "PackagePath": "staticwebassets\\uploads\\344463d0-7e41-447b-8523-d7ff272bb8a1.png"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\3e3d0061-81a5-47af-b4e8-4e81e3c38133.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3e3d0061-81a5-47af-b4e8-4e81e3c38133.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\4311958f-de47-48af-8b8b-4a4ef4723124.png",
+      "PackagePath": "staticwebassets\\uploads\\4311958f-de47-48af-8b8b-4a4ef4723124.png"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5445bc3b-cf9a-405f-b8a9-585b3e350641.png",
+      "PackagePath": "staticwebassets\\uploads\\5445bc3b-cf9a-405f-b8a9-585b3e350641.png"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5e5375d9-af5f-42fb-9906-ff0d34fa5198.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5e5375d9-af5f-42fb-9906-ff0d34fa5198.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5e97ca00-a40c-4308-b815-91460b073dc7.png",
+      "PackagePath": "staticwebassets\\uploads\\5e97ca00-a40c-4308-b815-91460b073dc7.png"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\62ee5247-14d9-4e46-9df2-53288c666af1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\62ee5247-14d9-4e46-9df2-53288c666af1.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\c27954fb-f16e-4615-977c-97c63030805a.png",
+      "PackagePath": "staticwebassets\\uploads\\c27954fb-f16e-4615-977c-97c63030805a.png"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\c778ee68-91f9-4c41-b598-83b35c0cc0d2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c778ee68-91f9-4c41-b598-83b35c0cc0d2.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\d28cc5be-2067-4b64-8566-0192006654eb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d28cc5be-2067-4b64-8566-0192006654eb.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\d5efaef9-c5e7-462a-afa9-4fd34013cc04.png",
+      "PackagePath": "staticwebassets\\uploads\\d5efaef9-c5e7-462a-afa9-4fd34013cc04.png"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\e3c813ae-d3f9-4c04-9a53-336284fabbb9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e3c813ae-d3f9-4c04-9a53-336284fabbb9.jpg"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\ef50817c-3678-4568-b741-a289f939f498.png",
+      "PackagePath": "staticwebassets\\uploads\\ef50817c-3678-4568-b741-a289f939f498.png"
+    },
+    {
+      "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\user.png",
+      "PackagePath": "staticwebassets\\uploads\\user.png"
     },
     {
       "Id": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\animate\\animate.css",

@@ -1,32 +1,37 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
+using prism_trust_foundation.ViewModels;
 
 namespace prism_trust_foundation.Pages.User
 {
     public class ChangePassModel : PageModel
     {
-        private readonly ILogger<ChangePassModel> _logger;
+        private readonly SignInManager<ApplicationUser> signinManager;
+
+        private readonly IHttpContextAccessor contxt;
+
         private UserService _svc;
-        public ChangePassModel(ILogger<ChangePassModel> logger, UserService service)
+
+        public ChangePassModel(SignInManager<ApplicationUser> signInManager, UserService service, IHttpContextAccessor httpContextAccessor)
         {
-            _logger = logger;
+            this.signinManager = signInManager;
             _svc = service;
+            contxt = httpContextAccessor;
         }
 
         [BindProperty]
-        public IFormFile? Upload { get; set; }
+        public ChangePassword CpModel { get; set; }
 
-        [BindProperty]
-        public Models.User PassUser { get; set; } = new();
+        public ApplicationUser PassUser { get; set; } = new();
 
-        [BindProperty]
-        public string? MyMessage { get; set; }
-
-        public IActionResult OnGet(string CurrentID)
+        public IActionResult OnGet()
         {
-            Models.User? user = _svc.GetUserById(CurrentID);
+            string Email = contxt.HttpContext.Session.GetString("Email");
+            ApplicationUser? user = _svc.GetUserByEmail(Email);
             if (user != null)
             {
                 PassUser = user;
@@ -34,44 +39,29 @@ namespace prism_trust_foundation.Pages.User
             }
             else
             {
-                return Page();
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("You have not login yet.");
+                return RedirectToPage("/Index");
             }
         }
 
         public IActionResult OnPost(int sessionCount)
         {
-            var confirmPass = Request.Form["confirmPass"];
             if (ModelState.IsValid)
             {
                 if (sessionCount == 1)
                 {
-                    if (PassUser.Password != confirmPass)
-                    {
-                        MyMessage = "Password are not matched!";
-                        return Page();
-                    }
-                    else
-                    {
-                        _svc.UpdateUser(PassUser);
-                        TempData["FlashMessage.Type"] = "success";
-                        TempData["FlashMessage.Text"] = string.Format("User {0} is updated", PassUser.Email);
-                        return RedirectToPage("UserDetails", new { CurrentID = PassUser.Email });
-                    }
+                    return RedirectToPage("UserDetails");
                 }
                 else if (sessionCount == 2)
                 {
-                    return RedirectToPage("UserDetails", new { CurrentID = PassUser.Email });
+                    /*IdentityResult result = UserManager.ChangePassword(model.UserId, model.CurrentPassword, model.NewPassword);*/
+                    _svc.UpdateUser(PassUser);
+                    TempData["FlashMessage.Type"] = "success";
+                    TempData["FlashMessage.Text"] = string.Format("User {0} is updated", PassUser.Email);
                 }
-                else
-                {
-                    return Page();
-                }
-
             }
-            else
-            {
-                return Page();
-            }
+            return RedirectToPage("UserDetails");
         }
     }
 }

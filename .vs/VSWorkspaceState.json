@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\prism_trust_foundation",
-    "\\prism_trust_foundation\\wwwroot",
-    "\\prism_trust_foundation\\wwwroot\\css"
+    "\\prism_trust_foundation\\Models",
+    "\\prism_trust_foundation\\Pages",
+    "\\prism_trust_foundation\\Properties",
+    "\\prism_trust_foundation\\Services",
+    "\\prism_trust_foundation\\wwwroot"
   ],
-  "SelectedNode": "\\prism_trust_foundation\\wwwroot\\css\\register.css",
+  "SelectedNode": "\\prism_trust_foundation\\MyDbContext.cs",
   "PreviewInSolutionExplorer": false
 }
