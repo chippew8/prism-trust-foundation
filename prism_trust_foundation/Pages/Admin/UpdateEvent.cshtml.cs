@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
 
-namespace prism_trust_foundation.Pages.Events
+namespace prism_trust_foundation.Pages.Admin
 {
     public class UpdateModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace prism_trust_foundation.Pages.Events
         public IActionResult OnGet(int id)
         {
             Event? myEvent = _eventService.GetEventById(id);
-            if(myEvent != null)
+            if (myEvent != null)
             {
                 MyEvent = myEvent;
                 return Page();
@@ -44,7 +44,7 @@ namespace prism_trust_foundation.Pages.Events
             return Page();
         }
 
-        
-        
+
+
     }
 }
