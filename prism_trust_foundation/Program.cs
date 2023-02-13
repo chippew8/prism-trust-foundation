@@ -10,6 +10,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<AuthDbContext>();
 builder.Services.AddScoped<EventService>();
+builder.Services.AddScoped<InventoryService>();
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.User.RequireUniqueEmail = true;
