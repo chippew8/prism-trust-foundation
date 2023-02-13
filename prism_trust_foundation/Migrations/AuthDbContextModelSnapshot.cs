@@ -223,13 +223,7 @@ namespace prismtrustfoundation.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Role")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -250,6 +244,104 @@ namespace prismtrustfoundation.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.Event", b =>
+                {
+                    b.Property<int>("EventId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EventId"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventVenue")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("EventId");
+
+                    b.ToTable("Event");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShift", b =>
+                {
+                    b.Property<string>("ShiftId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Shift_End")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Shift_Quantity")
+                        .HasMaxLength(2)
+                        .HasColumnType("float");
+
+                    b.Property<string>("Shift_Start")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ShiftId");
+
+                    b.ToTable("VolunteerShift");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShiftBook", b =>
+                {
+                    b.Property<string>("ShiftBookingId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("EventDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EventName")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.Property<string>("EventVenue")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ShiftId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ShiftBookingId");
+
+                    b.ToTable("VolunteerShiftBook");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

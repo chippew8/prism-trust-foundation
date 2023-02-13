@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace prismtrustfoundation.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class test : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,8 +35,6 @@ namespace prismtrustfoundation.Migrations
                     BanStatus = table.Column<bool>(name: "Ban_Status", type: "bit", nullable: true),
                     Fname = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
                     PhoneNum = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BirthDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ImageURL = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -58,6 +56,56 @@ namespace prismtrustfoundation.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Event",
+                columns: table => new
+                {
+                    EventId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EventName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventVenue = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageURL = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Event", x => x.EventId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "VolunteerShift",
+                columns: table => new
+                {
+                    ShiftId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ShiftStart = table.Column<string>(name: "Shift_Start", type: "nvarchar(max)", nullable: false),
+                    ShiftEnd = table.Column<string>(name: "Shift_End", type: "nvarchar(max)", nullable: false),
+                    ShiftQuantity = table.Column<double>(name: "Shift_Quantity", type: "float", maxLength: 2, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VolunteerShift", x => x.ShiftId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "VolunteerShiftBook",
+                columns: table => new
+                {
+                    ShiftBookingId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventName = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
+                    EventVenue = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    EventDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShiftId = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VolunteerShiftBook", x => x.ShiftBookingId);
                 });
 
             migrationBuilder.CreateTable(
@@ -223,6 +271,15 @@ namespace prismtrustfoundation.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Event");
+
+            migrationBuilder.DropTable(
+                name: "VolunteerShift");
+
+            migrationBuilder.DropTable(
+                name: "VolunteerShiftBook");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
