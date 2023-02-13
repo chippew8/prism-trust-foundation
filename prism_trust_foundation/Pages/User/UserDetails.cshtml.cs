@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
 
 namespace prism_trust_foundation.Pages.User
@@ -15,11 +16,11 @@ namespace prism_trust_foundation.Pages.User
         }
 
         [BindProperty]
-        public Models.User HomeUser { get; set; } = new();
+        public ApplicationUser HomeUser { get; set; } = new();
 
         public IActionResult OnGet(string CurrentID)
         {
-            Models.User? user = _svc.GetUserById(CurrentID);
+            ApplicationUser? user = _svc.GetUserByEmail(CurrentID);
             if (user != null)
             {
                 HomeUser = user;
@@ -32,10 +33,10 @@ namespace prism_trust_foundation.Pages.User
         }
         public IActionResult OnPost(int sessionCount)
         {
-            Models.User? user = _svc.GetUserById(HomeUser.Email);
+            ApplicationUser? user = _svc.GetUserByEmail(HomeUser.Email);
             if (user != null)
             {
-                if (user.Password == HomeUser.Password)
+                if (user.Email == HomeUser.Email)
                 {
                     if (sessionCount == 1)
                     {
@@ -44,6 +45,10 @@ namespace prism_trust_foundation.Pages.User
                     else if (sessionCount == 2)
                     {
                         return RedirectToPage("UpdateDetails", new { CurrentID = HomeUser.Email });
+                    }
+                    else if (sessionCount == 3)
+                    {
+                        return RedirectToPage("UpdateAvatar", new { CurrentID = HomeUser.Email });
                     }
                     else
                     {

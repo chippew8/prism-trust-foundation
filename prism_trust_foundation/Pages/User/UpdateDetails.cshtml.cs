@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
 
 namespace prism_trust_foundation.Pages.User
@@ -18,11 +19,11 @@ namespace prism_trust_foundation.Pages.User
         public IFormFile? Upload { get; set; }
 
         [BindProperty]
-        public Models.User UpdateUser { get; set; } = new();
+        public ApplicationUser UpdateUser { get; set; } = new();
 
         public IActionResult OnGet(string CurrentID)
         {
-            Models.User? user = _svc.GetUserById(CurrentID);
+            ApplicationUser? user = _svc.GetUserByEmail(CurrentID);
             if (user != null)
             {
                 UpdateUser = user;

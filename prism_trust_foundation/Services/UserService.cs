@@ -9,45 +9,40 @@ namespace prism_trust_foundation.Services
 {
     public class UserService
     {
-            
-        private MyDbContext _context;
-        public UserService(MyDbContext context)
+        private readonly AuthDbContext _context;
+
+        public UserService(AuthDbContext context)
         {
             _context = context;
         }
-
-
-        public bool AddUser(User newuser)
+        public List<ApplicationUser> GetAll()
         {
-            if (UserExists(newuser.Email))
-            {
-                return false;
-            }
-            _context.Add(newuser);
-            _context.SaveChanges();
-            return true;
+            return _context.AspNetUser.OrderBy(m => m.Id).ToList();
         }
-        public bool UserExists(string id)
+        public ApplicationUser? GetUserByNRIC(string Nric)
         {
-            return _context.Users.Any(e => e.Email == id);
+            ApplicationUser? applicationUser = _context.AspNetUser.FirstOrDefault(
+                x => x.NRIC.Equals(Nric));
+            return applicationUser;
         }
 
-        public User? GetUserById(string id)
+        public ApplicationUser? GetUserByEmail(string email)
         {
-            User? user = _context.Users.FirstOrDefault(
-            x => x.Email.Equals(id));
-            return user;
+            ApplicationUser? applicationUser = _context.AspNetUser.FirstOrDefault(
+                x => x.Email.Equals(email));
+            return applicationUser;
         }
 
-        public void UpdateUser(User user)
+        public void AddUser(ApplicationUser applicationUser)
         {
-            _context.Users.Update(user);
+            _context.AspNetUser.Add(applicationUser);
             _context.SaveChanges();
         }
 
-        public List<User> GetAll()
+        public void UpdateUser(ApplicationUser applicationUser)
         {
-            return _context.Users.OrderBy(m => m.Email).ToList();
+            _context.AspNetUser.Update(applicationUser);
+            _context.SaveChanges();
         }
     }
 }

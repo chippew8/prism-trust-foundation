@@ -34,9 +34,9 @@ namespace prism_trust_foundation.Pages.Events
         //        TempData["FlashMessage.Text"] = string.Format("Event not found", id);
         //        return Redirect("/");
         //    }
-            
+
         //}
-        
+
 
     }
 }

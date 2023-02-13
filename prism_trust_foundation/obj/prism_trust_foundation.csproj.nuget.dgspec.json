@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {}
+    "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {
+    "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+        "projectUniqueName": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
         "projectName": "prism_trust_foundation",
-        "projectPath": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
-        "packagesPath": "C:\\Users\\65910\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
+        "projectPath": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+        "packagesPath": "C:\\Users\\xuanx\\.nuget\\packages\\",
+        "outputPath": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\65910\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xuanx\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.2, )"
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

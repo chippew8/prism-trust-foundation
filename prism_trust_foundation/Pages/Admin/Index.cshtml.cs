@@ -14,7 +14,7 @@ namespace prism_trust_foundation.Pages.Admin
         {
             _svc = employeeService;
         }
-        public List<Models.User> UserList { get; set; } = new();
+        public List<ApplicationUser> UserList { get; set; } = new();
         public void OnGet()
         {
             UserList = _svc.GetAll();

@@ -1,76 +1,49 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
-using Microsoft.Extensions.Logging;
-using System.Diagnostics;
-using Microsoft.AspNetCore.Http;
+using prism_trust_foundation.ViewModels;
 
 namespace prism_trust_foundation.Pages
 {
-    public class loginModel : PageModel
+    public class LoginModel : PageModel
     {
-        private readonly ILogger<loginModel> _logger;
-        private UserService _svc;
-        public loginModel(ILogger<loginModel> logger, UserService service)
+        private readonly UserService _registerService;
+        [BindProperty]
+        public Login LModel { get; set; }
+        public ApplicationUser MyUser { get; set; }
+
+        private readonly SignInManager<ApplicationUser> signinManager;
+
+        public LoginModel(SignInManager<ApplicationUser> signInManager, UserService registerService)
         {
-            _logger = logger;
-            _svc = service;
+            _registerService = registerService;
+            this.signinManager = signInManager;
         }
-
-        [BindProperty]
-        public Models.User CurrentUser { get; set; } = new();
-
-        [BindProperty]
-        public string? MyMessage { get; set; }
 
         public void OnGet()
         {
         }
-        public IActionResult OnPost()
+
+        public async Task<IActionResult> OnPostAsync()
         {
-            Models.User? user = _svc.GetUserById(CurrentUser.Email);
-            if (user != null)
+            if (ModelState.IsValid)
             {
-                if(user.Password == CurrentUser.Password)
+                //ApplicationUser? applicationUser = _registerService.GetUserByNRIC(MyUser.NRIC);
+                var identityResult = await signinManager.PasswordSignInAsync(LModel.Email, LModel.Password, LModel.RememberMe, false);
+                /*if (identityResult.Succeeded)
                 {
-                    if (user.Status == "Activated")
-                    {
-                        if (user.Role == "User")
-                        {
-                            return RedirectToPage("User/UserDetails", new { CurrentID = CurrentUser.Email });
-                        }
-                        else if (user.Role == "Admin")
-                        {
-                            return RedirectToPage("Admin/Index", new { CurrentID = CurrentUser.Email });
-                        }
-                        else
-                        {
-                            return Page();
-                        }
-                    }
-                    else
-                    {
-                        MyMessage = "Your account has been deactivated!";
-                        return Page();
-                    }
+                    return RedirectToPage("/Admin/Index");
                 }
-                else
+                else */
+                if (identityResult.Succeeded)
                 {
-                    MyMessage = "Wrong Password!";
-                    return Page();
+                    return RedirectToPage("/Index");
                 }
-                
+                ModelState.AddModelError("", "Username or Password incorrect");
             }
-            else
-            {
-                MyMessage = "Your account does not exist, please register and account if you don't have!";
-                return Page();
-            }
+            return Page();
         }
     }
 }

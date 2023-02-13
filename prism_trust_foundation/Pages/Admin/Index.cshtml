@@ -11,10 +11,7 @@
             <th>@Html.DisplayNameFor(model => model.UserList[0].Email)</th>
             <th>@Html.DisplayNameFor(model => model.UserList[0].NRIC)</th>
             <th>@Html.DisplayNameFor(model => model.UserList[0].Fname)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Lname)</th>
             <th>@Html.DisplayNameFor(model => model.UserList[0].PhoneNum)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Role)</th>
-            <th>@Html.DisplayNameFor(model => model.UserList[0].Status)</th>
             <th>@Html.DisplayNameFor(model => model.UserList[0].BirthDate)</th>
             <th>@Html.DisplayNameFor(model => model.UserList[0].Gender)</th>
             <th></th>
@@ -28,11 +25,8 @@
                     <td>@item.Email</td>
                     <td>@item.NRIC</td>
                     <td>@item.Fname</td>
-                    <td>@item.Lname</td>
                     <td>@item.PhoneNum</td>
-                    <td>@item.Role</td>
-                    <td>@item.Status</td>
-                    <td>@item.BirthDate.ToShortDateString()</td>
+                    <td>@item.BirthDate</td>
                     <td>@item.Gender</td>
                     <td>
                         <a asp-page="/Admin/AdminUserDetails" asp-route-id="@item.Email">View</a>
