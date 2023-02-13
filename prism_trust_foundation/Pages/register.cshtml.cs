@@ -97,7 +97,7 @@ namespace prism_trust_foundation.Pages
                     if (result.Succeeded)
                     {
                         await signInManager.SignInAsync(newregister, true);
-                        return RedirectToPage("../Pages/Index");
+                        return RedirectToPage("/Index");
                     }
                     foreach (var error in result.Errors)
                     {

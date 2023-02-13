@@ -286,6 +286,30 @@ namespace prismtrustfoundation.Migrations
                     b.ToTable("Event");
                 });
 
+            modelBuilder.Entity("prism_trust_foundation.Models.Inventory", b =>
+                {
+                    b.Property<int>("InventoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InventoryId"));
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("InventoryId");
+
+                    b.ToTable("Inventory");
+                });
+
             modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShift", b =>
                 {
                     b.Property<string>("ShiftId")
