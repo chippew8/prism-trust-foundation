@@ -24,12 +24,14 @@ namespace prism_trust_foundation.Pages.Admin
         [BindProperty]
         public ApplicationUser AdminHomeUser { get; set; } = new();
 
-        public IActionResult OnGet()
+        public IActionResult OnGet(string id)
         {
             string Email = contxt.HttpContext.Session.GetString("Email");
             ApplicationUser? user = _svc.GetUserByEmail(Email);
             if (user != null)
             {
+                ApplicationUser? selected = _svc.GetUserByEmail(id);
+                AdminHomeUser = selected;
                 return Page();
             }
             else
@@ -39,6 +41,7 @@ namespace prism_trust_foundation.Pages.Admin
                 return RedirectToPage("/Index");
             }
         }
+
         public IActionResult OnPost(int sessionCount)
         {
             ApplicationUser? user = _svc.GetUserByEmail(AdminHomeUser.Email);
