@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e+RPfTb22U7qpuVZKdqqNDSxYXG0RN/nKfF2O7nzt+k=",
+  "Hash": "aG7Ch1fzz1iocQvakMnfyEK+m8rkjqSaEKpZ1kn10jY=",
   "Source": "prism_trust_foundation",
   "BasePath": "_content/prism_trust_foundation",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "prism_trust_foundation\\wwwroot",
       "Source": "prism_trust_foundation",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\bundle\\prism_trust_foundation.styles.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\bundle\\prism_trust_foundation.styles.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "prism_trust_foundation.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\bundle\\prism_trust_foundation.styles.css"
+      "OriginalItemSpec": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\bundle\\prism_trust_foundation.styles.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\prism_trust_foundation.bundle.scp.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\prism_trust_foundation.bundle.scp.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "prism_trust_foundation.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\prism_trust_foundation.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\prism_trust_foundation.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\css\\admin2.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\css\\admin2.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "css/admin2.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\admin2.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\css\\main.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\css\\main.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "css/main.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\css\\site.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\favicon.ico",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\js\\main.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\js\\main.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "js/main.js",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\js\\site.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\CannedFood.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\CannedFood.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "Picture/CannedFood.jpg",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\Picture\\CannedFood.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Coffee.webp",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Coffee.webp",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "Picture/Coffee.webp",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\Picture\\Coffee.webp"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\donate.svg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\donate.svg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "Picture/donate.svg",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\Picture\\donate.svg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\img-01.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\img-01.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "Picture/img-01.png",
       "AssetKind": "All",
@@ -1190,10 +1190,27 @@
       "OriginalItemSpec": "wwwroot\\Picture\\img-01.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Shirt.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Sad.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "Picture/Sad.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Picture\\Sad.png"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Shirt.jpg",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "Picture/Shirt.jpg",
       "AssetKind": "All",
@@ -1207,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\Picture\\Shirt.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Stationary.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Stationary.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "Picture/Stationary.jpg",
       "AssetKind": "All",
@@ -1224,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\Picture\\Stationary.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Umbrella.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\Umbrella.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "Picture/Umbrella.jpg",
       "AssetKind": "All",
@@ -1241,10 +1258,27 @@
       "OriginalItemSpec": "wwwroot\\Picture\\Umbrella.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\User.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\undraw_file_sync_ot38.svg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "Picture/undraw_file_sync_ot38.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Picture\\undraw_file_sync_ot38.svg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\Picture\\User.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "Picture/User.png",
       "AssetKind": "All",
@@ -1258,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\Picture\\User.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\16da8e5d-abae-43b9-9802-73ed0b1cf0a4.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\16da8e5d-abae-43b9-9802-73ed0b1cf0a4.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/16da8e5d-abae-43b9-9802-73ed0b1cf0a4.jpg",
       "AssetKind": "All",
@@ -1275,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\16da8e5d-abae-43b9-9802-73ed0b1cf0a4.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\16e3c539-c3e5-4f89-a127-3d8c81bdfa7a.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\16e3c539-c3e5-4f89-a127-3d8c81bdfa7a.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/16e3c539-c3e5-4f89-a127-3d8c81bdfa7a.jpg",
       "AssetKind": "All",
@@ -1292,10 +1326,44 @@
       "OriginalItemSpec": "wwwroot\\uploads\\16e3c539-c3e5-4f89-a127-3d8c81bdfa7a.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\275f7a2c-a845-40f6-bffe-0fd5659a3e4f.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\178df971-596d-4139-b5e0-ca74ac172ba4.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/178df971-596d-4139-b5e0-ca74ac172ba4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\178df971-596d-4139-b5e0-ca74ac172ba4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\19c9f362-b8ac-430d-a152-c45f885df24b.jpg",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/19c9f362-b8ac-430d-a152-c45f885df24b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\19c9f362-b8ac-430d-a152-c45f885df24b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\275f7a2c-a845-40f6-bffe-0fd5659a3e4f.jpg",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/275f7a2c-a845-40f6-bffe-0fd5659a3e4f.jpg",
       "AssetKind": "All",
@@ -1309,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\275f7a2c-a845-40f6-bffe-0fd5659a3e4f.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\3260a749-e6b7-425a-aeda-315271751359.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\3260a749-e6b7-425a-aeda-315271751359.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/3260a749-e6b7-425a-aeda-315271751359.png",
       "AssetKind": "All",
@@ -1326,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\3260a749-e6b7-425a-aeda-315271751359.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\344463d0-7e41-447b-8523-d7ff272bb8a1.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\344463d0-7e41-447b-8523-d7ff272bb8a1.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/344463d0-7e41-447b-8523-d7ff272bb8a1.png",
       "AssetKind": "All",
@@ -1343,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\344463d0-7e41-447b-8523-d7ff272bb8a1.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\3e3d0061-81a5-47af-b4e8-4e81e3c38133.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\3e3d0061-81a5-47af-b4e8-4e81e3c38133.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/3e3d0061-81a5-47af-b4e8-4e81e3c38133.jpg",
       "AssetKind": "All",
@@ -1360,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\3e3d0061-81a5-47af-b4e8-4e81e3c38133.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\4311958f-de47-48af-8b8b-4a4ef4723124.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\4311958f-de47-48af-8b8b-4a4ef4723124.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/4311958f-de47-48af-8b8b-4a4ef4723124.png",
       "AssetKind": "All",
@@ -1377,10 +1445,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\4311958f-de47-48af-8b8b-4a4ef4723124.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5445bc3b-cf9a-405f-b8a9-585b3e350641.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\462f02f8-a6aa-4d0f-b691-d78bc0c52bc3.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/462f02f8-a6aa-4d0f-b691-d78bc0c52bc3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\462f02f8-a6aa-4d0f-b691-d78bc0c52bc3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5445bc3b-cf9a-405f-b8a9-585b3e350641.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/5445bc3b-cf9a-405f-b8a9-585b3e350641.png",
       "AssetKind": "All",
@@ -1394,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\5445bc3b-cf9a-405f-b8a9-585b3e350641.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5e5375d9-af5f-42fb-9906-ff0d34fa5198.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5e5375d9-af5f-42fb-9906-ff0d34fa5198.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/5e5375d9-af5f-42fb-9906-ff0d34fa5198.jpg",
       "AssetKind": "All",
@@ -1411,10 +1496,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\5e5375d9-af5f-42fb-9906-ff0d34fa5198.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5e97ca00-a40c-4308-b815-91460b073dc7.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5e849038-4c93-4272-b08e-1acc7c5e7911.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/5e849038-4c93-4272-b08e-1acc7c5e7911.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\5e849038-4c93-4272-b08e-1acc7c5e7911.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\5e97ca00-a40c-4308-b815-91460b073dc7.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/5e97ca00-a40c-4308-b815-91460b073dc7.png",
       "AssetKind": "All",
@@ -1428,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\5e97ca00-a40c-4308-b815-91460b073dc7.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\62ee5247-14d9-4e46-9df2-53288c666af1.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\62ee5247-14d9-4e46-9df2-53288c666af1.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/62ee5247-14d9-4e46-9df2-53288c666af1.jpg",
       "AssetKind": "All",
@@ -1445,10 +1547,61 @@
       "OriginalItemSpec": "wwwroot\\uploads\\62ee5247-14d9-4e46-9df2-53288c666af1.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\c27954fb-f16e-4615-977c-97c63030805a.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\82d0fcb6-76e6-465d-a64c-331310d77620.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/82d0fcb6-76e6-465d-a64c-331310d77620.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\82d0fcb6-76e6-465d-a64c-331310d77620.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\9f79a8bd-49bb-4188-a9e2-caaaf8ae0e9b.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/9f79a8bd-49bb-4188-a9e2-caaaf8ae0e9b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9f79a8bd-49bb-4188-a9e2-caaaf8ae0e9b.png"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\bf8e86d1-e82f-4935-9c16-55da68e7d486.jpg",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/bf8e86d1-e82f-4935-9c16-55da68e7d486.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\bf8e86d1-e82f-4935-9c16-55da68e7d486.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\c27954fb-f16e-4615-977c-97c63030805a.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/c27954fb-f16e-4615-977c-97c63030805a.png",
       "AssetKind": "All",
@@ -1462,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\c27954fb-f16e-4615-977c-97c63030805a.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\c778ee68-91f9-4c41-b598-83b35c0cc0d2.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\c778ee68-91f9-4c41-b598-83b35c0cc0d2.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/c778ee68-91f9-4c41-b598-83b35c0cc0d2.jpg",
       "AssetKind": "All",
@@ -1479,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\c778ee68-91f9-4c41-b598-83b35c0cc0d2.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\d28cc5be-2067-4b64-8566-0192006654eb.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\d28cc5be-2067-4b64-8566-0192006654eb.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/d28cc5be-2067-4b64-8566-0192006654eb.jpg",
       "AssetKind": "All",
@@ -1496,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\d28cc5be-2067-4b64-8566-0192006654eb.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\d5efaef9-c5e7-462a-afa9-4fd34013cc04.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\d5efaef9-c5e7-462a-afa9-4fd34013cc04.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/d5efaef9-c5e7-462a-afa9-4fd34013cc04.png",
       "AssetKind": "All",
@@ -1513,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\d5efaef9-c5e7-462a-afa9-4fd34013cc04.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\e3c813ae-d3f9-4c04-9a53-336284fabbb9.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\e3c813ae-d3f9-4c04-9a53-336284fabbb9.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/e3c813ae-d3f9-4c04-9a53-336284fabbb9.jpg",
       "AssetKind": "All",
@@ -1530,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\e3c813ae-d3f9-4c04-9a53-336284fabbb9.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\ef50817c-3678-4568-b741-a289f939f498.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\ef50817c-3678-4568-b741-a289f939f498.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/ef50817c-3678-4568-b741-a289f939f498.png",
       "AssetKind": "All",
@@ -1547,10 +1700,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\ef50817c-3678-4568-b741-a289f939f498.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\f77ef6c6-0a70-4be0-a6fc-bc9360dcc659.jpeg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\f36d1955-15aa-4e71-9191-6ea095dc3245.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/f36d1955-15aa-4e71-9191-6ea095dc3245.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\f36d1955-15aa-4e71-9191-6ea095dc3245.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\f77ef6c6-0a70-4be0-a6fc-bc9360dcc659.jpeg",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/f77ef6c6-0a70-4be0-a6fc-bc9360dcc659.jpeg",
       "AssetKind": "All",
@@ -1564,10 +1734,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\f77ef6c6-0a70-4be0-a6fc-bc9360dcc659.jpeg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\noimage.jpg",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\fd936e77-f363-4ee0-b648-de5796299fdc.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/fd936e77-f363-4ee0-b648-de5796299fdc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\fd936e77-f363-4ee0-b648-de5796299fdc.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\noimage.jpg",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/noimage.jpg",
       "AssetKind": "All",
@@ -1581,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\noimage.jpg"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\user.png",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\user.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "uploads/user.png",
       "AssetKind": "All",
@@ -1598,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\user.png"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\animate\\animate.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\animate\\animate.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/animate/animate.css",
       "AssetKind": "All",
@@ -1615,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\animate\\animate.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap.css",
       "AssetKind": "All",
@@ -1632,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1649,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1666,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1683,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1700,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1717,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1734,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1751,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1768,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1785,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1802,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1819,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/js/bootstrap.js",
       "AssetKind": "All",
@@ -1836,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1853,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\popper.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\popper.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/js/popper.js",
       "AssetKind": "All",
@@ -1870,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\popper.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\popper.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\popper.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/js/popper.min.js",
       "AssetKind": "All",
@@ -1887,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\popper.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\tooltip.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\bootstrap\\js\\tooltip.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/bootstrap/js/tooltip.js",
       "AssetKind": "All",
@@ -1904,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\tooltip.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\css-hamburgers\\hamburgers.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\css-hamburgers\\hamburgers.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/css-hamburgers/hamburgers.css",
       "AssetKind": "All",
@@ -1921,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\css-hamburgers\\hamburgers.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\css-hamburgers\\hamburgers.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\css-hamburgers\\hamburgers.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/css-hamburgers/hamburgers.min.css",
       "AssetKind": "All",
@@ -1938,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\css-hamburgers\\hamburgers.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\jquery\\jquery-3.2.1.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\jquery\\jquery-3.2.1.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/jquery/jquery-3.2.1.min.js",
       "AssetKind": "All",
@@ -1955,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery-3.2.1.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\select2\\select2.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\select2\\select2.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/select2/select2.css",
       "AssetKind": "All",
@@ -1972,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\select2\\select2.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\select2\\select2.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\select2\\select2.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/select2/select2.js",
       "AssetKind": "All",
@@ -1989,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\select2\\select2.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\select2\\select2.min.css",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\select2\\select2.min.css",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/select2/select2.min.css",
       "AssetKind": "All",
@@ -2006,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\select2\\select2.min.css"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\select2\\select2.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\select2\\select2.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/select2/select2.min.js",
       "AssetKind": "All",
@@ -2023,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\select2\\select2.min.js"
     },
     {
-      "Identity": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\tilt\\tilt.jquery.min.js",
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\vendor\\tilt\\tilt.jquery.min.js",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
       "BasePath": "_content/prism_trust_foundation",
       "RelativePath": "vendor/tilt/tilt.jquery.min.js",
       "AssetKind": "All",

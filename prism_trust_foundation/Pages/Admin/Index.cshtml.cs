@@ -30,8 +30,17 @@ namespace prism_trust_foundation.Pages.Admin
             ApplicationUser? user = _svc.GetUserByEmail(Email);
             if (user != null)
             {
-                UserList = _svc.GetAll();
-                return Page();
+                if(contxt.HttpContext.Session.GetString("Admin") == "Yes")
+                {
+                    UserList = _svc.GetAll();
+                    return Page();
+                }
+                else
+                {
+                    TempData["FlashMessage.Type"] = "danger";
+                    TempData["FlashMessage.Text"] = string.Format("You have not an Admin.");
+                    return RedirectToPage("/Index");
+                }
             }
             else
             {

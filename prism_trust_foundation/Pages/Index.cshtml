@@ -1,18 +1,50 @@
 ﻿@page
+@inject IHttpContextAccessor contxt;
 @model prism_trust_foundation.Pages.IndexModel
 @{
-    Layout = "~/Pages/Shared/_Layout.cshtml";
     ViewData["Title"] = "Prism Trust Foundation";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
+    @*    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Impact Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+*@
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
     <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+
+    <!-- =======================================================
+    * Template Name: Impact - v1.2.0
+    * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
 
-<html lang="en">
 <body>
-    <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero">
         <div class="container position-relative">
             <div class="row gy-5" data-bs-aos="fade-in">
@@ -107,10 +139,10 @@
                                 Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                                 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
                             </p>
-                            @*
+@*
                             <div class="position-relative mt-4">
-                            <img src="assets/img/about-2.jpg" class="img-fluid rounded-4" alt="">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                                <img src="assets/img/about-2.jpg" class="img-fluid rounded-4" alt="">
+                                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
                             </div>*@
                         </div>
                     </div>
@@ -170,14 +202,14 @@
 
             </div>
         </section><!-- End Stats Counter Section -->
-        @* <!-- ======= Call To Action Section ======= -->
+       @* <!-- ======= Call To Action Section ======= -->
         <section id="call-to-action" class="call-to-action">
-        <div class="container text-center" data-bs-aos="zoom-out">
-        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
-        <h3>Call To Action</h3>
-        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a class="cta-btn" href="#">Call To Action</a>
-        </div>
+            <div class="container text-center" data-bs-aos="zoom-out">
+                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                <h3>Call To Action</h3>
+                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a class="cta-btn" href="#">Call To Action</a>
+            </div>
         </section><!-- End Call To Action Section -->
         <!-- ======= Our Services Section ======= -->*@
         <section id="services" class="services sections-bg">
@@ -271,7 +303,7 @@
 
                 <div class="row gy-3" style="margin-left:175px">
 
-                    <div class="col-xl-2 col-md-3 d-flex" data-bs-aos="fade-up" data-bs-aos-delay="100">
+                    <div class="col-xl-2 col-md-3 d-flex"  data-bs-aos="fade-up" data-bs-aos-delay="100">
                         <div class="member">
                             <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
                             <h4>Zhen Wei</h4>
@@ -326,7 +358,7 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="col-xl-2 col-md-3 d-flex" data-bs-aos="fade-up" data-bs-aos-delay="400">
                         <div class="member">
                             <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
@@ -345,6 +377,7 @@
 
             </div>
         </section><!-- End Our Team Section -->
+       
         <!-- ======= Frequently Asked Questions Section ======= -->
         <section id="faq" class="faq">
             <div class="container" data-bs-aos="fade-up">
@@ -578,7 +611,7 @@
 
         <div class="container mt-4">
             <div class="copyright">
-                &copy; Copyright <strong><span>Prism Trust Foundatioon</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->

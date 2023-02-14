@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using prism_trust_foundation.Models
-
-@inject SignInManager<ApplicationUser> SignInManager
+@inject IHttpContextAccessor contxt;
+@inject SignInManager<ApplicationUser> SignInManager;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,7 @@
                 <h1>Prism Trust Foundation<span></span></h1>
             </a>
 
-            @if (SignInManager.IsSignedIn(User))
+            @if (contxt.HttpContext.Session.GetString("Email") != null)
             {
                 <nav id="navbar" class="navbar">
                     <ul>
@@ -49,8 +49,13 @@
                         </li>
                         <li><a href="/BookTimeSlot">Timeslot Booking</a></li>
                         <li><a href="">Volunteer</a></li>
-                        <li><a href="/User/Logout">Log Out</a></li>
-                        <li><a href="/user/userdetails"><img src="/Picture/User.png" width="40px" height="40px" /></a></li>
+                        <li class="dropdown">
+                            <a href="#"><span><img src="@contxt.HttpContext.Session.GetString("Url")" width="40px" height="40px" /></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="/User/UserDetails">User Details</a></li>
+                                <li><a href="/Logout">Log Out</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             }
@@ -62,13 +67,13 @@
                         <li class="dropdown">
                             <a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#services">Services</a></li>
-                                <li><a href="#team">Team</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="/Login">About</a></li>
+                                <li><a href="/Login">Services</a></li>
+                                <li><a href="/Login">Team</a></li>
+                                <li><a href="/Login">Contact</a></li>
                             </ul>
                         </li>
-                        <li><a href="/User/Login">Timeslot Booking</a></li>
+                        <li><a href="/Login">Timeslot Booking</a></li>
                         @*                        <li><a href="">Recycle</a></li>
                     <li><a href="">Donation</a></li>*@
                         <li><a href="/Login">Volunteer</a></li>

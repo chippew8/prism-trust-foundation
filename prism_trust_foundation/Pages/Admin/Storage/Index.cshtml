@@ -3,6 +3,7 @@
 @model prism_trust_foundation.Pages.Storage.IndexModel
 @{
     ViewData["Title"] = "Inventory";
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
 
 <!DOCTYPE html>
@@ -156,8 +157,8 @@
                      data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Coupon Screens:</h6>
-                        <a class="collapse-item" href="../CouponAdmin/CouponCreate">Creating Coupon</a>
-                        <a class="collapse-item" href="../CouponAdmin/CouponRead">Viewing Coupon</a>
+                        <a class="collapse-item" href="/Admin/Coupon/CouponCreate">Creating Coupon</a>
+                        <a class="collapse-item" href="./Admin/Coupon/CouponRead">Viewing Coupon</a>
                         <div class="collapse-divider"></div>
                         @*                        <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>

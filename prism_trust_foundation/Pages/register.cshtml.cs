@@ -110,13 +110,6 @@ namespace prism_trust_foundation.Pages
                 }
                 else if (Upload == null)
                 {
-                    var uploadsFolder = "uploads";
-                    var imageFile = Guid.NewGuid() + Path.GetExtension(Upload.FileName);
-                    var imagePath = Path.Combine(_environment.ContentRootPath, "wwwroot", uploadsFolder, imageFile);
-                    using var fileStream = new FileStream(imagePath, FileMode.Create);
-                    await Upload.CopyToAsync(fileStream);
-                    var ImageURL = string.Format("/{0}/{1}", uploadsFolder, imageFile);
-
                     ApplicationUser? employee = _registerService.GetUserByNRIC(RModel.NRIC);
                     ApplicationUser? user = _registerService.GetUserByEmail(RModel.Email);
                     if (employee != null)
@@ -142,7 +135,6 @@ namespace prism_trust_foundation.Pages
                         Ban_Status = false,
                         Admin_Role = false,
                         BirthDate = RModel.BirthDate,
-                        ImageURL = ImageURL,
                         Gender = RModel.Gender
                     };
 

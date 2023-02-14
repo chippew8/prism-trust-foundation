@@ -78,6 +78,8 @@ namespace prism_trust_foundation.Pages.User
                         _svc.UpdateUser(user);
                         TempData["FlashMessage.Type"] = "success";
                         TempData["FlashMessage.Text"] = string.Format("User {0}'s avatar is been uploaded", user.Email);
+                        contxt.HttpContext.Session.Remove("Url");
+                        contxt.HttpContext.Session.SetString("Url", user.ImageURL);
                         return RedirectToPage("UserDetails");
                     }
                     else

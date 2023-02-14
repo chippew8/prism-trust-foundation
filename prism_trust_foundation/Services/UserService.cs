@@ -15,10 +15,12 @@ namespace prism_trust_foundation.Services
         {
             _context = context;
         }
+
         public List<ApplicationUser> GetAll()
         {
             return _context.AspNetUser.OrderBy(m => m.Id).ToList();
         }
+
         public ApplicationUser? GetUserByNRIC(string Nric)
         {
             ApplicationUser? applicationUser = _context.AspNetUser.FirstOrDefault(

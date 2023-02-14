@@ -23,7 +23,7 @@ namespace prism_trust_foundation.Pages.User
         }
 
         [BindProperty]
-        public UpdateDetails UdModel { get; set; }
+        public UpdateDetails UdModel { get; set; } = new();
 
         [BindProperty]
         public ApplicationUser UpdateUser { get; set; } = new();
@@ -35,6 +35,10 @@ namespace prism_trust_foundation.Pages.User
             if (user != null)
             {
                 UpdateUser = user;
+                UdModel.Gender = user.Gender;
+                UdModel.BirthDate = (DateTime)user.BirthDate;
+                UdModel.Fname = user.Fname;
+                UdModel.PhoneNum = user.PhoneNum;
                 return Page();
             }
             else

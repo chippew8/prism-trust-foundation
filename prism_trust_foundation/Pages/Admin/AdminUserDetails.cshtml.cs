@@ -30,9 +30,18 @@ namespace prism_trust_foundation.Pages.Admin
             ApplicationUser? user = _svc.GetUserByEmail(Email);
             if (user != null)
             {
-                ApplicationUser? selected = _svc.GetUserByEmail(id);
-                AdminHomeUser = selected;
-                return Page();
+                if (contxt.HttpContext.Session.GetString("Admin") == "Yes")
+                {
+                    ApplicationUser? selected = _svc.GetUserByEmail(id);
+                    AdminHomeUser = selected;
+                    return Page();
+                }
+                else
+                {
+                    TempData["FlashMessage.Type"] = "danger";
+                    TempData["FlashMessage.Text"] = string.Format("You have not an Admin.");
+                    return RedirectToPage("/Index");
+                }
             }
             else
             {
@@ -53,39 +62,39 @@ namespace prism_trust_foundation.Pages.Admin
                     {
                         if (sessionCount == 1)
                         {
-                            if (AdminHomeUser.Ban_Status == false)
+                            if (user.Ban_Status == false)
                             {
-                                AdminHomeUser.Ban_Status = true;
-                                _svc.UpdateUser(AdminHomeUser);
+                                user.Ban_Status = true;
+                                _svc.UpdateUser(user);
                                 TempData["FlashMessage.Type"] = "success";
-                                TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", AdminHomeUser.Email);
+                                TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", user.Email);
                                 return RedirectToPage("Index");
                             }
                             else
                             {
-                                AdminHomeUser.Ban_Status = false;
-                                _svc.UpdateUser(AdminHomeUser);
+                                user.Ban_Status = false;
+                                _svc.UpdateUser(user);
                                 TempData["FlashMessage.Type"] = "success";
-                                TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", AdminHomeUser.Email);
+                                TempData["FlashMessage.Text"] = string.Format("User {0}'s status is updated", user.Email);
                                 return RedirectToPage("Index");
                             }
                         }
                         else if (sessionCount == 2)
                         {
-                            if(AdminHomeUser.Admin_Role == false)
+                            if(user.Admin_Role == false)
                             {
-                                AdminHomeUser.Admin_Role = true;
-                                _svc.UpdateUser(AdminHomeUser);
+                                user.Admin_Role = true;
+                                _svc.UpdateUser(user);
                                 TempData["FlashMessage.Type"] = "success";
-                                TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);
+                                TempData["FlashMessage.Text"] = string.Format("User {0} is updated", user.Email);
                                 return RedirectToPage("Index");
                             }
                             else
                             {
-                                AdminHomeUser.Admin_Role = false;
-                                _svc.UpdateUser(AdminHomeUser);
+                                user.Admin_Role = false;
+                                _svc.UpdateUser(user);
                                 TempData["FlashMessage.Type"] = "success";
-                                TempData["FlashMessage.Text"] = string.Format("User {0} is updated", AdminHomeUser.Email);
+                                TempData["FlashMessage.Text"] = string.Format("User {0} is updated", user.Email);
                                 return RedirectToPage("Index");
                             }
                             
