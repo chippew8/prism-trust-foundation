@@ -520,7 +520,7 @@
                         <div>
                                 <input type="submit" asp-route-sessioncount="1" value="Back to List" class="btn btn-primary" />
                                 <input type="submit" asp-route-sessioncount="2" value="Ban Account" class="btn btn-primary" />
-                                @if (Model.AdminHomeUser.Email != contxt.HttpContext.Session.GetString("Email"))
+                                @if (Model.AdminHomeUser.Admin_Role != true)
                                 {
                                     <input type="submit" asp-route-sessioncount="3" value="Change to Admin" class="btn btn-primary" />
                                 }                              
