@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using prism_trust_foundation.Models;
 
 namespace EDP_Project.Models
 {
@@ -21,11 +22,11 @@ namespace EDP_Project.Models
         [DataType(DataType.Date)]
         [Column(TypeName = "date")]
         [Display(Name = "Coupon Expiration Date")]
-        public DateTime Expiry_Date { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+        public DateTime Expiry_Date { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day + 10);
 
         [Display(Name = "Total Coupon Redeemed")]
         public int Total_Coupon_Redeemed { get; set; }
-        
+
         [Required]
         [Display(Name = "No. of Coupons Created"),]
         public int Total_Coupon_Quantity { get; set; }
@@ -38,7 +39,10 @@ namespace EDP_Project.Models
         public int Points_to_redeem { get; set; }
 
         [MaxLength(50)]
+        [DataType(DataType.Upload)]
         public string? ImageURL { get; set; }
         public ICollection<CouponRedemption>? CouponRedemptions { get; set; }
+
+        public ICollection<ApplicationUser>? User { get; set; }
     }
 }

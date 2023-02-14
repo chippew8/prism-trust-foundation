@@ -1,19 +1,31 @@
 using EDP_Project.Models;
 using EDP_Project.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using prism_trust_foundation.Models;
+using prism_trust_foundation.Services;
 
 namespace EDP_Project.Pages
 {
     public class CouponRedeemModel : PageModel
     {
         private readonly CouponService _couponService;
+        private readonly UserManager<ApplicationUser> userManager;
         private readonly CouponRedemptionService _couponRedemptionService;
+        private readonly AuthDbContext _db;
+        private readonly UserService _userService;
 
-        public CouponRedeemModel(CouponService couponService, CouponRedemptionService couponRedemptionService)
+
+
+        public CouponRedeemModel(CouponService couponService, CouponRedemptionService couponRedemptionService,
+            AuthDbContext db, UserService userService, UserManager<ApplicationUser> userManager)
         {
             _couponService = couponService;
             _couponRedemptionService = couponRedemptionService;
+            _db = db;
+            _userService = userService;
+            this.userManager = userManager;
         }
 
         [BindProperty]
@@ -22,15 +34,23 @@ namespace EDP_Project.Pages
         public CouponRedemption MyCouponRedemption { get; set; } = new();
 
         public List<Coupon> CouponList { get; set; } = new();
+        /*        [BindProperty]
+                public ApplicationUser MyUser { get; set; } = new();*/
+
 
         public void OnGet()
         {
             CouponList = _couponService.GetAll();
+
+            string? username = User.Identity?.Name;
+
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost()
         {
+            var user = await userManager.GetUserAsync(User);
             Coupon? coupon = _couponService.GetCouponById(MyCoupon.CouponId);
+            ApplicationUser? applicationUser = _userService.GetUserByEmail(user.Email);
             CouponRedemption? couponRedemption = _couponRedemptionService.GetCouponRedemptionById(MyCouponRedemption.CouponRedemptionId);
             if (coupon != null)
             {
@@ -38,20 +58,39 @@ namespace EDP_Project.Pages
                 TempData["FlashMessage.Type"] = "success";
                 TempData["FlashMessage.Text"] = string.Format("Coupon ID {0} has been redeemed", MyCoupon.CouponId);
             }
-            
+
             if (couponRedemption != null)
             {
-                MyCouponRedemption.Coupon = coupon;
                 MyCouponRedemption.Date_of_Redemption = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+                MyCouponRedemption.Coupon = coupon;
+                MyCouponRedemption.ApplicationUser = applicationUser;
+
+                MyCouponRedemption.CouponId = coupon.CouponId;
+                MyCouponRedemption.UserId = applicationUser.Email;
+
                 _couponRedemptionService.AddCouponRedemption(MyCouponRedemption);
+
+                applicationUser.Coupon.Add(coupon);
+                _db.SaveChanges();
                 TempData["FlashMessage.Type"] = "success";
                 TempData["FlashMessage.Text"] = string.Format("Coupon ID {0} has been redeemed", MyCoupon.CouponId);
             }
             else if (couponRedemption == null)
             {
                 MyCouponRedemption.Date_of_Redemption = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
                 MyCouponRedemption.Coupon = coupon;
+                MyCouponRedemption.ApplicationUser = applicationUser;
+
+                MyCouponRedemption.CouponId = coupon.CouponId;
+                MyCouponRedemption.UserId = applicationUser.Id;
+
                 _couponRedemptionService.AddCouponRedemption(MyCouponRedemption);
+
+                applicationUser.Coupon.Add(coupon);
+                _db.SaveChanges();
+                /*coupon.User.Add(applicationUser);*/
                 TempData["FlashMessage.Type"] = "success";
                 TempData["FlashMessage.Text"] = string.Format("Coupon ID {0} has been redeemed", MyCoupon.CouponId);
             }
@@ -60,5 +99,7 @@ namespace EDP_Project.Pages
 
             return Redirect("/Index");
         }
+
+
     }
 }

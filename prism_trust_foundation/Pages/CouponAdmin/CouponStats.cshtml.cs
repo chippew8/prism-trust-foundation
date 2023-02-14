@@ -33,7 +33,7 @@ namespace EDP_Project.Pages.CouponAdmin
             CouponList = _couponService.GetAll();
 
             CouponRedemptionList = _couponRedemptionService.GetAll();
-            
+
         }
     }
 }

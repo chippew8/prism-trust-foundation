@@ -1,9 +1,10 @@
 ﻿@page
 @model EDP_Project.Pages.CouponAdmin.CouponStatsModel
 @{
-    ViewData["Title"] = "Coupon Create";
-    Layout = "~/Pages/Shared/_Layout2.cshtml";
+    ViewData["Title"] = "Coupon Stats";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
 }
+
 <head>
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -18,7 +19,7 @@
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="~/css/admin2.css" asp-append-version="true" />
 
-    
+
 </head>
 
 <body id="page-top">
@@ -121,7 +122,7 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item active" >
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCharts"
                    aria-expanded="true" aria-controls="collapseCharts">
                     <i class="fa-solid fa-chart-simple"></i>
@@ -371,20 +372,46 @@
                 </nav>
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
-                        <div class="container-fluid">
+                <div class="container-fluid">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Coupon Statistics</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
+                        </a>
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
                         @{
+                            var today = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
                             var totalCouponRedeemed = Model.CouponRedemptionList.Count;
-                            var couponQuantityCount = Model.MyCoupon.Total_Coupon_Quantity;
+                            var totalcount = 0;
+                            var currentcount = 0;
+                            @foreach (var elem in Model.CouponList)
+                            {
+
+                                totalcount += elem.Total_Coupon_Quantity;
+                            };
+
+                            @foreach (var elem in Model.CouponList)
+                            {
+
+                                currentcount += elem.Current_Coupon_Quantity;
+                            };
+
+                            var todayredeemcount = 0;
+                            @foreach (var elem in Model.CouponRedemptionList)
+                            {
+                                if (elem.Date_of_Redemption == today)
+                                {
+                                    todayredeemcount += 1;
+                                }
+                            }
+                                        ;
+
                         }
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-4 col-md-6 mb-4">
@@ -393,8 +420,9 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Coupons Created</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                                Total Coupons Created
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">@totalcount</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -411,8 +439,9 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Current Coupon Quantities</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                                Current Coupon Quantities
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">@currentcount</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -441,7 +470,7 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
 
                     <!-- Content Row -->
@@ -452,16 +481,15 @@
                         <div class="col-xl-8 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Coupon Redeem Overview</h6>
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Coupon Redeem Graph</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
+                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Dropdown Header:</div>
                                             <a class="dropdown-item" href="#">Action</a>
                                             <a class="dropdown-item" href="#">Another action</a>
@@ -478,68 +506,59 @@
                                 </div>
                             </div>
                         </div>
-                <!-- /.container-fluid -->
+                        <!-- /.container-fluid -->
 
-            </div>
+                    </div>
 
-                @*<canvas  id="myChart" style="max-width:700px;margin-left:auto;margin-right:auto;margin-top:200px"></canvas>*@
-
-
+                    @*<canvas  id="myChart" style="max-width:700px;margin-left:auto;margin-right:auto;margin-top:200px"></canvas>*@
 
 
-            <!-- End of Main Content -->
-            <!-- Footer -->
-            @*            <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
-            </div>
-            </div>
-            </footer>*@
-            <!-- End of Footer -->
 
-        </div>
-        <!-- End of Content Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+                    <!-- End of Main Content -->
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                <!-- End of Content Wrapper -->
+
+            </div>
+            <!-- End of Page Wrapper -->
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="login.html">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- Bootstrap core JavaScript-->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
 
-    <script src="https://kit.fontawesome.com/3336a4ae8e.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+            <script src="https://kit.fontawesome.com/3336a4ae8e.js" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </body>
 
 
@@ -560,106 +579,106 @@
 
 
 @section Scripts {
-    @{        
+    @{
     }
     }
 
     <script>
         var today = new Date();
-		var dd = today.getDate();
-		var mm = today.getMonth() + 1;
-		var yyyy = today.getFullYear();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
 
-		if (dd < 10){
-			dd = "0" + dd;
-		}
+        if (dd < 10) {
+            dd = "0" + dd;
+        }
 
-		if (mm < 10){
-			mm = "0" + mm
-		}
+        if (mm < 10) {
+            mm = "0" + mm
+        }
 
-		today = yyyy + "-" + mm + "-" + dd;
+        today = yyyy + "-" + mm + "-" + dd;
     </script>
 
     <script>
         var yesterday = new Date();
-		var dd = yesterday.getDate() -1 ;
-		var mm = yesterday.getMonth() + 1;
-		var yyyy = yesterday.getFullYear();
+        var dd = yesterday.getDate() - 1;
+        var mm = yesterday.getMonth() + 1;
+        var yyyy = yesterday.getFullYear();
 
-		if (dd < 10){
-			dd = "0" + dd;
-		}
+        if (dd < 10) {
+            dd = "0" + dd;
+        }
 
-		if (mm < 10){
-			mm = "0" + mm
-		}
+        if (mm < 10) {
+            mm = "0" + mm
+        }
 
-		yesterday = yyyy + "-" + mm + "-" + dd;
+        yesterday = yyyy + "-" + mm + "-" + dd;
     </script>
 
     <script>
         var twodaysback = new Date();
-		var dd = twodaysback.getDate() - 2 ;
-		var mm = twodaysback.getMonth() + 1;
-		var yyyy = twodaysback.getFullYear();
+        var dd = twodaysback.getDate() - 2;
+        var mm = twodaysback.getMonth() + 1;
+        var yyyy = twodaysback.getFullYear();
 
-		if (dd < 10){
-			dd = "0" + dd;
-		}
+        if (dd < 10) {
+            dd = "0" + dd;
+        }
 
-		if (mm < 10){
-			mm = "0" + mm
-		}
+        if (mm < 10) {
+            mm = "0" + mm
+        }
 
-		twodaysback = yyyy + "-" + mm + "-" + dd;
+        twodaysback = yyyy + "-" + mm + "-" + dd;
     </script>
 
     <script>
         var threedaysback = new Date();
-		var dd = threedaysback.getDate() - 3 ;
-		var mm = threedaysback.getMonth() + 1;
-		var yyyy = threedaysback.getFullYear();
+        var dd = threedaysback.getDate() - 3;
+        var mm = threedaysback.getMonth() + 1;
+        var yyyy = threedaysback.getFullYear();
 
-		if (dd < 10){
-			dd = "0" + dd;
-		}
+        if (dd < 10) {
+            dd = "0" + dd;
+        }
 
-		if (mm < 10){
-			mm = "0" + mm
-		}
+        if (mm < 10) {
+            mm = "0" + mm
+        }
 
-		threedaysback = yyyy + "-" + mm + "-" + dd;
+        threedaysback = yyyy + "-" + mm + "-" + dd;
     </script>
 
     <script>
         var fourdaysback = new Date();
-		var dd = fourdaysback.getDate() - 4 ;
-		var mm = fourdaysback.getMonth() + 1;
-		var yyyy = fourdaysback.getFullYear();
+        var dd = fourdaysback.getDate() - 4;
+        var mm = fourdaysback.getMonth() + 1;
+        var yyyy = fourdaysback.getFullYear();
 
-		if (dd < 10){
-			dd = "0" + dd;
-		}
+        if (dd < 10) {
+            dd = "0" + dd;
+        }
 
-		if (mm < 10){
-			mm = "0" + mm
-		}
+        if (mm < 10) {
+            mm = "0" + mm
+        }
 
-		fourdaysback = yyyy + "-" + mm + "-" + dd;
+        fourdaysback = yyyy + "-" + mm + "-" + dd;
     </script>
 
-    
 
+    @*
     <script>
-        var xValues = [fourdaysback, threedaysback, twodaysback, yesterday, today];
+        var xValues = [1, 2, 3, 4, 5];
 
         new Chart("myChart", {
             type: "line",
             data: {
                 labels: xValues,
                 datasets: [{
-                    data: [1, 2, 3, 4, count],
+                    data: [1, 2, 3, 4, 5],
                     borderColor: "red",
                     fill: false
                 }]
@@ -668,4 +687,73 @@
                 legend: { display: false }
             }
         });
+    </script>*@
+
+    <script>
+        var getRevenueData = $.get('/CouponAdmin/CouponStats')
+        getRevenueData.done(function (data) {
+            var ctxrevenue = document.getElementById("myChart");
+
+            labels = [];
+
+            let values = []
+            data.forEach(element => {
+                labels.push(element.dateOfPayment)
+
+            });
+
+
+            data.forEach(element => {
+                values.push(element.cost)
+
+            });
+            var myLineChart = new Chart(ctxrevenue, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Sessions",
+                        lineTension: 0.3,
+                        backgroundColor: "rgba(2,117,216,0.2)",
+                        borderColor: "rgba(2,117,216,1)",
+                        pointRadius: 5,
+                        pointBackgroundColor: "rgba(2,117,216,1)",
+                        pointBorderColor: "rgba(255,255,255,0.8)",
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                        pointHitRadius: 20,
+                        pointBorderWidth: 2,
+                        data: data,
+                    }],
+                },
+                options: {
+                    scales: {
+                        xAxes: [{
+                            time: {
+                                unit: 'date'
+                            },
+                            gridLines: {
+                                display: false
+                            },
+                            ticks: {
+                                maxTicksLimit: 7
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                min: 0,
+                                max: 40000,
+                                maxTicksLimit: 5
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, .125)",
+                            }
+                        }],
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+        })
     </script>

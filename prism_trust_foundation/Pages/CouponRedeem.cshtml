@@ -1,96 +1,29 @@
 ﻿@page
+@using Pages;
+@using Microsoft.AspNetCore.Identity
+@using prism_trust_foundation.Services;
+@using prism_trust_foundation.Models
+@inject UserManager<ApplicationUser> _userManager;
 @model EDP_Project.Pages.CouponRedeemModel
 @{
-    Layout = "~/Pages/Shared/_Layout2.cshtml";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
+
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    @*    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Impact Bootstrap Template - Index</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    *@
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
-
-    <!-- =======================================================
-    * Template Name: Impact - v1.2.0
-    * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
-</head>
-
 <body>
-
-    <!-- ======= Header ======= -->
-
-    <header id="header" class="header d-flex align-items-center">
-
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1>Prism Trust Foundation<span>.</span></h1>
-            </a>
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a href="/Index">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#team">Team</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Recycle</a></li>
-                    <li><a href="">Donation</a></li>
-                    <li><a href="">Volunteer</a></li>
-                    <li><a href="">Require Assistance</a></li>
-                    <li><img src="/Picture/User.png" width="40px" height="40px" /></li>
-                </ul>
-            </nav><!-- .navbar -->
-
-            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-        </div>
-    </header><!-- End Header -->
-    <!-- End Header -->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero">
         @{
             var couponListCount = Model.CouponList.Count;
             var todays_date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
+            var user = await _userManager.GetUserAsync(User);
         }
         @if (couponListCount.Equals(0))
         {
-            <h1 class="display-4">There are no coupons</h1>
+            <h1 class="display-4" style="text-align:center;color:white;">There are no coupons</h1>
             @*<div class="wrapper">
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark_check" fill="none" d="M14.1 14.1l23.8 23.8 m0,-23.8 l-23.8,23.8" /></svg>
         </div>*@
@@ -131,41 +64,52 @@
                                     <td>@item.Current_Coupon_Quantity</td>
                                     <td>@item.Points_to_redeem</td>
                                     <td>
-                                        @if(@item.Current_Coupon_Quantity == 0){
+                                        @if (@item.Current_Coupon_Quantity <= 0)
+                                        {
                                             <p style="color:black">No more of this coupon available</p>
                                         }
-                                        else{
-                                            if (@item.Expiry_Date < todays_date){
+                                        else
+                                        {
+                                            @if (@item.Expiry_Date < todays_date)
+                                            {
                                                 <p style="color:black">Coupon has expired</p>
                                             }
-                                            else{
-                                                <form method="post">
-                                                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                                            else
+                                            {
+                                                @if (user.points < @item.Points_to_redeem)
+                                                {
+                                                    <p style="color:black">You do not have enough points to redeem the coupon. Points: @user.points/@item.Points_to_redeem</p>
+                                                }
+                                                else
+                                                {
+                                                    <form method="post">
+                                                        @*<div asp-validation-summary="All" class="text-danger"></div>*@
 
 
-                                                    <div class="AddPopUp">
-                                                        <input class="form-control" asp-for="MyCoupon.CouponId" type="hidden" value="@item.CouponId" />
-                                                        <a class="btn btn-primary savodel" data-bs-toggle="modal" data-bs-target="#MyPopUp_@item.CouponId">Redeem</a>
-                                                    </div>
+                                                        <div class="AddPopUp">
+                                                            <input class="form-control" asp-for="MyCoupon.CouponId" type="hidden" value="@item.CouponId" />
+                                                            <a class="btn btn-primary savodel" data-bs-toggle="modal" data-bs-target="#MyPopUp_@item.CouponId">Redeem</a>
+                                                        </div>
 
-                                                    <div class="modal fade" id="MyPopUp_@item.CouponId" role="alert">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-body">
-                                                                    <h4>Are you sure you want to redeem coupon: @item.CouponId</h4>
-                                                                    <br>
-                                                                    <a class="btn btn-secondary poppy" href="/CouponRedeem" style="margin-left:300px">Cancel</a>
+                                                        <div class="modal fade" id="MyPopUp_@item.CouponId" role="alert">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-body">
+                                                                        <h4>Are you sure you want to redeem coupon: @item.CouponId</h4>
+                                                                        <br>
+                                                                        <a class="btn btn-secondary poppy" href="/CouponRedeem" style="margin-left:300px">Cancel</a>
 
-                                                                    <input class="form-control" asp-for="MyCoupon.CouponId" type="hidden" value="@item.CouponId" />
-                                                                    <input type="submit" value="Redeem" class="btn btn-primary savodelconfirm" />
+                                                                        <input class="form-control" asp-for="MyCoupon.CouponId" type="hidden" value="@item.CouponId" />
+                                                                        <input type="submit" value="Redeem" class="btn btn-primary savodelconfirm" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </form>
+                                                    </form>
+                                                }
                                             }
                                         }
-                                        
+
                                     </td>
                                 </tr>
 
@@ -176,12 +120,8 @@
             </div>
 
         }
-        </section>
+    </section>
     <!-- End Hero Section -->
-
-    
-    
-
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -199,7 +139,6 @@
 </body>
 
 </html>
-
 <style>
     body{
         background-color:#008374;

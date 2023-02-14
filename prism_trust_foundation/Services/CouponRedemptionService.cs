@@ -6,9 +6,9 @@ namespace EDP_Project.Services
 {
     public class CouponRedemptionService
     {
-        private readonly MyDbContext _context;
+        private readonly AuthDbContext _context;
 
-        public CouponRedemptionService(MyDbContext context)
+        public CouponRedemptionService(AuthDbContext context)
         {
             _context = context;
         }
@@ -26,13 +26,6 @@ namespace EDP_Project.Services
             CouponRedemption? couponRedemption = _context.CouponRedemptions.FirstOrDefault(x => x.CouponRedemptionId.Equals(id));
             return couponRedemption;
         }
-
-        //public void AddCouponDateOfRedemption(CouponRedemption couponRedemption)
-        //{
-        //    couponRedemption.Date_of_Redemption = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-        //    _context.CouponRedemptions.Add(couponRedemption);
-        //    _context.SaveChanges();
-        //}
 
         public void AddCouponRedemption(CouponRedemption couponRedemption)
         {

@@ -7,9 +7,9 @@ namespace EDP_Project.Services
 {
 	public class CouponService
 	{
-        private readonly MyDbContext _context;
+        private readonly AuthDbContext _context;
 
-        public CouponService(MyDbContext context)
+        public CouponService(AuthDbContext context)
         {
             _context = context;
         }
@@ -24,7 +24,7 @@ namespace EDP_Project.Services
 
         public Coupon? GetCouponById(string id)
         {
-            Coupon? coupon = _context.Coupons.FirstOrDefault(x => x.CouponId.Equals(id));
+            Coupon? coupon = _context.Coupons.Include(u => u.User).FirstOrDefault(x => x.CouponId.Equals(id));
             return coupon;
         }
 

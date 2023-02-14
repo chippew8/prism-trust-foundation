@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using EDP_Project.Models;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using static Azure.Core.HttpHeader;
 
@@ -24,6 +25,14 @@ namespace prism_trust_foundation.Models
         public string? ImageURL { get; set; }
 
         public string? Gender { get; set; }
+
+        public int points { get; set; }
+
+/*        public ICollection<Timeslot>? Timeslot { get; set; }
+*/
+        public ICollection<Coupon>? Coupon { get; set; }
+
+        public ICollection<CouponRedemption>? CouponRedemption { get; set; }
 
     }
 }

@@ -3685,19 +3685,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xuanx\\.nuget\\packages\\": {}
+    "C:\\Users\\ngyew\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+      "projectUniqueName": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
       "projectName": "prism_trust_foundation",
-      "projectPath": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
-      "packagesPath": "C:\\Users\\xuanx\\.nuget\\packages\\",
-      "outputPath": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
+      "projectPath": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+      "packagesPath": "C:\\Users\\ngyew\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ngyew\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xuanx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ngyew\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3765,7 +3765,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
