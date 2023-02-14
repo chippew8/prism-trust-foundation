@@ -15,6 +15,8 @@
             <th>@Html.DisplayNameFor(model => model.UserList[0].PhoneNum)</th>
             <th>@Html.DisplayNameFor(model => model.UserList[0].BirthDate)</th>
             <th>@Html.DisplayNameFor(model => model.UserList[0].Gender)</th>
+            <th>Role</th>
+            <th>Ban Status</th>
             <th></th>
         </tr>
     </thead>
@@ -29,6 +31,20 @@
                     <td>@item.PhoneNum</td>
                     <td>@item.BirthDate</td>
                     <td>@item.Gender</td>
+                    @if (item.Admin_Role == true)
+                    {
+                        <td>Admin</td>
+                    }else{
+                        <td>User</td>
+                    }
+                    @if (item.Ban_Status == true)
+                    {
+                        <td>Ban</td>
+                    }
+                    else
+                    {
+                        <td>Not Ban</td>
+                    }
                     <td>
                         <a asp-page="/Admin/AdminUserDetails" asp-route-id="@item.Email">View</a>
                     </td>

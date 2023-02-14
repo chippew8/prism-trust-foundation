@@ -44,24 +44,32 @@ namespace prism_trust_foundation.Pages
                 else */
                 if (identityResult.Succeeded)
                 {
-                    contxt.HttpContext.Session.SetString("Email", LModel.Email);
                     ApplicationUser? user = _registerService.GetUserByEmail( LModel.Email);
+                    contxt.HttpContext.Session.SetString("Email", user.Email);
+                    contxt.HttpContext.Session.SetString("Url", user.ImageURL);
+                    contxt.HttpContext.Session.SetString("Password", LModel.Password);
                     if (user.Admin_Role == true)
                     {
+                        contxt.HttpContext.Session.SetString("Admin", "Yes");
                         return RedirectToPage("/Admin/Index");
                     }
                     else
                     {
+                        contxt.HttpContext.Session.SetString("Admin", "No");
                         return RedirectToPage("/User/UserDetails");
                     }
                 }
                 else
                 {
                     TempData["FlashMessage.Type"] = "danger";
-                    TempData["FlashMessage.Text"] = string.Format("You have not created an account yet.");
+                    TempData["FlashMessage.Text"] = string.Format("Username or Password incorrect");
                     return Page();
                 }
-                ModelState.AddModelError("", "Username or Password incorrect");
+            }
+            else
+            {
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("Username or Password is required");
             }
             return Page();
         }

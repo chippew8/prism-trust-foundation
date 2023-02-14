@@ -9,8 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<AuthDbContext>();
+
 builder.Services.AddScoped<EventService>();
-builder.Services.AddScoped<InventoryService>();
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.User.RequireUniqueEmail = true;
@@ -47,10 +48,6 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Lockout.MaxFailedAccessAttempts = 3;
 
 });
-builder.Services.AddScoped<ProductServices>();
-
-builder.Services.AddScoped<cartService>();
-builder.Services.AddScoped<itemRequestService>();
 
 var app = builder.Build();
 
