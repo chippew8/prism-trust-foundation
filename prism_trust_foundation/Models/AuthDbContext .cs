@@ -23,10 +23,14 @@ namespace prism_trust_foundation.Models
 		public DbSet<VolunteerShift> VolunteerShift { get; set; }
 		public DbSet<VolunteerShiftBook> VolunteerShiftBook { get; set; }
 
+        /*tristan's db*/
         public DbSet<itemRequest> itemRequests { get; set; }
 
         public DbSet<cart> cart { get; set; }
+        public DbSet<donationRecipient> donationRecipients { get; set; }
+        /*---------*/
         public DbSet<Product> Products { get; set; }
 
+        
 	}
 }

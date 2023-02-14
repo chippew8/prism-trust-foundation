@@ -10,6 +10,14 @@
 </head>
 <body>
 
+    @if (Model.Products == null)
+    {
+
+        <div>Out of stock!</div>
+
+
+    }
+    else{
     <h3>Product List</h3>
     <table border="1">
         <tr>
@@ -31,9 +39,9 @@
             </tr>
         }
     </table>
- 
+            }
 
-        @if(Model.MyCart.Count() == 0){
+        @if(Model.MyCart == null){
 
 
 
@@ -42,13 +50,11 @@
         else{
         <table border="1">
             <tr>
-                <th>Action</th>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Photo</th>
-                <th>Price</th>
+                
+                <th>Item Name</th>
+
                 <th>Quantity </th>
-                <th>Sub Total</th>
+                
                     </tr>
             @foreach (var item in Model.MyCart)
             {
@@ -60,7 +66,7 @@
                     <td>@Model.FindbyId(item.productId).Name</td>
                     
                     <td>@item.quantity</td>
-                    @*<td>@Model.FindbyId(item.productId).Price</td>*@
+                    
                     <td align="center">
                         <a asp-page="cart" asp-page-handler="delete" asp-route-id="@item.productId">x</a>
                     </td>
@@ -71,7 +77,7 @@
             }
            
             </table>
-        <a asp-page="Index" asp-page-handler="submitreq" asp-route-id="1">Submit</a>
+        <a asp-page="reqItems" asp-page-handler="submitreq" asp-route-id="1">Submit</a>
         }
 
     

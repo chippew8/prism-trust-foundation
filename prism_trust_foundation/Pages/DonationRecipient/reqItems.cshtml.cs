@@ -14,14 +14,17 @@ namespace prism_trust_foundation.Pages.DonationRecipient
             private readonly ProductServices _productService;
             private readonly cartService _cartServices;
             private readonly itemRequestService _itemRequestService;
-            private readonly ILogger<IndexModel> _logger;
-            public List<Product> Products { get; set; }
+            private readonly UserService _userService;
+            private readonly IHttpContextAccessor contxt;
+        public List<Product> Products { get; set; }
             public List<cart> MyCart { get; set; }
-            public reqItemsModel(ProductServices productService, cartService cartServices, itemRequestService itemRequestService)
+            public reqItemsModel(ProductServices productService, cartService cartServices, itemRequestService itemRequestService, IHttpContextAccessor contextAccessor, UserService userService)
             {
                 _productService = productService;
                 _cartServices = cartServices;
                 _itemRequestService = itemRequestService;
+                _userService = userService;
+                contxt = contextAccessor;
             }
 
 
@@ -43,7 +46,11 @@ namespace prism_trust_foundation.Pages.DonationRecipient
             }
             public IActionResult OnGetBuyNow(string id)
             {
-                var newCart = _cartServices.CheckProductById(id);
+
+            string Email = contxt.HttpContext.Session.GetString("Email");
+            ApplicationUser? user = _userService.GetUserByEmail(Email);
+
+            var newCart = _cartServices.CheckProductById(id);
                 if (newCart == null)
                 {
                     _cartServices.AddCart(new cart
@@ -51,7 +58,7 @@ namespace prism_trust_foundation.Pages.DonationRecipient
                         Id = (_cartServices.GetAll().Count() + 1).ToString(),
                         productId = id,
                         quantity = 1,
-                        userId = "1"
+                        userId = Email
                     }
                         );
 

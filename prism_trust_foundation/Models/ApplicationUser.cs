@@ -25,5 +25,6 @@ namespace prism_trust_foundation.Models
 
         public string? Gender { get; set; }
 
+        public bool? dRecip_Role { get; set; }
     }
 }

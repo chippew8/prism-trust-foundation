@@ -12,7 +12,14 @@ namespace prism_trust_foundation.Services
         }
         public List<cart> GetAll()
         {
-            return _context.cart.OrderBy(d => d.Id).ToList();
+            try
+            {
+                return _context.cart.OrderBy(d => d.Id).ToList();
+            }
+            catch(InvalidOperationException)
+            {
+                return null;
+            }
         }
         public void AddCart(cart cart)
         {

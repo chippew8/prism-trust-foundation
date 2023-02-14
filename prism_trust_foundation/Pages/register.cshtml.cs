@@ -89,7 +89,9 @@ namespace prism_trust_foundation.Pages
                         Admin_Role = false,
                         BirthDate = RModel.BirthDate,
                         ImageURL = ImageURL,
-                        Gender = RModel.Gender
+                        Gender = RModel.Gender,
+                        dRecip_Role = false
+                        
                     };
 
                     var result = await userManager.CreateAsync(newregister, RModel.Password);

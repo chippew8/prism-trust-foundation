@@ -13,7 +13,14 @@ namespace prism_trust_foundation.Services
             }
             public List<itemRequest> GetAll()
             {
+            try
+            {
                 return _context.itemRequests.ToList();
+            }
+            catch (InvalidOperationException)
+            {
+                return null;
+            }
             }
             public void AddRequest(itemRequest x)
             {

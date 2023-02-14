@@ -233,6 +233,9 @@ namespace prismtrustfoundation.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<bool?>("dRecip_Role")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -407,6 +410,37 @@ namespace prismtrustfoundation.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("cart");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.donationRecipient", b =>
+                {
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Fname")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("NRIC")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("monthlyIncome")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("nationality")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("email");
+
+                    b.ToTable("donationRecipients");
                 });
 
             modelBuilder.Entity("prism_trust_foundation.Models.itemRequest", b =>
