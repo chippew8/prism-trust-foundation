@@ -1,17 +1,20 @@
 ﻿@page
 @model prism_trust_foundation.Pages.Admin.Timeslots.TimeslotListModel
 @{
+    var TargetId = Model.TargetId;
 }
 <h1 class="display-4" style="text-align:center;">Current Timeslots created</h1>
 
 
 <div class="container">
     <div class="card card-body">
-
+        
         
                 @if(Model.TimeslotList.Count <= 0)
                 {
+                    
                     <div>No Timeslots for this event currently</div>
+                    <a class="btn btn-secondary ms-2" asp-page="/Admin/Timeslots/AddTimeslot" asp-route-id="@TargetId">Add Timeslot</a>
                 }
                 else
                 {
@@ -26,7 +29,7 @@
                             <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_Type)</th>
                             <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_Quantity)</th>
                             <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].EventId)</th>
-                            <th style="background-color: lightgray;"></th>
+                            <th style="background-color: lightgray;"><a class="btn btn-secondary ms-2" asp-page="/Admin/Timeslots/TimeslotList" asp-route-id="@TargetId">Add New Timeslot</a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,5 +74,6 @@
                     </table>
                     }
                 }
+        
     </div>
 </div>

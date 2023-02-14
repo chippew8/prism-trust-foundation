@@ -5,7 +5,7 @@ namespace prism_trust_foundation.Models
     public class Timeslot
     {
         [Required, Key]
-        public string TimeslotId { get; set; } = string.Empty;
+        public int TimeslotId { get; set; }
 
         [Required]
         public int Shift_Start { get; set; }

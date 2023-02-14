@@ -8,18 +8,23 @@ namespace prism_trust_foundation.Pages.Admin.Timeslots
     public class TimeslotListModel : PageModel
     {
         private readonly TimeslotService _timeslotService;
-        public TimeslotListModel(TimeslotService timeslotService)
+        private readonly EventService _eventService;
+        public TimeslotListModel(TimeslotService timeslotService, EventService eventService)
         {
             _timeslotService = timeslotService;
+            _eventService = eventService;
         }
         [BindProperty]
-        public List<Timeslot> TimeslotList { get; set; } = new(); 
-
+        public List<Timeslot> TimeslotList { get; set; } = new();
+        [BindProperty]
+        public int TargetId { get; set; }
         public IActionResult OnGet(int eventId)
         {
+            TargetId = eventId;
             TimeslotList = _timeslotService.GetTimeslotsByEventId(eventId);
             if (TimeslotList != null)
             {
+                
                 return Page();
             }
             else
