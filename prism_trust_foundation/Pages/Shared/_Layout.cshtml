@@ -1,58 +1,97 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using prism_trust_foundation.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - prism_trust_foundation</title>
+    <title>@ViewData["Title"] - EDP_Project</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/prism_trust_foundation.styles.css" asp-append-version="true" />
+
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="wwwroot/css/main.css" asp-append-version="true" />
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">prism_trust_foundation</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+
+    <header id="header" class="header d-flex align-items-center">
+
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1>Prism Trust Foundation<span></span></h1>
+            </a>
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a href="/Index">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/register">Register</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/DonationRecipientInfoPage">Require Assistance?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/requestitems">RequestItemTemp</a>
-                        </li>
+                        <li><a href="/BookTimeSlot">Timeslot Booking</a></li>
+                        <li><a href="">Volunteer</a></li>
+                        <li><a href="/User/Logout">Log Out</a></li>
+                        <li><a href="/user/userdetails"><img src="/Picture/User.png" width="40px" height="40px" /></a></li>
                     </ul>
-                </div>
-            </div>
-        </nav>
+                </nav>
+            }
+            else
+            {
+                <nav id="navbar2" class="navbar">
+                    <ul>
+                        <li><a href="/Index">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/User/Login">Timeslot Booking</a></li>
+                        @*                        <li><a href="">Recycle</a></li>
+                    <li><a href="">Donation</a></li>*@
+                        <li><a href="/User/Login">Volunteer</a></li>
+                        <li><a href="/User/Login">Require Assistance</a></li>
+                        <li><a href="/User/Login"><img src="/Picture/User.png" width="40px" height="40px" /></a></li>
+                    </ul>
+                </nav>
+            }
+
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        </div>
     </header>
-    <div class="container">
+    <div>
+
+
         <main role="main" class="pb-3">
+            @await Html.PartialAsync("_FlashMessage")
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - prism_trust_foundation - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
