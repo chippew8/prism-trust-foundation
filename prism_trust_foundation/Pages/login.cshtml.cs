@@ -17,14 +17,16 @@ namespace prism_trust_foundation.Pages
         public ApplicationUser MyUser { get; set; }
 
         private readonly SignInManager<ApplicationUser> signinManager;
+        private readonly UserManager<ApplicationUser> userManager;
 
         private readonly IHttpContextAccessor contxt;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, UserService registerService, IHttpContextAccessor httpContextAccessor)
+        public LoginModel(SignInManager<ApplicationUser> signInManager, UserService registerService, IHttpContextAccessor httpContextAccessor, UserManager<ApplicationUser> userManager)
         {
             _registerService = registerService;
             this.signinManager = signInManager;
             contxt = httpContextAccessor;
+            this.userManager = userManager;
         }
 
         public void OnGet()
@@ -45,9 +47,21 @@ namespace prism_trust_foundation.Pages
                 if (identityResult.Succeeded)
                 {
                     ApplicationUser? user = _registerService.GetUserByEmail( LModel.Email);
+                    var testuser = await userManager.GetUserAsync(User);
+                    Console.WriteLine(testuser);
                     contxt.HttpContext.Session.SetString("Email", user.Email);
-                    contxt.HttpContext.Session.SetString("Url", user.ImageURL);
+                    /*contxt.HttpContext.Session.SetString("Email", "{0}, {1}, {2}", user.Email, user.);*/
                     contxt.HttpContext.Session.SetString("Password", LModel.Password);
+
+                    if (user.ImageURL == null)
+                    {
+                        contxt.HttpContext.Session.SetString("Url", "/uploads/user.png");
+                    }
+                    else
+                    {
+                        contxt.HttpContext.Session.SetString("Url", user.ImageURL);
+                    }
+
                     if (user.Admin_Role == true)
                     {
                         contxt.HttpContext.Session.SetString("Admin", "Yes");
@@ -56,7 +70,7 @@ namespace prism_trust_foundation.Pages
                     else
                     {
                         contxt.HttpContext.Session.SetString("Admin", "No");
-                        return RedirectToPage("/User/UserDetails");
+                        return RedirectToPage("/Index");
                     }
                 }
                 else

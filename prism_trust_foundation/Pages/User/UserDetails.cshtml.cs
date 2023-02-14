@@ -60,6 +60,10 @@ namespace prism_trust_foundation.Pages.User
                     {
                         return RedirectToPage("UpdateAvatar");
                     }
+                    else if (sessionCount == 4)
+                    {
+                        return RedirectToPage("/CouponRedeem");
+                    }
                     else
                     {
                         return Page();

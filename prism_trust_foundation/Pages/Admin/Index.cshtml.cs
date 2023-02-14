@@ -38,7 +38,7 @@ namespace prism_trust_foundation.Pages.Admin
                 else
                 {
                     TempData["FlashMessage.Type"] = "danger";
-                    TempData["FlashMessage.Text"] = string.Format("You have not an Admin.");
+                    TempData["FlashMessage.Text"] = string.Format("Unauthorized Access");
                     return RedirectToPage("/Index");
                 }
             }

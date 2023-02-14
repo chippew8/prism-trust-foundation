@@ -39,7 +39,7 @@ namespace prism_trust_foundation.Pages.Admin
                 else
                 {
                     TempData["FlashMessage.Type"] = "danger";
-                    TempData["FlashMessage.Text"] = string.Format("You have not an Admin.");
+                    TempData["FlashMessage.Text"] = string.Format("Unauthorized Access");
                     return RedirectToPage("/Index");
                 }
             }
@@ -62,6 +62,10 @@ namespace prism_trust_foundation.Pages.Admin
                     {
                         if (sessionCount == 1)
                         {
+                            return RedirectToPage("Index");
+                        }
+                        else if (sessionCount == 2)
+                        {
                             if (user.Ban_Status == false)
                             {
                                 user.Ban_Status = true;
@@ -79,7 +83,7 @@ namespace prism_trust_foundation.Pages.Admin
                                 return RedirectToPage("Index");
                             }
                         }
-                        else if (sessionCount == 2)
+                        else if (sessionCount == 3)
                         {
                             if(user.Admin_Role == false)
                             {
@@ -98,6 +102,14 @@ namespace prism_trust_foundation.Pages.Admin
                                 return RedirectToPage("Index");
                             }
                             
+                        }
+                        else if(sessionCount == 4)
+                        {
+                            user.points = AdminHomeUser.points;
+                            _svc.UpdateUser(user);
+                            TempData["FlashMessage.Type"] = "success";
+                            TempData["FlashMessage.Text"] = string.Format("Points have been added into {0}", user.Email);
+                            return RedirectToPage("Index");
                         }
                         else
                         {
