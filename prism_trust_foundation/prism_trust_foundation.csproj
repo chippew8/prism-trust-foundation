@@ -12,11 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Pages\Admin\Admin.cshtml" />
-    <None Include="Pages\CouponAdmin\CouponCreate.cshtml" />
-    <None Include="Pages\CouponAdmin\CouponEdit.cshtml" />
-    <None Include="Pages\CouponAdmin\CouponRead.cshtml" />
-    <None Include="Pages\CouponAdmin\CouponStats.cshtml" />
     <None Include="wwwroot\css\login.css" />
     <None Include="wwwroot\css\register.css" />
     <None Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.css.map" />

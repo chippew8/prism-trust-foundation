@@ -679,8 +679,3 @@ C:\Users\65910\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\ob
 C:\Users\65910\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.csproj.CopyComplete
 C:\Users\65910\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.genruntimeconfig.cache
 C:\Users\65910\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\ref\prism_trust_foundation.dll
-C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\ngyew\Documents\GitHub\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
