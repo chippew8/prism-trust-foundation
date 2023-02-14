@@ -46,8 +46,17 @@ namespace prism_trust_foundation.Pages
                 {
                     ApplicationUser? user = _registerService.GetUserByEmail( LModel.Email);
                     contxt.HttpContext.Session.SetString("Email", user.Email);
-                    contxt.HttpContext.Session.SetString("Url", user.ImageURL);
                     contxt.HttpContext.Session.SetString("Password", LModel.Password);
+
+                    if (user.ImageURL == null)
+                    {
+                        contxt.HttpContext.Session.SetString("Url", "/uploads/user.png");
+                    }
+                    else
+                    {
+                        contxt.HttpContext.Session.SetString("Url", user.ImageURL);
+                    }
+
                     if (user.Admin_Role == true)
                     {
                         contxt.HttpContext.Session.SetString("Admin", "Yes");
