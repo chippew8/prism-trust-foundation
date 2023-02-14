@@ -2,7 +2,7 @@
 @model prism_trust_foundation.Pages.User.ChangePassModel
 @{
     ViewData["Title"] = "Change Password";
-    Layout = "~/Pages/Shared/_Layout2.cshtml";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <head>
@@ -15,42 +15,6 @@
 </head>
 
 <body>
-    <header id="header" class="header d-flex align-items-center">
-
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1>Prism Trust Foundation<span>.</span></h1>
-            </a>
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a href="/Index">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#team">Team</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Recycle</a></li>
-                    <li><a href="">Donation</a></li>
-                    <li><a href="">Volunteer</a></li>
-                    <li><a href="">Require Assistance</a></li>
-                    <li><img src="@(string.IsNullOrEmpty(Model.PassUser.ImageURL) ?"/Picture/User.png" : Model.PassUser.ImageURL)" width="40px" height="40px" /></li>
-
-                </ul>
-            </nav><!-- .navbar -->
-
-            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-        </div>
-    </header>
-
     <div class="content">
         <div class="container">
             <div class="row">
