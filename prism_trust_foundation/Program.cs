@@ -1,4 +1,3 @@
-using EDP_Project.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using prism_trust_foundation.Models;
@@ -10,19 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<AuthDbContext>();
-
 builder.Services.AddScoped<EventService>();
-
 builder.Services.AddScoped<InventoryService>();
-
-builder.Services.AddScoped<CouponService>();
-builder.Services.AddScoped<CouponRedemptionService>();
-
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.User.RequireUniqueEmail = true;
     options.Lockout.AllowedForNewUsers = true;
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
     options.Lockout.MaxFailedAccessAttempts = 3;
 
 })
@@ -38,22 +31,26 @@ builder.Services.AddDistributedMemoryCache(); //save session in memory
 
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.IdleTimeout = TimeSpan.FromSeconds(30);
 });
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.Name = "AspNetCore.Identity.Application";
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    options.ExpireTimeSpan = TimeSpan.FromSeconds(5);
     options.SlidingExpiration = true;
 });
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(30);
     options.Lockout.MaxFailedAccessAttempts = 3;
 
 });
+/*builder.Services.AddScoped<ProductServices>();*/
+
+builder.Services.AddScoped<cartService>();
+builder.Services.AddScoped<itemRequestService>();
 
 var app = builder.Build();
 

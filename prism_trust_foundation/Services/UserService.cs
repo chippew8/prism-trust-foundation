@@ -30,7 +30,7 @@ namespace prism_trust_foundation.Services
 
         public ApplicationUser? GetUserByEmail(string email)
         {
-            ApplicationUser? applicationUser = _context.AspNetUser.Include(u => u.Coupon).FirstOrDefault(
+            ApplicationUser? applicationUser = _context.AspNetUser.FirstOrDefault(
                 x => x.Email.Equals(email));
             return applicationUser;
         }

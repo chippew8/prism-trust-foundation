@@ -1,4 +1,4 @@
-﻿
+﻿/*
 using prism_trust_foundation.Models;
 
 namespace prism_trust_foundation.Services
@@ -13,7 +13,14 @@ namespace prism_trust_foundation.Services
         }
         public List<Product> GetAll()
         {
-            return _context.Products.OrderBy(m => m.Name).ToList();
+            try
+            {
+                return _context.Products.OrderBy(m => m.Name).ToList();
+            }
+            catch(InvalidOperationException)
+            {
+                return null;
+            }
         }
         public Product? GetProductById(string id)
         {
@@ -32,4 +39,4 @@ namespace prism_trust_foundation.Services
             _context.SaveChanges();
         }
     }
-}
+}*/
