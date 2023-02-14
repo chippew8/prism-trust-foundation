@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MEA00ugTRY4+3tvH8bu/OqqOwkXubVltvbsZegdeTn8=",
+  "Hash": "ieEXaXa3dZqfDANsUM2DuiO8kp0bT9S7mHF75RuGLbA=",
   "Source": "prism_trust_foundation",
   "BasePath": "_content/prism_trust_foundation",
   "Mode": "Default",
@@ -1443,6 +1443,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\f36d1955-15aa-4e71-9191-6ea095dc3245.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\fd936e77-f363-4ee0-b648-de5796299fdc.jpg",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/fd936e77-f363-4ee0-b648-de5796299fdc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\fd936e77-f363-4ee0-b648-de5796299fdc.jpg"
     },
     {
       "Identity": "C:\\Users\\zoyoq\\OneDrive\\文档\\GitHub\\My_FSDP\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\user.png",

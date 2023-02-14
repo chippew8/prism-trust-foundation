@@ -62,14 +62,15 @@ namespace prism_trust_foundation.Pages
                 else
                 {
                     TempData["FlashMessage.Type"] = "danger";
-                    TempData["FlashMessage.Text"] = string.Format("You have not created an account yet.");
+                    TempData["FlashMessage.Text"] = string.Format("Username or Password incorrect");
                     return Page();
                 }
-                TempData["FlashMessage.Type"] = "danger";
-                TempData["FlashMessage.Text"] = string.Format("Username or Password incorrect");
             }
-            TempData["FlashMessage.Type"] = "danger";
-            TempData["FlashMessage.Text"] = string.Format("Username or Password is required");
+            else
+            {
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("Username or Password is required");
+            }
             return Page();
         }
     }

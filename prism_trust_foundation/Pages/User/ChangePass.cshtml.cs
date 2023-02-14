@@ -12,7 +12,7 @@ namespace prism_trust_foundation.Pages.User
     {
         private readonly SignInManager<ApplicationUser> signinManager;
 
-        private UserManager<IdentityUser> userManager;
+        private UserManager<ApplicationUser> userManager;
 
         private readonly IHttpContextAccessor contxt;
 
@@ -20,7 +20,7 @@ namespace prism_trust_foundation.Pages.User
 
         private readonly AuthDbContext _authDbContext;
 
-        public ChangePassModel(UserManager<IdentityUser> userManager, AuthDbContext authDbContext, SignInManager<ApplicationUser> signInManager, UserService service, IHttpContextAccessor httpContextAccessor)
+        public ChangePassModel(UserManager<ApplicationUser> userManager, AuthDbContext authDbContext, SignInManager<ApplicationUser> signInManager, UserService service, IHttpContextAccessor httpContextAccessor)
         {
             this.userManager = userManager;
             this.signinManager = signInManager;
@@ -68,10 +68,12 @@ namespace prism_trust_foundation.Pages.User
                     var token = await userManager.GeneratePasswordResetTokenAsync(user);
                     if (user != null)
                     {
-                        IdentityResult result = await userManager.ChangePasswordAsync(user, token, CpModel.NewPassword);
-                        _svc.UpdateUser(PassUser);
+                        IdentityResult result = await userManager.ResetPasswordAsync(user, token, CpModel.NewPassword);
+                        _svc.UpdateUser(user);
                         TempData["FlashMessage.Type"] = "success";
                         TempData["FlashMessage.Text"] = string.Format("User {0} is updated", PassUser.Email);
+                        contxt.HttpContext.Session.Clear();
+                        await signinManager.SignOutAsync();
                         return RedirectToPage("/Login");
                     }
                 }
