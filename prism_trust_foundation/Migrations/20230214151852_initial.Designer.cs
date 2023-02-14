@@ -12,8 +12,8 @@ using prism_trust_foundation.Models;
 namespace prismtrustfoundation.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20230213140558_hi")]
-    partial class hi
+    [Migration("20230214151852_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,91 @@ namespace prismtrustfoundation.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("ApplicationUserCoupon", b =>
+                {
+                    b.Property<string>("CouponId")
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("CouponId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ApplicationUserCoupon");
+                });
+
+            modelBuilder.Entity("EDP_Project.Models.Coupon", b =>
+                {
+                    b.Property<string>("CouponId")
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<string>("Coupon_Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("Current_Coupon_Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Expiry_Date")
+                        .HasColumnType("date");
+
+                    b.Property<string>("ImageURL")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Percentage_Discount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Points_to_redeem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Total_Coupon_Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Total_Coupon_Redeemed")
+                        .HasColumnType("int");
+
+                    b.HasKey("CouponId");
+
+                    b.ToTable("Coupons");
+                });
+
+            modelBuilder.Entity("EDP_Project.Models.CouponRedemption", b =>
+                {
+                    b.Property<int>("CouponRedemptionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CouponRedemptionId"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CouponId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<DateTime>("Date_of_Redemption")
+                        .HasColumnType("date");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CouponRedemptionId");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("CouponId");
+
+                    b.ToTable("CouponRedemptions");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -236,6 +321,9 @@ namespace prismtrustfoundation.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<int>("points")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -433,6 +521,40 @@ namespace prismtrustfoundation.Migrations
                     b.ToTable("itemRequests");
                 });
 
+            modelBuilder.Entity("ApplicationUserCoupon", b =>
+                {
+                    b.HasOne("EDP_Project.Models.Coupon", null)
+                        .WithMany()
+                        .HasForeignKey("CouponId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("prism_trust_foundation.Models.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EDP_Project.Models.CouponRedemption", b =>
+                {
+                    b.HasOne("prism_trust_foundation.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("CouponRedemption")
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EDP_Project.Models.Coupon", "Coupon")
+                        .WithMany("CouponRedemptions")
+                        .HasForeignKey("CouponId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Coupon");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -482,6 +604,16 @@ namespace prismtrustfoundation.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("EDP_Project.Models.Coupon", b =>
+                {
+                    b.Navigation("CouponRedemptions");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("CouponRedemption");
                 });
 #pragma warning restore 612, 618
         }
