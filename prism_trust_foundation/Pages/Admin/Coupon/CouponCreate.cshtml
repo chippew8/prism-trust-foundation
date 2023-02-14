@@ -1,13 +1,9 @@
 ﻿@page
-@model prism_trust_foundation.Pages.Admin.DonationRecipient.retrieveApplicationFormModel
+@model EDP_Project.Pages.CouponCreateModel
 @{
-    ViewData["Title"] = "Anything";
-    Layout = "~/Pages/Shared/_Layout2.cshtml";
+	ViewData["Title"] = "Coupon Create";
+	Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
-<<<<<<<< HEAD:prism_trust_foundation/Pages/Admin/Coupon/CouponCreate.cshtml
-========
-
->>>>>>>> Tristan-branch:prism_trust_foundation/Pages/Admin/DonationRecipient/retrieveApplicationForm.cshtml
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,7 +130,6 @@
                    aria-controls="collapseInventory">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Inventory</span>
-<<<<<<<< HEAD:prism_trust_foundation/Pages/Admin/Coupon/CouponCreate.cshtml
                 </a>
                 <div id="collapseInventory" class="collapse" aria-labelledby="headingPages"
                      data-bs-parent="#accordionSidebar">
@@ -216,109 +211,17 @@
                    aria-expanded="true" aria-controls="collapseCharts">
                     <i class="fa-solid fa-chart-simple"></i>
                     <span>Charts</span>
-========
->>>>>>>> Tristan-branch:prism_trust_foundation/Pages/Admin/DonationRecipient/retrieveApplicationForm.cshtml
                 </a>
-                <div id="collapseInventory" class="collapse" aria-labelledby="headingPages"
+                <div id="collapseCharts" class="collapse" aria-labelledby="headingCharts"
                      data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-<<<<<<<< HEAD:prism_trust_foundation/Pages/Admin/Coupon/CouponCreate.cshtml
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="/Admin/Coupon/CouponStats">Coupon Stats</a>
-========
-                        <h6 class="collapse-header">Inventory Screens:</h6>
-                        <a class="collapse-item" href="/Admin/Storage/Add">Add Inventory</a>
-                        <a class="collapse-item" href="/Admin/Storage/Index">View Inventory</a>
-                        <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
->>>>>>>> Tristan-branch:prism_trust_foundation/Pages/Admin/DonationRecipient/retrieveApplicationForm.cshtml
                     </div>
                 </div>
             </li>
 
-<<<<<<<< HEAD:prism_trust_foundation/Pages/Admin/Coupon/CouponCreate.cshtml
             @*<!-- Nav Item - Tables -->
-========
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCoupon" aria-expanded="true"
-                   aria-controls="collapseCoupon">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Coupon</span>
-                </a>
-                <div id="collapseCoupon" class="collapse" aria-labelledby="headingPages"
-                     data-bs-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Coupon Screens:</h6>
-                        <a class="collapse-item" href="../CouponAdmin/CouponCreate">Creating Coupon</a>
-                        <a class="collapse-item" href="../CouponAdmin/CouponRead">Viewing Coupon</a>
-                        <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEvent" aria-expanded="true"
-                   aria-controls="collapseEvent">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Event</span>
-                </a>
-                <div id="collapseEvent" class="collapse" aria-labelledby="headingPages"
-                     data-bs-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Event Screens:</h6>
-                        <a class="collapse-item" href="/Admin/Event/Index">View Events</a>
-                        <a class="collapse-item" href="/Admin/Event/AddEvent">Add Events</a>
-                        <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRecipient" aria-expanded="true"
-                   aria-controls="collapseRecipient">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Recipient Application</span>
-                </a>
-                <div id="collapseRecipient" class="collapse" aria-labelledby="headingPages"
-                     data-bs-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Recipient Screens:</h6>
-                        <a class="collapse-item" href="/Admin/Recipient/Index">View Application</a>
-                        <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
-                    </div>
-                </div>
-            </li>
-
-
-            @*<!-- Nav Item - Charts -->
-            <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCharts"
-            aria-expanded="true" aria-controls="collapseCharts">
-            <i class="fa-solid fa-chart-simple"></i>
-            <span>Charts</span>
-            </a>
-            <div id="collapseCharts" class="collapse" aria-labelledby="headingCharts"
-            data-bs-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="../CouponAdmin/CouponStats">Coupon Stats</a>
-            </div>
-            </div>
-            </li>
-
-            <!-- Nav Item - Tables -->
->>>>>>>> Tristan-branch:prism_trust_foundation/Pages/Admin/DonationRecipient/retrieveApplicationForm.cshtml
             <li class="nav-item">
             <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
@@ -553,7 +456,6 @@
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-<<<<<<<< HEAD:prism_trust_foundation/Pages/Admin/Coupon/CouponCreate.cshtml
 
                     <div class="container">
                         <div class="card card-body">
@@ -623,43 +525,10 @@
                                 </div>
 
                             </form>
-========
-                    <div class="container mx-auto mt-4">
-                        <div class="row">
-                            @if (Model.dRecipient != null)
-                            {
-                                @foreach (var item in Model.dRecipient)
-                                {
-                                    <div class="col-md-4">
-                                        <div class="card" style="width: 18rem;">
-
-                                            <div class="card-body">
-
-                                                <p class="card-text">User: @item.email</p>
-                                                <p class="card-text">Name: @item.Fname</p>
-                                                <p class="card-text">NRIC: @item.NRIC</p>
-                                                <p class="card-text">Date of Birth: @item.BirthDate</p>
-                                                <p class="card-text">Address: @item.address</p>
-                                                <p class="card-text">Monthly income: $@item.monthlyIncome</p>
-
-                                                <a asp-page="retrieveApplicationForm" asp-page-handler="accept" asp-route-id="@item.email" class="btn btn-primary">Accept</a>
-                                                <a asp-page="retrieveApplicationForm" asp-page-handler="reject" asp-route-id="@item.email" class="btn btn-primary">Reject</a>
-                                                @*<a href="#" class="btn "><i class="fab fa-github"></i> Github</a>*@
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                            }
->>>>>>>> Tristan-branch:prism_trust_foundation/Pages/Admin/DonationRecipient/retrieveApplicationForm.cshtml
                         </div>
                     </div>
 
-                    @if (Model.dRecipient == null)
-                    {
-                        <div>
-                            No item requests currently.
-                        </div>
-                    }
+                </div>
                 <!-- /.container-fluid -->
 
             </div>

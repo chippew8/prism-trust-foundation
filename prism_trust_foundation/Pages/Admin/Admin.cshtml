@@ -1,14 +1,15 @@
 ﻿@page
-@model prism_trust_foundation.Pages.Admin.DonationRecipient.retrieveItemReqModel
+@model EDP_Project.Pages.CouponAdmin.AdminModel
 @{
     Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    @*    <meta charset="utf-8">
+@*    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -18,7 +19,8 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet">
+    <link
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="~/css/admin2.css" asp-append-version="true" />
@@ -48,8 +50,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </a>
+                    <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -63,7 +64,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                   aria-expanded="true" aria-controls="collapseTwo">
+                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Components</span>
                 </a>
@@ -79,12 +80,12 @@
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUtilities"
-                   aria-expanded="true" aria-controls="collapseUtilities">
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Utilities</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                     data-bs-parent="#accordionSidebar">
+                    data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="utilities-color.html">Colors</a>
@@ -104,128 +105,48 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUser" aria-expanded="true"
-                   aria-controls="collapseUser">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>User</span>
-                </a>
-                <div id="collapseUser" class="collapse" aria-labelledby="headingPages"
-                     data-bs-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">User Screens:</h6>
-                        <a class="collapse-item" href="/Admin/Index">View User Info</a>
-                        <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
-                    </div>
-                </div>
-            </li>
-
             <li class="nav-item active">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseInventory" aria-expanded="true"
-                   aria-controls="collapseInventory">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Inventory</span>
-                </a>
-                <div id="collapseInventory" class="collapse" aria-labelledby="headingPages"
-                     data-bs-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Inventory Screens:</h6>
-                        <a class="collapse-item" href="/Admin/Storage/Add">Add Inventory</a>
-                        <a class="collapse-item" href="/Admin/Storage/Index">View Inventory</a>
-                        <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCoupon" aria-expanded="true"
-                   aria-controls="collapseCoupon">
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="true"
+                    aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Coupon</span>
                 </a>
-                <div id="collapseCoupon" class="collapse" aria-labelledby="headingPages"
-                     data-bs-parent="#accordionSidebar">
+                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
+                    data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Coupon Screens:</h6>
-                        <a class="collapse-item" href="../CouponAdmin/CouponCreate">Creating Coupon</a>
-                        <a class="collapse-item" href="../CouponAdmin/CouponRead">Viewing Coupon</a>
+                        <a class="collapse-item" href="Admin/Coupon/CouponCreate">Creating Coupon</a>
+                        <a class="collapse-item" href="Admin/Coupon/CouponRead">Viewing Coupon</a>
                         <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
+@*                        <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
                         <a class="collapse-item active" href="blank.html">Blank Page</a>*@
                     </div>
                 </div>
             </li>
 
+            <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEvent" aria-expanded="true"
-                   aria-controls="collapseEvent">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Event</span>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCharts"
+                   aria-expanded="true" aria-controls="collapseCharts">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Charts</span>
                 </a>
-                <div id="collapseEvent" class="collapse" aria-labelledby="headingPages"
+                <div id="collapseCharts" class="collapse" aria-labelledby="headingCharts"
                      data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Event Screens:</h6>
-                        <a class="collapse-item" href="/Admin/Event/Index">View Events</a>
-                        <a class="collapse-item" href="/Admin/Event/AddEvent">Add Events</a>
-                        <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="Admin/Coupon/CouponStats">Coupon Stats</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRecipient" aria-expanded="true"
-                   aria-controls="collapseRecipient">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Recipient Application</span>
-                </a>
-                <div id="collapseRecipient" class="collapse" aria-labelledby="headingPages"
-                     data-bs-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Recipient Screens:</h6>
-                        <a class="collapse-item" href="/Admin/Recipient/Index">View Application</a>
-                        <div class="collapse-divider"></div>
-                        @*                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
-                    </div>
-                </div>
-            </li>
-
-
-            @*<!-- Nav Item - Charts -->
-            <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCharts"
-            aria-expanded="true" aria-controls="collapseCharts">
-            <i class="fa-solid fa-chart-simple"></i>
-            <span>Charts</span>
-            </a>
-            <div id="collapseCharts" class="collapse" aria-labelledby="headingCharts"
-            data-bs-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="../CouponAdmin/CouponStats">Coupon Stats</a>
-            </div>
-            </div>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
-            </li>*@
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -237,6 +158,7 @@
 
         </ul>
         <!-- End of Sidebar -->
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -252,10 +174,11 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                   aria-label="Search" aria-describedby="basic-addon2">
+                                aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -270,17 +193,17 @@
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                 aria-labelledby="searchDropdown">
+                                aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small"
-                                               placeholder="Search for..." aria-label="Search"
-                                               aria-describedby="basic-addon2">
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -294,14 +217,14 @@
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                 aria-labelledby="alertsDropdown">
+                                aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Alerts Center
                                 </h6>
@@ -345,70 +268,62 @@
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Counter - Messages -->
                                 <span class="badge badge-danger badge-counter">7</span>
                             </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                 aria-labelledby="messagesDropdown">
+                                aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
                                     Message Center
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
                                         <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                             alt="...">
+                                            alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
-                                        <div class="text-truncate">
-                                            Hi there! I am wondering if you can help me with a
-                                            problem I've been having.
-                                        </div>
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
                                         <div class="small text-gray-500">Emily Fowler · 58m</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
                                         <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                             alt="...">
+                                            alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">
-                                            I have the photos that you ordered last month, how
-                                            would you like them sent to you?
-                                        </div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
                                         <div class="small text-gray-500">Jae Chun · 1d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
                                         <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                             alt="...">
+                                            alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">
-                                            Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!
-                                        </div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
                                         <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
                                         <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                             alt="...">
+                                            alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">
-                                            Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...
-                                        </div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
                                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
                                     </div>
                                 </a>
@@ -421,14 +336,14 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
-                                     src="img/undraw_profile.svg">
+                                    src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                 aria-labelledby="userDropdown">
+                                aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -453,51 +368,26 @@
 
                 </nav>
                 <!-- End of Topbar -->
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <div class="container mx-auto mt-4">
-                        <div class="row">
-                            @if (Model.itemReqList != null)
-                            {
-                                @foreach (var item in Model.itemReqList)
-                                {
-                                    <div class="col-md-4">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="item.ImageURL" class="card-img-top" alt="*No Event Image*">
-                                            <div class="card-body">
-                                                <h5 class="card-title">@item.</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">@item.</h6>
-                                                <p class="card-text">User: @Model.FindUserbyId(item.userId).EmailConfirmed</p>
-                                                <p class="card-text">Item Name: @Model.FindbyId(item.productId).Name</p>
-                                                <p class="card-text">Item Quantity: @item.quantity</p>
-                                                
-                                                @*<a asp-page="" asp-route-id="@item." class="btn mr-2"><i class="fas fa-link"></i> </a>*@
-                                                @*<a href="#" class="btn "><i class="fab fa-github"></i> Github</a>*@
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                            }
-                        </div>
-                    </div>
 
-                    @if (Model.itemReqList == null)
-                    {
-                        <div>
-                            No item requests currently.
-                        </div>
-                    }
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+
+                </div>
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
+
             <!-- Footer -->
-            @*            <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
-            </div>
-            </div>
+@*            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
             </footer>*@
             <!-- End of Footer -->
 
@@ -506,6 +396,7 @@
 
     </div>
     <!-- End of Page Wrapper -->
+
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
@@ -513,7 +404,7 @@
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
