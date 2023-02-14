@@ -36,7 +36,7 @@ namespace prism_trust_foundation.Pages
             if (ModelState.IsValid)
             {
                 //ApplicationUser? applicationUser = _registerService.GetUserByNRIC(MyUser.NRIC);
-                var identityResult = await signinManager.PasswordSignInAsync(LModel.Email, LModel.Password, LModel.RememberMe, false);
+                var identityResult = await signinManager.PasswordSignInAsync(LModel.Email, LModel.Password, LModel.RememberMe, true);
                 /*if (identityResult.Succeeded)
                 {
                     return RedirectToPage("/Admin/Index");
@@ -44,6 +44,8 @@ namespace prism_trust_foundation.Pages
                 else */
                 if (identityResult.Succeeded)
                 {
+                    TempData["FlashMessage.Type"] = "success";
+                    TempData["FlashMessage.Text"] = string.Format("You are a nigger");
                     contxt.HttpContext.Session.SetString("Email", LModel.Email);
                     ApplicationUser? user = _registerService.GetUserByEmail( LModel.Email);
                     if (user.Admin_Role == true)

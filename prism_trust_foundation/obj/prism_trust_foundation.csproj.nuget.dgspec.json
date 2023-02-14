@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {}
+    "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {}
   },
   "projects": {
-    "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {
+    "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+        "projectUniqueName": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
         "projectName": "prism_trust_foundation",
-        "projectPath": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
-        "packagesPath": "C:\\Users\\xuanx\\.nuget\\packages\\",
-        "outputPath": "C:\\School_Work\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
+        "projectPath": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\prism_trust_foundation.csproj",
+        "packagesPath": "C:\\Users\\oscar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\xuanx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\oscar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

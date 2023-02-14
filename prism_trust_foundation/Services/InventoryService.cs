@@ -19,6 +19,11 @@ namespace prism_trust_foundation.Services
             Inventory? itemName = _context.Inventory.FirstOrDefault(i => i.Name.Equals(Name));
             return itemName;
         }
+        public Inventory? GetInventoryById(int id)
+        {
+            Inventory? itemId = _context.Inventory.FirstOrDefault(i => i.InventoryId.Equals(id));
+            return itemId;
+        }
         public void AddInventory(Inventory myInventory)
         {
             _context.Inventory.Add(myInventory);
@@ -28,6 +33,12 @@ namespace prism_trust_foundation.Services
         public void UpdateInventory(Inventory myInventory)
         {
             _context.Inventory.Update(myInventory);
+            _context.SaveChanges();
+        }
+
+        public void DeleteInventory(Inventory myInventory)
+        {
+            _context.Inventory.Remove(myInventory);
             _context.SaveChanges();
         }
     }

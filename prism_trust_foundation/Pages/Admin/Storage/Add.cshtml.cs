@@ -37,7 +37,7 @@ namespace prism_trust_foundation.Pages.Storage
                     ModelState.Clear();
                 }
             }
-            return Page();
+            return Redirect("/Admin/Storage/Add");
         }
     }
 }
