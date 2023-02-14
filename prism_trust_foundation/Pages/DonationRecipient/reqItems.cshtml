@@ -2,6 +2,7 @@
 @model prism_trust_foundation.Pages.DonationRecipient.reqItemsModel
 @{
     ViewData["Title"] = "Request Items";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 <html>
 <head>
@@ -23,18 +24,19 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Photo</th>
-            <th>Price</th>
-            <th>Action</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            
         </tr>
+           
         @foreach (var product in Model.Products)
         {
             <tr align="center">
-                <td>@product.Id</td>
+                <td>@product.InventoryId</td>
                 <td>@product.Name</td>
               
                 <td>
-                    <a asp-page="Index" asp-page-handler="buynow" asp-route-id="@product.Id">Buy Now</a>
+                        <a asp-page="reqItems" asp-page-handler="buynow" asp-route-id="@product.InventoryId" >Buy Now</a>
                 </td>
             </tr>
         }
@@ -59,7 +61,7 @@
             @foreach (var item in Model.MyCart)
             {
                 
-                <tr align="center">
+                <tr >
                     <td>@item.productId</td>
                     
 
@@ -68,7 +70,7 @@
                     <td>@item.quantity</td>
                     
                     <td align="center">
-                        <a asp-page="cart" asp-page-handler="delete" asp-route-id="@item.productId">x</a>
+                        <a asp-page="reqItems" asp-page-handler="delete" asp-route-id="@item.productId">x</a>
                     </td>
 
                     
@@ -77,7 +79,7 @@
             }
            
             </table>
-        <a asp-page="reqItems" asp-page-handler="submitreq" asp-route-id="1">Submit</a>
+        <a asp-page="reqItems" asp-page-handler="submitreq" asp-route-id="@Model.HttpContext.Session.GetString("Email")">Submit</a>
         }
 
     

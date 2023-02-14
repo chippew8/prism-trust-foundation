@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+CSrcFBbyD0c+SW+4F+vCqd5dohAAAAr8FS+FJyMiEI=",
+  "Hash": "I3W70r9rhxhA9r6LAJjoWg0EihVkSIINlV/eMOos6/Y=",
   "Source": "prism_trust_foundation",
   "BasePath": "_content/prism_trust_foundation",
   "Mode": "Default",
@@ -1258,6 +1258,23 @@
       "OriginalItemSpec": "wwwroot\\Picture\\User.png"
     },
     {
+      "Identity": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\10cca09a-a00e-42f3-b5e7-17bb36be2f33.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/10cca09a-a00e-42f3-b5e7-17bb36be2f33.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\10cca09a-a00e-42f3-b5e7-17bb36be2f33.png"
+    },
+    {
       "Identity": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\10f97cf5-2605-4e7c-9597-b251df47add6.jfif",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
@@ -1307,6 +1324,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\16e3c539-c3e5-4f89-a127-3d8c81bdfa7a.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\1e4179c8-ade2-436d-9e2d-c7185db9ebb8.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/1e4179c8-ade2-436d-9e2d-c7185db9ebb8.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1e4179c8-ade2-436d-9e2d-c7185db9ebb8.png"
     },
     {
       "Identity": "C:\\Users\\65910\\Documents\\GitHub\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\275f7a2c-a845-40f6-bffe-0fd5659a3e4f.jpg",

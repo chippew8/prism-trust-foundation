@@ -37,7 +37,10 @@ namespace prism_trust_foundation.Services
             try
             {
                 cart product = _context.cart.FirstOrDefault(x => x.productId.Equals(id));
-                return product;
+
+                    return product;
+               
+                
             }
             catch
             {
@@ -46,7 +49,17 @@ namespace prism_trust_foundation.Services
 
 
         }
+        public void remProductById(string id)
+        {
+            
+                cart product = _context.cart.FirstOrDefault(x => x.productId.Equals(id));
+                _context.cart.Remove(product);
+            _context.SaveChanges();
 
+            
+
+
+        }
 
         public void UpdateCart(cart cart)
         {

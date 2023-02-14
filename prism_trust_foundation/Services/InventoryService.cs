@@ -30,5 +30,12 @@ namespace prism_trust_foundation.Services
             _context.Inventory.Update(myInventory);
             _context.SaveChanges();
         }
+        public Inventory? GetInventoryById(string id)
+        {
+            
+            Inventory? inventory = _context.Inventory.FirstOrDefault(
+            x => x.InventoryId.ToString().Equals(id));
+            return inventory;
+        }
     }
 }
