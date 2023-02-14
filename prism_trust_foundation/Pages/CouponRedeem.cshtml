@@ -22,7 +22,9 @@
             var couponListCount = Model.CouponList.Count;
             var todays_date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
-            var user = await _userManager.GetUserAsync(User);
+            //var user = await _userManager.GetUserAsync(User);
+            //Console.WriteLine(user);
+            Console.WriteLine("test");
         }
         @if (couponListCount.Equals(0))
         {
@@ -79,9 +81,9 @@
                                             }
                                             else
                                             {
-                                                @if (user.points < @item.Points_to_redeem)
+                                                @if (Model.couponuser.points < @item.Points_to_redeem)
                                                 {
-                                                    <p style="color:black">You do not have enough points to redeem the coupon. Points: @user.points/@item.Points_to_redeem</p>
+                                                    <p style="color:black">You do not have enough points to redeem the coupon. Points: @Model.couponuser.points/@item.Points_to_redeem</p>
                                                 }
                                                 else
                                                 {

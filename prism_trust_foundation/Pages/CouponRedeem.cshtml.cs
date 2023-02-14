@@ -15,23 +15,27 @@ namespace EDP_Project.Pages
         private readonly CouponRedemptionService _couponRedemptionService;
         private readonly AuthDbContext _db;
         private readonly UserService _userService;
+        private readonly IHttpContextAccessor contxt;
 
 
 
         public CouponRedeemModel(CouponService couponService, CouponRedemptionService couponRedemptionService,
-            AuthDbContext db, UserService userService, UserManager<ApplicationUser> userManager)
+            AuthDbContext db, UserService userService, UserManager<ApplicationUser> userManager, IHttpContextAccessor httpContextAccessor)
         {
             _couponService = couponService;
             _couponRedemptionService = couponRedemptionService;
             _db = db;
             _userService = userService;
             this.userManager = userManager;
+            contxt = httpContextAccessor;
         }
 
         [BindProperty]
         public Coupon MyCoupon { get; set; } = new();
         [BindProperty]
         public CouponRedemption MyCouponRedemption { get; set; } = new();
+        [BindProperty]
+        public ApplicationUser? couponuser { get; set; } = new();
 
         public List<Coupon> CouponList { get; set; } = new();
         /*        [BindProperty]
@@ -40,6 +44,8 @@ namespace EDP_Project.Pages
 
         public void OnGet()
         {
+            string Email = contxt.HttpContext.Session.GetString("Email");
+            couponuser = _userService.GetUserByEmail(Email);
             CouponList = _couponService.GetAll();
 
             string? username = User.Identity?.Name;
@@ -48,9 +54,10 @@ namespace EDP_Project.Pages
 
         public async Task<IActionResult> OnPost()
         {
+            string Email = contxt.HttpContext.Session.GetString("Email");
             var user = await userManager.GetUserAsync(User);
             Coupon? coupon = _couponService.GetCouponById(MyCoupon.CouponId);
-            ApplicationUser? applicationUser = _userService.GetUserByEmail(user.Email);
+            ApplicationUser? applicationUser = _userService.GetUserByEmail(Email);
             CouponRedemption? couponRedemption = _couponRedemptionService.GetCouponRedemptionById(MyCouponRedemption.CouponRedemptionId);
             if (coupon != null)
             {
@@ -89,6 +96,7 @@ namespace EDP_Project.Pages
                 _couponRedemptionService.AddCouponRedemption(MyCouponRedemption);
 
                 applicationUser.Coupon.Add(coupon);
+                applicationUser.points -= coupon.Points_to_redeem;
                 _db.SaveChanges();
                 /*coupon.User.Add(applicationUser);*/
                 TempData["FlashMessage.Type"] = "success";
