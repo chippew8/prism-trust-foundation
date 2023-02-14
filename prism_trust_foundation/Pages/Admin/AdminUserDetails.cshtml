@@ -1,5 +1,6 @@
 ﻿@page
 @model prism_trust_foundation.Pages.Admin.AdminUserDetailsModel
+@inject IHttpContextAccessor contxt;
 @{
     Layout = "~/Pages/Shared/_Layout2.cshtml";
     ViewData["Title"] = "Admin User Details page";
@@ -510,15 +511,16 @@
                                 </div>
                         </div>
                         <div>
-                                <input type="submit" asp-route-sessioncount="1" value="Ban Account" class="btn btn-primary" />
-                                <input type="submit" asp-route-sessioncount="2" value="Change to Admin" class="btn btn-primary" />
+                                <input type="submit" asp-route-sessioncount="1" value="Back to List" class="btn btn-primary" />
+                                <input type="submit" asp-route-sessioncount="2" value="Ban Account" class="btn btn-primary" />
+                                @if (Model.AdminHomeUser.Email != contxt.HttpContext.Session.GetString("Email"))
+                                {
+                                    <input type="submit" asp-route-sessioncount="3" value="Change to Admin" class="btn btn-primary" />
+                                }
+                                
                         </div>
                     </form>
-
-
                 </div>
-                <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
             <!-- Footer -->
