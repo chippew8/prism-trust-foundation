@@ -11,6 +11,10 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<AuthDbContext>();
 builder.Services.AddScoped<EventService>();
 builder.Services.AddScoped<InventoryService>();
+builder.Services.AddScoped<TimeslotService>();
+builder.Services.AddScoped<TimeslotBookingService>();
+builder.Services.AddScoped<UserService>();
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.User.RequireUniqueEmail = true;
@@ -23,7 +27,6 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     .AddDefaultTokenProviders();
 
 
-builder.Services.AddScoped<UserService>();
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

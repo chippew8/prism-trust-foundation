@@ -53,7 +53,7 @@ namespace prism_trust_foundation.Pages.Events
                 _eventService.AddEvent(MyEvent);
                 TempData["FlashMessage.Type"] = "success";
                 TempData["FlashMessage.Text"] = string.Format("Event {0} is added", MyEvent.EventName);
-                return Redirect("/Admin/EventList");
+                return Redirect("/Admin/Events/EventList");
             }
             return Page();
         }

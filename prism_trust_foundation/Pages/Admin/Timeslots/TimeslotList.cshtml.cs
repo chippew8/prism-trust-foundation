@@ -15,9 +15,19 @@ namespace prism_trust_foundation.Pages.Admin.Timeslots
         [BindProperty]
         public List<Timeslot> TimeslotList { get; set; } = new(); 
 
-        public void OnGet()
+        public IActionResult OnGet(int eventId)
         {
-            TimeslotList = _timeslotService.GetAll();
+            TimeslotList = _timeslotService.GetTimeslotsByEventId(eventId);
+            if (TimeslotList != null)
+            {
+                return Page();
+            }
+            else
+            {
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("Event does not exist");
+                return Redirect("/Admin/EventList");
+            }
         }
     }
 }

@@ -1,4 +1,75 @@
 ﻿@page
-@model prism_trust_foundation.Pages.Admin.Timeslot.TimeslotListModel
+@model prism_trust_foundation.Pages.Admin.Timeslots.TimeslotListModel
 @{
 }
+<h1 class="display-4" style="text-align:center;">Current Timeslots created</h1>
+
+
+<div class="container">
+    <div class="card card-body">
+
+        
+                @if(Model.TimeslotList.Count <= 0)
+                {
+                    <div>No Timeslots for this event currently</div>
+                }
+                else
+                {
+                    @foreach (var item in Model.TimeslotList)
+                    {
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th style="background-color: lightgray;"></th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_Start)</th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_End)</th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_Type)</th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_Quantity)</th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].EventId)</th>
+                            <th style="background-color: lightgray;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            @*<td><img style="height:60px;width:60px;" src="@item.ImageURL"></td>*@
+                            <td>@item.Shift_Start</td>
+                            @*<td>@item.Coupon_Name</td>*@
+                            <td>@item.Shift_End</td>
+                            <td>@item.Shift_Type</td>
+                            <td>@item.Shift_Quantity</td>
+                            <td>@item.EventId</td>
+                            <td>
+                                @*<form method="post">
+                                    <a class="btn btn-primary savo" asp-page="/CouponAdmin/CouponEdit" asp-route-id="@item.CouponId">View</a>
+
+                                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+
+                                @*<div class="AddPopUp">
+                                        <input class="form-control" asp-for="MyCoupon.CouponId" type="hidden" value="@item.CouponId" />
+                                        <a class="btn btn-primary savodel" data-bs-toggle="modal" data-bs-target="#MyPopUp_@item.CouponId">Delete</a>
+                                    </div>
+
+                                    <div class="modal fade" id="MyPopUp_@item.CouponId" role="alert">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <h4>Are you sure you want to delete coupon: @item.CouponId</h4>
+                                                    <br>
+                                                    <a class="btn btn-secondary poppy" href="/CouponAdmin/CouponRead">Cancel</a>
+                                                    <input class="form-control" asp-for="MyCoupon.CouponId" type="hidden" value="@item.CouponId" />
+                                                    <input type="submit" value="Delete" class="btn btn-primary savodelconfirm" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>*@
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    }
+                }
+    </div>
+</div>

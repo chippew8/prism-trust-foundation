@@ -20,8 +20,8 @@ namespace prism_trust_foundation.Models
         public DbSet<ApplicationUser> AspNetUser { get; set; }
         public DbSet<Event> Event { get; set; }
         public DbSet<Inventory>Inventory { get; set; }
-		public DbSet<VolunteerShift> VolunteerShift { get; set; }
-		public DbSet<VolunteerShiftBook> VolunteerShiftBook { get; set; }
+		public DbSet<Timeslot> Timeslot { get; set; }
+		public DbSet<TimeslotBooking> TimeslotBooking { get; set; }
 
         public DbSet<itemRequest> itemRequests { get; set; }
 

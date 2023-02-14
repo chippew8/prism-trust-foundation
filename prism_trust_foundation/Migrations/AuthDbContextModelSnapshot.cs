@@ -330,62 +330,65 @@ namespace prismtrustfoundation.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShift", b =>
+            modelBuilder.Entity("prism_trust_foundation.Models.Timeslot", b =>
                 {
-                    b.Property<string>("ShiftId")
+                    b.Property<string>("TimeslotId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Shift_End")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Shift_End")
+                        .HasColumnType("int");
 
                     b.Property<double>("Shift_Quantity")
                         .HasMaxLength(2)
                         .HasColumnType("float");
 
-                    b.Property<string>("Shift_Start")
+                    b.Property<int>("Shift_Start")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Shift_Type")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ShiftId");
+                    b.HasKey("TimeslotId");
 
-                    b.ToTable("VolunteerShift");
+                    b.HasIndex("EventId");
+
+                    b.ToTable("Timeslot");
                 });
 
-            modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShiftBook", b =>
+            modelBuilder.Entity("prism_trust_foundation.Models.TimeslotBooking", b =>
                 {
-                    b.Property<string>("ShiftBookingId")
+                    b.Property<int>("TimeslotBookingId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TimeslotBookingId"));
+
+                    b.Property<string>("ApplicationUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("EventDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("EventId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ShiftId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("EventName")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                    b.Property<string>("TimeslotId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("EventVenue")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("ShiftId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("TimeslotBookingId");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasIndex("ApplicationUserId");
 
-                    b.HasKey("ShiftBookingId");
+                    b.HasIndex("TimeslotId");
 
-                    b.ToTable("VolunteerShiftBook");
+                    b.ToTable("TimeslotBooking");
                 });
 
             modelBuilder.Entity("prism_trust_foundation.Models.cart", b =>
@@ -479,6 +482,38 @@ namespace prismtrustfoundation.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.Timeslot", b =>
+                {
+                    b.HasOne("prism_trust_foundation.Models.Event", "Event")
+                        .WithMany()
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Event");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.TimeslotBooking", b =>
+                {
+                    b.HasOne("prism_trust_foundation.Models.ApplicationUser", null)
+                        .WithMany("TimeslotBookings")
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("prism_trust_foundation.Models.Timeslot", null)
+                        .WithMany("Bookings")
+                        .HasForeignKey("TimeslotId");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("TimeslotBookings");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.Timeslot", b =>
+                {
+                    b.Navigation("Bookings");
                 });
 #pragma warning restore 612, 618
         }
