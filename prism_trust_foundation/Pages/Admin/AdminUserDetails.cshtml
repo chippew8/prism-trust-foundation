@@ -503,10 +503,17 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.BirthDate">Brithday Date: </label>
+                                    <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.BirthDate">Birthday Date: </label>
                                     <div class="col-sm-10">
                                         <input class="form-control" asp-for="AdminHomeUser.BirthDate" readonly />
                                         <span asp-validation-for="AdminHomeUser.BirthDate" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label" asp-for="AdminHomeUser.points">Points: </label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" asp-for="AdminHomeUser.points" />
+                                        <span asp-validation-for="AdminHomeUser.points" class="text-danger"></span>
                                     </div>
                                 </div>
                         </div>
@@ -516,7 +523,9 @@
                                 @if (Model.AdminHomeUser.Email != contxt.HttpContext.Session.GetString("Email"))
                                 {
                                     <input type="submit" asp-route-sessioncount="3" value="Change to Admin" class="btn btn-primary" />
-                                }
+                                }                              
+                                <input type="submit" asp-route-sessioncount="4" value="Add Points" class="btn btn-primary" />
+                                
                                 
                         </div>
                     </form>

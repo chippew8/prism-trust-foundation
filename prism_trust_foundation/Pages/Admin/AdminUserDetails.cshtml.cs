@@ -103,6 +103,14 @@ namespace prism_trust_foundation.Pages.Admin
                             }
                             
                         }
+                        else if(sessionCount == 4)
+                        {
+                            user.points = AdminHomeUser.points;
+                            _svc.UpdateUser(user);
+                            TempData["FlashMessage.Type"] = "success";
+                            TempData["FlashMessage.Text"] = string.Format("Points have been added into {0}", user.Email);
+                            return RedirectToPage("Index");
+                        }
                         else
                         {
                             return Page();
