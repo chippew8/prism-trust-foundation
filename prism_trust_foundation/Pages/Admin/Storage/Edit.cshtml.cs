@@ -34,6 +34,11 @@ namespace prism_trust_foundation.Pages.Storage
         {
             if (ModelState.IsValid)
             {
+                if(edititem.Quantity <= 0)
+                {
+                    ModelState.AddModelError("","Quantity must be above 0");
+                    return Page();
+                }
                 _inventoryService.UpdateInventory(edititem);
                 TempData["FlashMessage.Type"] = "success";
                 TempData["FlashMessage.Text"] = string.Format("{0} successfully editted", edititem.Name);

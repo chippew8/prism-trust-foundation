@@ -25,8 +25,12 @@ namespace prism_trust_foundation.Pages.Storage
                 Inventory? itemName = _inventoryService.GetInventoryByName(MyInventory.Name);
                 if (itemName != null)
                 {
-                    TempData["FlashMessage.Type"] = "danger";
-                    TempData["FlashMessage.Text"] = string.Format("Item already exists");
+                    ModelState.AddModelError("", "Item already exists in Inventory");
+                    return Page();
+                }
+                else if (MyInventory.Quantity <= 0)
+                {
+                    ModelState.AddModelError("", "Quantity must be above 0");
                     return Page();
                 }
                 else
