@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aG7Ch1fzz1iocQvakMnfyEK+m8rkjqSaEKpZ1kn10jY=",
+  "Hash": "C7PQ7HqTFHfHHlPzIrYQhfm0+80VvBL10rqMDHFeXlk=",
   "Source": "prism_trust_foundation",
   "BasePath": "_content/prism_trust_foundation",
   "Mode": "Default",
@@ -1292,6 +1292,23 @@
       "OriginalItemSpec": "wwwroot\\Picture\\User.png"
     },
     {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\1303f5ae-f0a9-40d8-aeeb-28f9f3874195.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/1303f5ae-f0a9-40d8-aeeb-28f9f3874195.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1303f5ae-f0a9-40d8-aeeb-28f9f3874195.png"
+    },
+    {
       "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\16da8e5d-abae-43b9-9802-73ed0b1cf0a4.jpg",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
@@ -1564,6 +1581,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\82d0fcb6-76e6-465d-a64c-331310d77620.jpg"
     },
     {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\98f076c2-7258-492a-b55b-5984735673cc.svg",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/98f076c2-7258-492a-b55b-5984735673cc.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\98f076c2-7258-492a-b55b-5984735673cc.svg"
+    },
+    {
       "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\9f79a8bd-49bb-4188-a9e2-caaaf8ae0e9b.png",
       "SourceId": "prism_trust_foundation",
       "SourceType": "Discovered",
@@ -1613,6 +1647,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\c27954fb-f16e-4615-977c-97c63030805a.png"
+    },
+    {
+      "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\c5996698-792c-48ec-8786-5e4b48bfa473.png",
+      "SourceId": "prism_trust_foundation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\",
+      "BasePath": "_content/prism_trust_foundation",
+      "RelativePath": "uploads/c5996698-792c-48ec-8786-5e4b48bfa473.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\c5996698-792c-48ec-8786-5e4b48bfa473.png"
     },
     {
       "Identity": "C:\\Users\\oscar\\source\\repos\\prism-trust-foundation\\prism_trust_foundation\\wwwroot\\uploads\\c778ee68-91f9-4c41-b598-83b35c0cc0d2.jpg",

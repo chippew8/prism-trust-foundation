@@ -133,7 +133,7 @@
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Inventory</span>
                 </a>
-                <div id="collapseInventory" class="collapse show" aria-labelledby="headingPages"
+                <div id="collapseInventory" class="collapse" aria-labelledby="headingPages"
                      data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Inventory Screens:</h6>
@@ -158,7 +158,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Coupon Screens:</h6>
                         <a class="collapse-item" href="/Admin/Coupon/CouponCreate">Creating Coupon</a>
-                        <a class="collapse-item" href="./Admin/Coupon/CouponRead">Viewing Coupon</a>
+                        <a class="collapse-item" href="/Admin/Coupon/CouponRead">Viewing Coupon</a>
                         <div class="collapse-divider"></div>
                         @*                        <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
@@ -207,23 +207,23 @@
             </li>
 
 
-            @*<!-- Nav Item - Charts -->
+            <!-- Nav Item - Charts -->
             <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCharts"
-            aria-expanded="true" aria-controls="collapseCharts">
-            <i class="fa-solid fa-chart-simple"></i>
-            <span>Charts</span>
-            </a>
-            <div id="collapseCharts" class="collapse" aria-labelledby="headingCharts"
-            data-bs-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="../CouponAdmin/CouponStats">Coupon Stats</a>
-            </div>
-            </div>
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCharts"
+                   aria-expanded="true" aria-controls="collapseCharts">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Charts</span>
+                </a>
+                <div id="collapseCharts" class="collapse" aria-labelledby="headingCharts"
+                     data-bs-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="/Admin/Coupon/CouponStats">Coupon Stats</a>
+                    </div>
+                </div>
             </li>
 
-            <!-- Nav Item - Tables -->
+            @*<!-- Nav Item - Tables -->
             <li class="nav-item">
             <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
@@ -456,64 +456,77 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                @{
+                    var inventorycount = Model.InventoryList.Count;
+                }
+                @if (inventorycount.Equals(0))
+                {
+                    <h1 class="display-4">Inventory Empty</h1>
+                }
+                else
+                {
+                    <h1 class="display-4" style="text-align:center;">@ViewData["Title"]</h1>
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">@ViewData["Title"]</h1>
-
-                    <table class="table mt-3">
-                        <thead>
-                            <tr>
-                                <th>@Html.DisplayNameFor(model => model.InventoryList[0].Name)</th>
-                                <th>@Html.DisplayNameFor(model => model.InventoryList[0].Category)</th>
-                                <th>@Html.DisplayNameFor(model => model.InventoryList[0].Quantity)</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @{
-                                @foreach (var item in Model.InventoryList)
-                                {
+                    <div class="container">
+                        <div class="card card-body">
+                            <table class="table mt-3">
+                                <thead>
                                     <tr>
-                                        <td>@item.Name</td>
-                                        <td>@item.Category</td>
-                                        <td>@item.Quantity</td>
-                                        <td>
-                                            <a asp-page="/Admin/Storage/Edit" asp-route-id="@item.InventoryId" class="btn btn-primary mt-3">Edit</a>
-                                            <form class="mt-3" method="post">
-                                                <div class="row mb-3" hidden>
-                                                    <label class="col-sm-2 col-form-label" asp-for="MyInventory.InventoryId">
-                                                    </label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" asp-for="MyInventory.InventoryId" readonly value="@item.InventoryId"/>
-                                                        <span asp-validation-for="MyInventory.InventoryId"
-                                                      class="text-danger"></span>
-                                                    </div>
-                                                </div>                                     
-                                                <input type="submit" value="Delete" class="btn btn-danger mt-3"/>
-                                            </form>
-                                        </td>
+                                        <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.InventoryList[0].Name)</th>
+                                        <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.InventoryList[0].Category)</th>
+                                        <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.InventoryList[0].Quantity)</th>
+                                        <th style="background-color: lightgray;"></th>
                                     </tr>
-                                }
-                            }
-                        </tbody>
-                    </table>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.InventoryList)
+                                    {
+                                        <tr>
+                                            <td>@item.Name</td>
+                                            <td>@item.Category</td>
+                                            <td>@item.Quantity</td>
+                                            <td>
+                                                <a asp-page="/Admin/Storage/Edit" asp-route-id="@item.InventoryId" class="btn btn-primary mt-3">Edit</a>
+                                                <form class="mt-3" method="post">
+                                                    <div class="AddPopUp">
+                                                        <input class="form-control" asp-for="MyInventory.InventoryId" type="hidden" value="@item.InventoryId" />
+                                                        <a class="btn btn-danger savodel" data-bs-toggle="modal" data-bs-target="#MyPopUp_@item.InventoryId">Delete</a>
+                                                    </div>
 
-                </div>
+                                                    <div class="modal fade" id="MyPopUp_@item.InventoryId" role="alert">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <h4>Are you sure you want to delete item: @item.Name</h4>
+                                                                    <br>
+                                                                    <a class="btn btn-secondary poppy" href="/Admin/Storage/Index">Cancel</a>
+                                                                    <input class="form-control" asp-for="MyInventory.InventoryId" type="hidden" value="@item.InventoryId" />
+                                                                    <input type="submit" value="Delete" class="btn btn-primary savodelconfirm" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
-
             <!-- Footer -->
             @*            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
-                    </div>
-                </div>
+            <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2020</span>
+            </div>
+            </div>
             </footer>*@
             <!-- End of Footer -->
 
@@ -522,7 +535,6 @@
 
     </div>
     <!-- End of Page Wrapper -->
-
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
@@ -530,7 +542,7 @@
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

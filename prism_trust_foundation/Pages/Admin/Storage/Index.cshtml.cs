@@ -15,7 +15,6 @@ namespace prism_trust_foundation.Pages.Storage
         public List<Inventory> InventoryList { get; set; } = new();
         [BindProperty]
         public Inventory MyInventory { get; set; } = new();
-        public Inventory removeitem { get; set; } = new();
         public void OnGet()
         {
             InventoryList = _inventoryService.GetAll();
@@ -23,26 +22,20 @@ namespace prism_trust_foundation.Pages.Storage
 
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+            Inventory ? inventory = _inventoryService.GetInventoryById(MyInventory.InventoryId);
+            if (inventory == null)
             {
-                Inventory? myInventory = _inventoryService.GetInventoryById(MyInventory.InventoryId);
-                if (myInventory == null)
-                {
-                    TempData["FlashMessage.Type"] = "danger";
-                    TempData["FlashMessage.Text"] = string.Format("Item does not exist in Inventory");
-                    return Redirect("/Admin/Storage/Index");
-                }
-                else
-                {
-/*                    removeitem.Name = myInventory.Name;
-                    removeitem.Category = myInventory.Category;
-                    removeitem.Quantity = myInventory.Quantity;*/
-                    TempData["FlashMessage.Type"] = "success";
-                    TempData["FlashMessage.Text"] = string.Format("Removed {0} successfully", myInventory.Name);
-                    _inventoryService.DeleteInventory(myInventory);
-                }
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("Item does not exist in Inventory");
+                return Redirect("/Admin/Storage/Index");
             }
-            return Page();
+            else
+            {
+                _inventoryService.DeleteInventory(inventory);
+                TempData["FlashMessage.Type"] = "success";
+                TempData["FlashMessage.Text"] = string.Format("Removed {0} successfully", inventory.Name);
+            }
+            return Redirect("/Admin/Storage/Index");
         }
     }
 }
