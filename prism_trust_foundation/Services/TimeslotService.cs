@@ -19,7 +19,13 @@ namespace prism_trust_foundation.Services
         {
             return _context.Timeslot.Where(d => d.EventId.Equals(EventId)).ToList();
         }
-
+        public Timeslot? GetTimeslotByTimeandType(int time, string type)
+        {
+            List<Timeslot?> EventTimeslotList = GetAll().ToList();
+            EventTimeslotList = EventTimeslotList.Where(d => d.Shift_Type.Equals(type)).ToList();
+            EventTimeslotList = EventTimeslotList.Where(d => d.Shift_Start.Equals(time)).ToList();
+            return EventTimeslotList.FirstOrDefault();
+        }
         public Timeslot? GetTimeslotById(int Id)
         {
             Timeslot? EventTimeslots = _context.Timeslot.FirstOrDefault(x => x.TimeslotId.Equals(Id));

@@ -1,7 +1,7 @@
 ﻿@page
 @model prism_trust_foundation.Pages.Admin.Timeslots.TimeslotListModel
 @{
-    var TargetId = Model.TargetId;
+    
 }
 <h1 class="display-4" style="text-align:center;">Current Timeslots created</h1>
 
@@ -10,32 +10,34 @@
     <div class="card card-body">
         
         
-                @if(Model.TimeslotList.Count <= 0)
+                @if(Model.TimeslotsList.Count <= 0)
                 {
                     
                     <div>No Timeslots for this event currently</div>
-                    <a class="btn btn-secondary ms-2" asp-page="/Admin/Timeslots/AddTimeslot" asp-route-id="@TargetId">Add Timeslot</a>
+
+            <a class="btn btn-secondary ms-2" asp-page="/Admin/Timeslots/AddTimeslot" asp-route-id="@Model.Target">Add Timeslot</a>
                 }
                 else
                 {
-                    @foreach (var item in Model.TimeslotList)
-                    {
+                    
                 <table class="table mt-3">
                     <thead>
                         <tr>
                             <th style="background-color: lightgray;"></th>
-                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_Start)</th>
-                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_End)</th>
-                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_Type)</th>
-                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].Shift_Quantity)</th>
-                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotList[0].EventId)</th>
-                            <th style="background-color: lightgray;"><a class="btn btn-secondary ms-2" asp-page="/Admin/Timeslots/TimeslotList" asp-route-id="@TargetId">Add New Timeslot</a></th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotsList[0].Shift_Start)</th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotsList[0].Shift_End)</th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotsList[0].Shift_Type)</th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotsList[0].Shift_Quantity)</th>
+                            <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.TimeslotsList[0].EventId)</th>
+                            <th style="background-color: lightgray;"></th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach (var item in Model.TimeslotsList)
+                        {
                         <tr>
 
-                            @*<td><img style="height:60px;width:60px;" src="@item.ImageURL"></td>*@
+                            <td></td>
                             <td>@item.Shift_Start</td>
                             @*<td>@item.Coupon_Name</td>*@
                             <td>@item.Shift_End</td>
@@ -43,6 +45,7 @@
                             <td>@item.Shift_Quantity</td>
                             <td>@item.EventId</td>
                             <td>
+                                <a asp-page="/Admin/Timeslots/UpdateTimeslot" asp-route-id="@item.TimeslotId" class="btn mr-2"> Edit Event</a>
                                 @*<form method="post">
                                     <a class="btn btn-primary savo" asp-page="/CouponAdmin/CouponEdit" asp-route-id="@item.CouponId">View</a>
 
@@ -70,10 +73,11 @@
                                 </form>*@
                             </td>
                         </tr>
+                        }
                         </tbody>
                     </table>
                     }
-                }
+                
         
     </div>
 </div>

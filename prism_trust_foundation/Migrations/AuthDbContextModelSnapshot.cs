@@ -332,8 +332,11 @@ namespace prismtrustfoundation.Migrations
 
             modelBuilder.Entity("prism_trust_foundation.Models.Timeslot", b =>
                 {
-                    b.Property<string>("TimeslotId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("TimeslotId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TimeslotId"));
 
                     b.Property<int>("EventId")
                         .HasColumnType("int");
@@ -341,9 +344,8 @@ namespace prismtrustfoundation.Migrations
                     b.Property<int>("Shift_End")
                         .HasColumnType("int");
 
-                    b.Property<double>("Shift_Quantity")
-                        .HasMaxLength(2)
-                        .HasColumnType("float");
+                    b.Property<int>("Shift_Quantity")
+                        .HasColumnType("int");
 
                     b.Property<int>("Shift_Start")
                         .HasColumnType("int");
@@ -353,8 +355,6 @@ namespace prismtrustfoundation.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("TimeslotId");
-
-                    b.HasIndex("EventId");
 
                     b.ToTable("Timeslot");
                 });
@@ -376,17 +376,12 @@ namespace prismtrustfoundation.Migrations
                     b.Property<int>("ShiftId")
                         .HasColumnType("int");
 
-                    b.Property<string>("TimeslotId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("TimeslotBookingId");
 
                     b.HasIndex("ApplicationUserId");
-
-                    b.HasIndex("TimeslotId");
 
                     b.ToTable("TimeslotBooking");
                 });
@@ -484,36 +479,16 @@ namespace prismtrustfoundation.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("prism_trust_foundation.Models.Timeslot", b =>
-                {
-                    b.HasOne("prism_trust_foundation.Models.Event", "Event")
-                        .WithMany()
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Event");
-                });
-
             modelBuilder.Entity("prism_trust_foundation.Models.TimeslotBooking", b =>
                 {
                     b.HasOne("prism_trust_foundation.Models.ApplicationUser", null)
                         .WithMany("TimeslotBookings")
                         .HasForeignKey("ApplicationUserId");
-
-                    b.HasOne("prism_trust_foundation.Models.Timeslot", null)
-                        .WithMany("Bookings")
-                        .HasForeignKey("TimeslotId");
                 });
 
             modelBuilder.Entity("prism_trust_foundation.Models.ApplicationUser", b =>
                 {
                     b.Navigation("TimeslotBookings");
-                });
-
-            modelBuilder.Entity("prism_trust_foundation.Models.Timeslot", b =>
-                {
-                    b.Navigation("Bookings");
                 });
 #pragma warning restore 612, 618
         }

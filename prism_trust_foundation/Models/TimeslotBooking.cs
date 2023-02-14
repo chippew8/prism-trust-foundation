@@ -13,5 +13,6 @@ namespace prism_trust_foundation.Models
         public int EventId { get; set; }
         [Required]
         public int ShiftId { get; set; }
+
     }
 }

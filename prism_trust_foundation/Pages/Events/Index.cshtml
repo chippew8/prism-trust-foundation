@@ -59,16 +59,9 @@
                                 <p class="card-text">Event Type: @item.EventType</p>
                                 <p class="card-text">Event Location: @item.EventVenue</p>
                                 <p class="card-text">Event Date: @item.EventDate</p>
-                                @if (item.IsActive == true)
-                                {
-                                    <p class="card-text">Event Status: Active</p>
-                                }
-                                @if (item.IsActive == false)
-                                {
-                                    <p class="card-text">Event Status: Inactive</p>
-                                }
+                                
 
-                                <a asp-page="/Admin/UpdateEvent" asp-route-id="@item.EventId" class="btn mr-2"><i class="fas fa-link"></i> Edit Event</a>
+                                <a asp-page="/Events/TimeslotBooking" asp-route-id="@item.EventId" class="btn mr-2"><i class="fas fa-link"></i> Book a Timeslot</a>
                                 @*<a href="#" class="btn "><i class="fab fa-github"></i> Github</a>*@
                             </div>
                         </div>
