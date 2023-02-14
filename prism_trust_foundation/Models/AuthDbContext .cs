@@ -1,5 +1,4 @@
-﻿using EDP_Project.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace prism_trust_foundation.Models
@@ -19,9 +18,6 @@ namespace prism_trust_foundation.Models
         }
 
         public DbSet<ApplicationUser> AspNetUser { get; set; }
-
-        public DbSet<Coupon> Coupons { get; set; }
-        public DbSet<CouponRedemption> CouponRedemptions { get; set; }
         public DbSet<Event> Event { get; set; }
         public DbSet<Inventory>Inventory { get; set; }
 		public DbSet<VolunteerShift> VolunteerShift { get; set; }
