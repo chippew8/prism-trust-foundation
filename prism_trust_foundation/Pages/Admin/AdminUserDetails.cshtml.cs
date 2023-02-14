@@ -62,6 +62,10 @@ namespace prism_trust_foundation.Pages.Admin
                     {
                         if (sessionCount == 1)
                         {
+                            return RedirectToPage("Index");
+                        }
+                        else if (sessionCount == 2)
+                        {
                             if (user.Ban_Status == false)
                             {
                                 user.Ban_Status = true;
