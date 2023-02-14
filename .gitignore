@@ -1,9 +1,9 @@
 # Ignore Migrations
-Migrations
+/Migrations
 
 # Ignore Caches
-obj
+/obj
 
-Properties
+/Properties
 
-bin
+/bin
