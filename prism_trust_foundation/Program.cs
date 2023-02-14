@@ -1,3 +1,4 @@
+using EDP_Project.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using prism_trust_foundation.Models;
@@ -11,6 +12,11 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<AuthDbContext>();
 
 builder.Services.AddScoped<EventService>();
+
+builder.Services.AddScoped<InventoryService>();
+
+builder.Services.AddScoped<CouponService>();
+builder.Services.AddScoped<CouponRedemptionService>();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
