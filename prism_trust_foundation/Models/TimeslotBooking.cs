@@ -8,7 +8,7 @@ namespace prism_trust_foundation.Models
         [Key]
         public int TimeslotBookingId { get; set; }
         [Required]
-        public int UserId { get; set; }
+        public string UserEmail { get; set; }
         [Required]
         public int EventId { get; set; }
         [Required]

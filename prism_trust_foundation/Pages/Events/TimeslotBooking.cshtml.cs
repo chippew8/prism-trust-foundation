@@ -10,11 +10,13 @@ namespace prism_trust_foundation.Pages.Events
         private readonly EventService _eventService;
         private readonly TimeslotService _timeslotService;
         private readonly TimeslotBookingService _timeslotbookingService;
-        public TimeslotBookingModel(EventService eventService, TimeslotService timeslotService, TimeslotBookingService timeslotbookingService)
+        private readonly IHttpContextAccessor _contxt;
+        public TimeslotBookingModel(EventService eventService, TimeslotService timeslotService, TimeslotBookingService timeslotbookingService, IHttpContextAccessor contxt)
         {
             _eventService = eventService;
             _timeslotService = timeslotService;
             _timeslotbookingService = timeslotbookingService;
+            _contxt = contxt;
         }
 
         [BindProperty]
@@ -30,6 +32,7 @@ namespace prism_trust_foundation.Pages.Events
         public int BookTime { get; set; }
         public IActionResult OnGet(int id)
         {
+            
             Event? myEvent = _eventService.GetEventById(id);
             
             if (myEvent != null)
@@ -49,7 +52,8 @@ namespace prism_trust_foundation.Pages.Events
         public async Task<IActionResult> OnPostAsync()
         {
             if (ModelState.IsValid)
-            {
+            { 
+                string Email = _contxt.HttpContext.Session.GetString("Email");
                 Event? events = _eventService.GetEventByName(MyEvent.EventName);
                 myTimeslot = _timeslotService.GetTimeslotByTimeandType(BookTime, BookType);
                 if (events != null)
@@ -61,9 +65,11 @@ namespace prism_trust_foundation.Pages.Events
                 
                 myTimeslotBooking.EventId = MyEvent.EventId;
                 myTimeslotBooking.ShiftId = myTimeslot.TimeslotId;
+                myTimeslotBooking.UserEmail = Email;
+                _timeslotbookingService.AddBooking(myTimeslotBooking);
                 TempData["FlashMessage.Type"] = "success";
-                TempData["FlashMessage.Text"] = string.Format("Event {0} is added", MyEvent.EventName);
-                return Redirect("/Admin/Events/EventList");
+                TempData["FlashMessage.Text"] = string.Format("Booking is successful");
+                return Redirect("/Index");
             }
             return Page();
         }

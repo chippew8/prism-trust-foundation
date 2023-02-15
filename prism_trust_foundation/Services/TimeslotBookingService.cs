@@ -20,13 +20,13 @@ namespace prism_trust_foundation.Services
             return _context.TimeslotBooking.Where(d => d.EventId.Equals(EventId)).ToList();
         }
 
-        public void AddTimeslot(TimeslotBooking myTimeslotBooking)
+        public void AddBooking(TimeslotBooking myTimeslotBooking)
         {
             _context.TimeslotBooking.Add(myTimeslotBooking);
             _context.SaveChanges();
         }
 
-        public void UpdateTimeslot(TimeslotBooking myTimeslotBooking)
+        public void UpdateBooking(TimeslotBooking myTimeslotBooking)
         {
             _context.TimeslotBooking.Update(myTimeslotBooking);
             _context.SaveChanges();
