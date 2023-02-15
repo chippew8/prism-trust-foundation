@@ -1,10 +1,14 @@
 using EDP_Project.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
+using SendGrid.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+var provider = builder.Services.BuildServiceProvider();
+var configuration = provider.GetRequiredService<IConfiguration>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -17,6 +21,8 @@ builder.Services.AddScoped<InventoryService>();
 
 builder.Services.AddScoped<CouponService>();
 builder.Services.AddScoped<CouponRedemptionService>();
+
+builder.Services.AddScoped<QuestionService>();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
@@ -54,6 +60,14 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Lockout.MaxFailedAccessAttempts = 3;
 
 });
+
+builder.Services.AddSendGrid(options =>
+    options.ApiKey = configuration["SendGrid"]
+                     ?? throw new Exception("The 'SendGridApiKey' is not configured")
+);
+builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.AddScoped<EmailSender>();
+builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
 
 var app = builder.Build();
 

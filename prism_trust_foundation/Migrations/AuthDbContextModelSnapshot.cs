@@ -418,6 +418,27 @@ namespace prismtrustfoundation.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("prism_trust_foundation.Models.Question", b =>
+                {
+                    b.Property<int>("QueryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QueryId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserQuestion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("QueryId");
+
+                    b.ToTable("Question");
+                });
+
             modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShift", b =>
                 {
                     b.Property<string>("ShiftId")

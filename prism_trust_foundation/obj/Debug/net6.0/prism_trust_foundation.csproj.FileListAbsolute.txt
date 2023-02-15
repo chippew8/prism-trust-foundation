@@ -594,3 +594,9 @@ C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\obj\De
 C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.pdb
 C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.genruntimeconfig.cache
 C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\ref\prism_trust_foundation.dll
+C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\SendGrid.dll
+C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\SendGrid.Extensions.DependencyInjection.dll
+C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.MvcApplicationPartsAssemblyInfo.cs

@@ -75,6 +75,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXBkYXRlRXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/UserQuery/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlclF1ZXJ5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/UserQuery/Response.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlclF1ZXJ5XFJlc3BvbnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/CouponRedeem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cG9uUmVkZWVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
