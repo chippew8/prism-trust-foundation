@@ -500,11 +500,6 @@ C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Mi
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
-C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets\msbuild.prism_trust_foundation.Microsoft.AspNetCore.StaticWebAssets.props
-C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets\msbuild.build.prism_trust_foundation.props
-C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.prism_trust_foundation.props
-C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.prism_trust_foundation.props
-C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\zoyoq\OneDrive\文档\GitHub\My_FSDP\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\appsettings.json
@@ -600,3 +595,10 @@ C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\De
 C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\SendGrid.Extensions.DependencyInjection.dll
 C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\StarkbankEcdsa.dll
 C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.MvcApplicationPartsAssemblyInfo.cs
+C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\SendGrid.dll
+C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\SendGrid.Extensions.DependencyInjection.dll
+C:\School_Work\prism-trust-foundation\prism_trust_foundation\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\prism_trust_foundation.MvcApplicationPartsAssemblyInfo.cs
+C:\School_Work\prism-trust-foundation\prism_trust_foundation\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css

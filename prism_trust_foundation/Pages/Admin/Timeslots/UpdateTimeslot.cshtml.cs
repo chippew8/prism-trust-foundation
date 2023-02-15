@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using prism_trust_foundation.Models;
 using prism_trust_foundation.Services;
+using SendGrid.Helpers.Mail;
 
 namespace prism_trust_foundation.Pages.Admin.Timeslots
 {
@@ -9,11 +10,12 @@ namespace prism_trust_foundation.Pages.Admin.Timeslots
     {
         private readonly EventService _eventService;
         private readonly TimeslotService _timeslotService;
-
-        public UpdateTimeslotModel(EventService eventService, TimeslotService timeslotService)
+        private readonly IHttpContextAccessor contxt;
+        public UpdateTimeslotModel(EventService eventService, TimeslotService timeslotService, IHttpContextAccessor context)
         {
             _eventService = eventService;
             _timeslotService = timeslotService;
+            contxt = context;
         }
         [BindProperty]
         public Timeslot MyTimeslot { get; set; } = new();

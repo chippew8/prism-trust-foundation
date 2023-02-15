@@ -11,18 +11,42 @@ namespace prism_trust_foundation.Pages.Events
         private readonly TimeslotService _timeslotService;
         private readonly EventService _eventService;
         private IWebHostEnvironment _environment;
-        public AddModel(EventService eventService, IWebHostEnvironment environment, TimeslotService timeslotService)
+        private readonly IHttpContextAccessor contxt;
+        public AddModel(EventService eventService, IWebHostEnvironment environment, TimeslotService timeslotService, IHttpContextAccessor context)
         {
             _eventService = eventService;
             _environment = environment;
             _timeslotService = timeslotService;
+            contxt = context;
         }
         [BindProperty]
         public Event MyEvent { get; set; } = new();
         [BindProperty]
         public IFormFile? Upload { get; set; }
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            string Email = contxt.HttpContext.Session.GetString("Email");
+
+            if (Email != null)
+            {
+                if (contxt.HttpContext.Session.GetString("Admin") == "Yes")
+                {
+                    
+                    return Page();
+                }
+                else
+                {
+                    TempData["FlashMessage.Type"] = "danger";
+                    TempData["FlashMessage.Text"] = string.Format("Unauthorized Access");
+                    return RedirectToPage("/Index");
+                }
+            }
+            else
+            {
+                TempData["FlashMessage.Type"] = "danger";
+                TempData["FlashMessage.Text"] = string.Format("You have not login yet.");
+                return RedirectToPage("/Index");
+            }
         }
 
         public async Task<IActionResult> OnPostAsync()
