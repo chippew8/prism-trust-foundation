@@ -64,6 +64,11 @@ namespace prism_trust_foundation.Pages.User
                     {
                         return RedirectToPage("/CouponRedeem");
                     }
+                    else if (sessionCount == 5)
+                    {
+                        return RedirectToPage("/DonationRecipient/reqItems");
+                    }
+
                     else
                     {
                         return Page();

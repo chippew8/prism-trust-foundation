@@ -8,7 +8,7 @@ using prism_trust_foundation.Models;
 
 #nullable disable
 
-namespace prismtrustfoundation.Migrations
+namespace prism_trust_foundation.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
     partial class AuthDbContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace prismtrustfoundation.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.2")
+                .HasAnnotation("ProductVersion", "7.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -318,6 +318,9 @@ namespace prismtrustfoundation.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<bool?>("dRecip_Role")
+                        .HasColumnType("bit");
+
                     b.Property<int>("points")
                         .HasColumnType("int");
 
@@ -396,26 +399,6 @@ namespace prismtrustfoundation.Migrations
                     b.HasKey("InventoryId");
 
                     b.ToTable("Inventory");
-                });
-
-            modelBuilder.Entity("prism_trust_foundation.Models.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("prism_trust_foundation.Models.Question", b =>
@@ -516,6 +499,35 @@ namespace prismtrustfoundation.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("cart");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.donationRecipient", b =>
+                {
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Fname")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("NRIC")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("monthlyIncome")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("nationality")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("email");
+
+                    b.ToTable("donationRecipients");
                 });
 
             modelBuilder.Entity("prism_trust_foundation.Models.itemRequest", b =>

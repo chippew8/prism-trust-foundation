@@ -30,7 +30,7 @@ namespace prism_trust_foundation.Models
         public DbSet<itemRequest> itemRequests { get; set; }
 
         public DbSet<cart> cart { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<donationRecipient> donationRecipients { get; set; }
         public DbSet<Question> Question { get; set; }
 
 	}

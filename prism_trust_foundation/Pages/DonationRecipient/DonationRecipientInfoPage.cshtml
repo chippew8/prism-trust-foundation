@@ -2,7 +2,15 @@
 @model prism_trust_foundation.Pages.Shared.DonationRecipientInfoPageModel
 @{
 	ViewData["Title"] = "Recipient Application";
-}
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+}<head>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+</head>
 <div class="text-center p-t-136">
 <h1>Recipient Application Page</h1>
 <h2>Providing assistance to low-income families</h2>
@@ -22,7 +30,7 @@
 	
 	<div class="text-center p-t-136">
 		<a  href="/DonationRecipient/ApplicationForm">
-			<button>
+			<button class="btn btn-primary">
 			Apply Now
 			<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 			</button>

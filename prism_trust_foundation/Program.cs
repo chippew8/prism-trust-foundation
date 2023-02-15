@@ -19,6 +19,9 @@ builder.Services.AddScoped<EventService>();
 
 builder.Services.AddScoped<InventoryService>();
 
+builder.Services.AddScoped<cartService>();
+builder.Services.AddScoped<itemRequestService>();
+
 builder.Services.AddScoped<CouponService>();
 builder.Services.AddScoped<CouponRedemptionService>();
 

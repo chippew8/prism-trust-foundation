@@ -11,15 +11,15 @@ namespace prism_trust_foundation.Pages.DonationRecipient
 
 
 
-            private readonly ProductServices _productService;
+            private readonly InventoryService _inventoryService;
             private readonly cartService _cartServices;
             private readonly itemRequestService _itemRequestService;
             private readonly ILogger<IndexModel> _logger;
-            public List<Product> Products { get; set; }
+            public List<Inventory> Products { get; set; }
             public List<cart> MyCart { get; set; }
-            public reqItemsModel(ProductServices productService, cartService cartServices, itemRequestService itemRequestService)
+            public reqItemsModel( cartService cartServices, itemRequestService itemRequestService, InventoryService inventoryService)
             {
-                _productService = productService;
+            _inventoryService =  inventoryService;
                 _cartServices = cartServices;
                 _itemRequestService = itemRequestService;
             }
@@ -27,7 +27,7 @@ namespace prism_trust_foundation.Pages.DonationRecipient
 
             public void OnGet()
             {
-                Products = _productService.GetAll();
+                Products = _inventoryService.GetAll();
                 try
                 {
                     MyCart = _cartServices.GetAll();
@@ -37,9 +37,11 @@ namespace prism_trust_foundation.Pages.DonationRecipient
                     MyCart = null;
                 }
             }
-            public Product FindbyId(string? id)
+            public Inventory FindbyId(string? id)
             {
-                return _productService.GetProductById(id);
+
+            int x = (int)Convert.ToInt64(id);
+                return _inventoryService.GetInventoryById(x);
             }
             public IActionResult OnGetBuyNow(string id)
             {

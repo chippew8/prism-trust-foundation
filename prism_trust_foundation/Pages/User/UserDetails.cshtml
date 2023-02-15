@@ -69,6 +69,11 @@
                 <input type="submit" asp-route-sessioncount="2" value="Update Details" class="btn btn-primary" />
                 <input type="submit" asp-route-sessioncount="3" value="Upload Avatar" class="btn btn-primary" />
                 <input type="submit" asp-route-sessioncount="4" value="Redeem Rewards" class="btn btn-primary" />
+
+                @if(Model.HomeUser.dRecip_Role == true){
+                    <input type="submit" asp-route-sessioncount="5" value="Request Item" class="btn btn-primary" />
+                }
+
             </div>
     </div>
 </form>
