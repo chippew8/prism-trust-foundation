@@ -68,7 +68,7 @@ namespace prism_trust_foundation.Pages.User
                 else if(sessionCount == 1)
                 {
                     TempData["FlashMessage.Type"] = "success";
-                    TempData["FlashMessage.Text"] = string.Format("You have canecel updating of details");
+                    TempData["FlashMessage.Text"] = string.Format("You have cancelled updating of details");
                     return RedirectToPage("UserDetails");
                 }
                 return RedirectToPage("UserDetails");

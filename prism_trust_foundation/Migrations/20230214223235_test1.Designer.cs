@@ -12,8 +12,8 @@ using prism_trust_foundation.Models;
 namespace prismtrustfoundation.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20230214151852_initial")]
-    partial class initial
+    [Migration("20230214223235_test1")]
+    partial class test1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -419,6 +419,27 @@ namespace prismtrustfoundation.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("prism_trust_foundation.Models.Question", b =>
+                {
+                    b.Property<int>("QueryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QueryId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserQuestion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("QueryId");
+
+                    b.ToTable("Question");
                 });
 
             modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShift", b =>
