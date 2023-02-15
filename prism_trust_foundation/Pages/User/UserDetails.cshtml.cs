@@ -33,8 +33,8 @@ namespace prism_trust_foundation.Pages.User
         public async Task<IActionResult> OnGetAsync(string id)
         {
             string Email = contxt.HttpContext.Session.GetString("Email");
-            /*MyCoupons = _context.Users.Include(x => x.Coupon).FirstOrDefault(x => x.UserName == User.Identity.Name).Coupon.ToList();*/
             ApplicationUser? user = _svc.GetUserByEmail(Email);
+            /*MyCoupons = user.Include(x => x.Coupon).FirstOrDefault(x => x.UserName == User.Identity.Name).Coupon.ToList();*/
             if (user != null)
             {
                 HomeUser = user;
