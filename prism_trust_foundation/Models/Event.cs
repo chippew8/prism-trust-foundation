@@ -14,7 +14,6 @@ namespace prism_trust_foundation.Models
 		public int EventId { get; set; }
 		[Required]
 		public string EventName { get; set; } = string.Empty;
-
 		[Required]
 		public string EventType { get; set; } = string.Empty;
 		[Required]
@@ -27,6 +26,9 @@ namespace prism_trust_foundation.Models
 		[MaxLength(50)]
 		public string? ImageURL { get; set; }
 		public Boolean IsActive { get; set; } = false;
+/*		public TimeOnly Start_Time { get; set; }
+		public TimeOnly End_Time { get; set; }*/
 
+		/*public ICollection<Timeslot> Timeslots { get; set; }*/
 	}
 }

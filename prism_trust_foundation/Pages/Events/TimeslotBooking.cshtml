@@ -1,0 +1,57 @@
+﻿@page
+@model prism_trust_foundation.Pages.Events.TimeslotBookingModel
+@{
+    Layout = "~/Shared/_Layout.html";
+}
+<form class="mt-3" method="post" >
+    <div asp-validation-summary="All" class="text-danger" ></div>
+    <div class="row mb-3" style="text-align:center">
+        <label class="col-sm-2 col-form-label" asp-for="BookType">What do you want to do?</label>
+        <div class="col-sm-10 d-flex align-items-center">
+            <div class="form-check form-check-inline" >
+                <input type="radio" id="donation"  value="Donate">
+                <label for="donation">Donate</label><br>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="recycle"  value="Recycle">
+            <label for="recycle">Recycle</label><br>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="volunteer"  value="Volunteer">
+                <label for="volunteer">Volunteer</label>
+            </div>
+            <span asp-validation-for="BookType" class="text-danger"></span>
+        </div>  
+    </div>
+
+    <div class="row mb-3" style="text-align:center">
+        <label class="col-sm-2 col-form-label" asp-for="BookTime">What do you want to do?</label>
+            <div class="col-sm-10 d-flex align-items-center">
+            <div class="form-check form-check-inline">
+                <input type="radio" id="12pm"  value="1200">
+                <label for="12pm">12pm to 1pm</label><br>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="1pm" value="1300">
+                <label for="1pm">1pm to 2pm</label><br>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="2pm" value="1400">
+                <label for="2pm">2pm to 3pm</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="3pm" value="1500">
+                <label for="3pm">3pm to 4pm</label>
+            </div>
+            <span asp-validation-for="BookTime" class="text-danger"></span>
+        </div>
+    </div>
+
+    
+
+    <div>
+        <input type="submit" value="Confirm Booking" class="btn btn-primary" />
+        <a class="btn btn-secondary ms-2" href="/events/index">Cancel</a>
+    </div>
+</form>
+

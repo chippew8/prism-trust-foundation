@@ -20,22 +20,7 @@ namespace prism_trust_foundation.Pages.Events
         {
             EventList = _eventService.GetAll();
         }
-        //public IActionResult OnGet(string id)
-        //{
-        //    Event? myEvent = _eventService.GetEventById(id);
-        //    if(myEvent != null)
-        //    {
-        //        EventList = myEvent;
-        //        return Page();
-        //    }
-        //    else
-        //    {
-        //        TempData["FlashMessage.Type"] = "danger";
-        //        TempData["FlashMessage.Text"] = string.Format("Event not found", id);
-        //        return Redirect("/");
-        //    }
-
-        //}
+        
 
 
     }
