@@ -23,6 +23,8 @@ builder.Services.AddScoped<CouponService>();
 builder.Services.AddScoped<CouponRedemptionService>();
 
 builder.Services.AddScoped<QuestionService>();
+builder.Services.AddScoped<TimeslotBookingService>();
+builder.Services.AddScoped<TimeslotService>();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {

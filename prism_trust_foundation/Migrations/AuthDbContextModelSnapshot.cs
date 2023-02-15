@@ -439,62 +439,56 @@ namespace prismtrustfoundation.Migrations
                     b.ToTable("Question");
                 });
 
-            modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShift", b =>
+            modelBuilder.Entity("prism_trust_foundation.Models.Timeslot", b =>
                 {
-                    b.Property<string>("ShiftId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("TimeslotId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("Shift_End")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TimeslotId"));
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Shift_End")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Shift_Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Shift_Start")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Shift_Type")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Shift_Quantity")
-                        .HasMaxLength(2)
-                        .HasColumnType("float");
+                    b.HasKey("TimeslotId");
 
-                    b.Property<string>("Shift_Start")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ShiftId");
-
-                    b.ToTable("VolunteerShift");
+                    b.ToTable("Timeslot");
                 });
 
-            modelBuilder.Entity("prism_trust_foundation.Models.VolunteerShiftBook", b =>
+            modelBuilder.Entity("prism_trust_foundation.Models.TimeslotBooking", b =>
                 {
-                    b.Property<string>("ShiftBookingId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("TimeslotBookingId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("EventDate")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TimeslotBookingId"));
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShiftId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserEmail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EventId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("TimeslotBookingId");
 
-                    b.Property<string>("EventName")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
-
-                    b.Property<string>("EventVenue")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("ShiftId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ShiftBookingId");
-
-                    b.ToTable("VolunteerShiftBook");
+                    b.ToTable("TimeslotBooking");
                 });
 
             modelBuilder.Entity("prism_trust_foundation.Models.cart", b =>
