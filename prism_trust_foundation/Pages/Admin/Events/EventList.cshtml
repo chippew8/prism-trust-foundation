@@ -45,42 +45,29 @@
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="~/css/admin2.css" asp-append-version="true" />
 
-    <style>
-        /*:root {
-            --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
-        }*/
+    
 
-        body {
-            background: #111 !important;
-        }
+</head>
 
-        .card {
-            background: #222;
-            border: 1px solid #dd2476;
-            color: rgba(250, 250, 250, 0.8);
-            margin-bottom: 2rem;
-        }
+<!DOCTYPE html>
+<html lang="en">
 
-        .btn {
-            border: 5px solid;
-            border-image-slice: 1;
-            background: var(--gradient) !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: #fff !important;
-            border-image-source: var(--gradient) !important;
-            text-decoration: none;
-            transition: all .4s ease;
-        }
+<head>
 
-        .btn:hover, .btn:focus {
-            background: var(--gradient) !important;
-            -webkit-background-clip: none !important;
-            -webkit-text-fill-color: #fff !important;
-            border: 5px solid #fff !important;
-            box-shadow: #222 1px 0 10px;
-            text-decoration: underline;
-        }
-    </style>
+    @*    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Blank</title>*@
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="~/css/admin2.css" asp-append-version="true" />
 
 </head>
 
@@ -162,6 +149,8 @@
                 Addons
             </div>
 
+            <!-- Nav Item - Pages Collapse Menu -->
+
             <li class="nav-item">
                 <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUser" aria-expanded="true"
                    aria-controls="collapseUser">
@@ -231,8 +220,8 @@
                      data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Event Screens:</h6>
-                        <a class="collapse-item" href="/Admin/Event/Index">View Events</a>
-                        <a class="collapse-item" href="/Admin/Event/AddEvent">Add Events</a>
+                        <a class="collapse-item" href="/Admin/Events/EventList">View Events</a>
+                        <a class="collapse-item" href="/Admin/Events/AddEvent">Add Events</a>
                         <div class="collapse-divider"></div>
                         @*                        <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
@@ -293,13 +282,12 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Tables -->
+            @*<!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span>
-                </a>
-            </li>
+            <a class="nav-link" href="tables.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Tables</span></a>
+            </li>*@
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -529,48 +517,103 @@
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <div class="container mx-auto mt-4">
-                        <div class="row">
-                        @if(Model.EventList != null){
-                            @foreach (var item in Model.EventList)
-                            {
-                                <div class="col-md-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="item.ImageURL" class="card-img-top" alt="*No Event Image*">
-                                        <div class="card-body">
-                                            <h5 class="card-title">@item.EventName</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">@item.Description</h6>
-                                            <p class="card-text">Event Type: @item.EventType</p>
-                                            <p class="card-text">Event Location: @item.EventVenue</p>
-                                            <p class="card-text">Event Date: @item.EventDate</p>
-                                            @if(item.IsActive == true){
-                                                <p class="card-text">Event Status: Active</p>
-                                            }
-                                            @if(item.IsActive == false)
-                                            {
-                                                <p class="card-text">Event Status: Inactive</p>
-                                            }
-
-                                            <a asp-page="/Admin/Events/UpdateEvent" asp-route-id="@item.EventId" class="btn mr-2"> Edit Event</a>
-                                            <a asp-page="/Admin/Timeslots/TimeslotList" asp-route-id="@item.EventId"class="btn "> Timeslots</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                        }
-                        </div>
-                    </div>
-
-                    @if(Model.EventList == null){
-                        <div>
-                        No events currently
-                        </div>
-                    }
 
                     <!-- Page Heading -->
-                   
+                    <h1 class="h3 mb-4 text-gray-800">@ViewData["Title"]</h1>
+                    @if (Model.EventList == null)
+                    {
 
-                </div>
+                        <div>No Timeslots for this event currently</div>
+
+                        
+                    }
+                    else
+                    {
+
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th style="background-color: lightgray;"></th>
+                                    <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.EventList[0].EventName)</th>
+                                    <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.EventList[0].Description)</th>
+                                    <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.EventList[0].EventType)</th>
+                                    <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.EventList[0].EventDate)</th>
+                                    <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.EventList[0].EventVenue)</th>
+                                     <th style="background-color: lightgray;">@Html.DisplayNameFor(model => model.EventList[0].IsActive)</th>
+                                    <th style="background-color: lightgray;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.EventList)
+                                {
+                                    <tr>
+
+                                        <td><img src="item.ImageURL" class="card-img-top" alt="*No Event Image*"> </td>
+                                        <td>@item.EventName</td>
+                                        <td>@item.Description</td>
+                                        <td>@item.EventType</td>
+                                        <td>@item.EventDate</td>
+                                        <td>@item.EventVenue</td>
+                                        @if (item.IsActive == true)
+                                        {
+                                            <td>Event Status: Active</td>
+                                        }
+                                        @if (item.IsActive == false)
+                                        {
+                                            <td>Event Status: Inactive</td>
+                                        }
+                                        
+                                        <td>
+                                            <a asp-page="/Admin/Events/UpdateEvent" asp-route-id="@item.EventId" class="btn" style="background-color:aqua"> <div style="color:black">Edit Event</div></a>
+                                            <a asp-page="/Admin/Timeslots/TimeslotList" asp-route-id="@item.EventId" class="btn" style="background-color:aqua"> <div style="color:black">Timeslots</div></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    @*<div class="container-fluid">
+                        <div class="container mx-auto mt-4">
+                            <div class="row">
+                                @if (Model.EventList != null)
+                                {
+                                    @foreach (var item in Model.EventList)
+                                    {
+                                        <div class="col-md-4">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="item.ImageURL" class="card-img-top" alt="*No Event Image*">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">@item.EventName</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">@item.Description</h6>
+                                                    <p class="card-text">Event Type: @item.EventType</p>
+                                                    <p class="card-text">Event Location: @item.EventVenue</p>
+                                                    <p class="card-text">Event Date: @item.EventDate</p>
+                                                    @if (item.IsActive == true)
+                                                    {
+                                                        <p class="card-text">Event Status: Active</p>
+                                                    }
+                                                    @if (item.IsActive == false)
+                                                    {
+                                                        <p class="card-text">Event Status: Inactive</p>
+                                                    }
+
+                                                    <a asp-page="/Admin/Events/UpdateEvent" asp-route-id="@item.EventId" class="btn mr-2"> Edit Event</a>
+                                                    <a asp-page="/Admin/Timeslots/TimeslotList" asp-route-id="@item.EventId" class="btn "> Timeslots</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+
+                        @if (Model.EventList == null)
+                        {
+                            <div>
+                                No events currently
+                            </div>
+                        }
+                </div>*@
                 <!-- /.container-fluid -->
 
             </div>

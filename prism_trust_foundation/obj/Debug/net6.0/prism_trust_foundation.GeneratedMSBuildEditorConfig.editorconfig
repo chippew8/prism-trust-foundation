@@ -8,161 +8,177 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = prism_trust_foundation
 build_property.RootNamespace = prism_trust_foundation
-build_property.ProjectDir = C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation\
+build_property.ProjectDir = C:\School_Work\prism-trust-foundation\prism_trust_foundation\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\oscar\source\repos\prism-trust-foundation\prism_trust_foundation
+build_property.MSBuildProjectDirectory = C:\School_Work\prism-trust-foundation\prism_trust_foundation
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AddEvent.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRkRXZlbnQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Admin.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AdminLayout.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AdminUserDetails.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AdminUserDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5Vc2VyRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AdminViewRequest.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/AdminViewRequest.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5WaWV3UmVxdWVzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Coupon/CouponCreate.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Coupon/CouponCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cG9uXENvdXBvbkNyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Coupon/CouponEdit.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Coupon/CouponEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cG9uXENvdXBvbkVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Coupon/CouponRead.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Coupon/CouponRead.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cG9uXENvdXBvblJlYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Coupon/CouponStats.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Coupon/CouponStats.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cG9uXENvdXBvblN0YXRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/EventList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRXZlbnRMaXN0LmNzaHRtbA==
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Events/AddEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRXZlbnRzXEFkZEV2ZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Index.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Events/EventList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRXZlbnRzXEV2ZW50TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Events/UpdateEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRXZlbnRzXFVwZGF0ZUV2ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Storage/Add.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Storage/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3RvcmFnZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Storage/Edit.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Storage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3RvcmFnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Storage/Index.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Storage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3RvcmFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/UpdateEvent.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXBkYXRlRXZlbnQuY3NodG1s
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Timeslots/TimeslotList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVGltZXNsb3RzXFRpbWVzbG90TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/UserQuery/Index.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/Timeslots/UpdateTimeslot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVGltZXNsb3RzXFVwZGF0ZVRpbWVzbG90LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/UserQuery/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlclF1ZXJ5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Admin/UserQuery/Response.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Admin/UserQuery/Response.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlclF1ZXJ5XFJlc3BvbnNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/CouponRedeem.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/CouponRedeem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cG9uUmVkZWVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipient/Admin/retrieveItemReq.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipient/Admin/retrieveItemReq.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9uYXRpb25SZWNpcGllbnRcQWRtaW5ccmV0cmlldmVJdGVtUmVxLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipient/ApplicationForm.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipient/ApplicationForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9uYXRpb25SZWNpcGllbnRcQXBwbGljYXRpb25Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipient/DonationRecipientInfoPage.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipient/DonationRecipientInfoPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9uYXRpb25SZWNpcGllbnRcRG9uYXRpb25SZWNpcGllbnRJbmZvUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipient/reqItems.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/DonationRecipient/reqItems.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9uYXRpb25SZWNpcGllbnRccmVxSXRlbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Error.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Index.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Events/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Events/TimeslotBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXFRpbWVzbG90Qm9va2luZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/login.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Logout.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Query/Index.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Query/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUXVlcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/register.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_FlashMessage.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_FlashMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9GbGFzaE1lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/User/ChangePass.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/User/ChangePass.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxDaGFuZ2VQYXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/User/UpdateAvatar.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/User/UpdateAvatar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVcGRhdGVBdmF0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/User/UpdateDetails.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/User/UpdateDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVcGRhdGVEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/User/UserDetails.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/User/UserDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVc2VyRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/_ViewImports.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/_ViewStart.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_Layout.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qkkc7demk2
 
-[C:/Users/oscar/source/repos/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_Layout2.cshtml]
+[C:/School_Work/prism-trust-foundation/prism_trust_foundation/Pages/Shared/_Layout2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-i0tvi6o9ds

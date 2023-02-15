@@ -8,6 +8,7 @@ namespace prism_trust_foundation.Pages.Admin
     public class UpdateModel : PageModel
     {
         private readonly EventService _eventService;
+        private readonly IHttpContextAccessor contxt;
 
         public UpdateModel(EventService eventService)
         {
@@ -18,19 +19,42 @@ namespace prism_trust_foundation.Pages.Admin
 
         public IActionResult OnGet(int id)
         {
-            Event? myEvent = _eventService.GetEventById(id);
-            if (myEvent != null)
+            string Email = contxt.HttpContext.Session.GetString("Email");
+
+            if (Email != null)
             {
-                MyEvent = myEvent;
-                return Page();
+                if (contxt.HttpContext.Session.GetString("Admin") == "Yes")
+                {
+                    Event? myEvent = _eventService.GetEventById(id);
+                    if (myEvent != null)
+                    {
+                        MyEvent = myEvent;
+                        return Page();
+                    }
+                    else
+                    {
+                        TempData["FlashMessage.Type"] = "danger";
+                        TempData["FlashMessage.Text"] = string.Format("Event does not exist");
+                        return Redirect("/Admin/EventList");
+                    }
+                    return Page();
+                }
+                else
+                {
+                    TempData["FlashMessage.Type"] = "danger";
+                    TempData["FlashMessage.Text"] = string.Format("Unauthorized Access");
+                    return RedirectToPage("/Index");
+                }
             }
             else
             {
                 TempData["FlashMessage.Type"] = "danger";
-                TempData["FlashMessage.Text"] = string.Format("Event does not exist");
-                return Redirect("/Admin/EventList");
+                TempData["FlashMessage.Text"] = string.Format("You have not login yet.");
+                return RedirectToPage("/Index");
             }
+            
         }
+
 
         public IActionResult OnPost()
         {
