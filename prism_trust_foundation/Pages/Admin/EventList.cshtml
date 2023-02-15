@@ -162,14 +162,52 @@
                 Addons
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="true"
-                   aria-controls="collapsePages">
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUser" aria-expanded="true"
+                   aria-controls="collapseUser">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>User</span>
+                </a>
+                <div id="collapseUser" class="collapse" aria-labelledby="headingPages"
+                     data-bs-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">User Screens:</h6>
+                        <a class="collapse-item" href="/Admin/Index">View User Info</a>
+                        <div class="collapse-divider"></div>
+                        @*                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseInventory" aria-expanded="true"
+                   aria-controls="collapseInventory">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Inventory</span>
+                </a>
+                <div id="collapseInventory" class="collapse" aria-labelledby="headingPages"
+                     data-bs-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Inventory Screens:</h6>
+                        <a class="collapse-item" href="/Admin/Storage/Add">Add Inventory</a>
+                        <a class="collapse-item" href="/Admin/Storage/Index">View Inventory</a>
+                        <div class="collapse-divider"></div>
+                        @*                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCoupon" aria-expanded="true"
+                   aria-controls="collapseCoupon">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Coupon</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
+                <div id="collapseCoupon" class="collapse" aria-labelledby="headingPages"
                      data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Coupon Screens:</h6>
@@ -183,19 +221,18 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#collapseEvents" aria-expanded="true"
-                   aria-controls="collapseEvents">
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEvent" aria-expanded="true"
+                   aria-controls="collapseEvent">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Event</span>
                 </a>
-                <div id="collapseEvents" class="collapse" aria-labelledby="headingEvents"
+                <div id="collapseEvent" class="collapse" aria-labelledby="headingPages"
                      data-bs-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Event Screens:</h6>
-                        <a class="collapse-item" href="/Admin/AddEvent">Creating Event</a>
-                        <a class="collapse-item" href="/Admin/EventList">Viewing Event</a>
+                        <a class="collapse-item" href="/Admin/Event/Index">View Events</a>
+                        <a class="collapse-item" href="/Admin/Event/AddEvent">Add Events</a>
                         <div class="collapse-divider"></div>
                         @*                        <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
@@ -204,9 +241,45 @@
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRecipient" aria-expanded="true"
+                   aria-controls="collapseRecipient">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Recipient Application</span>
+                </a>
+                <div id="collapseRecipient" class="collapse" aria-labelledby="headingPages"
+                     data-bs-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Recipient Screens:</h6>
+                        <a class="collapse-item" href="/Admin/Recipient/Index">View Application</a>
+                        <div class="collapse-divider"></div>
+                        @*                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item active" href="blank.html">Blank Page</a>*@
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseQuery" aria-expanded="true"
+                   aria-controls="collapseQuery">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Query</span>
+                </a>
+                <div id="collapseQuery" class="collapse" aria-labelledby="headingPages"
+                     data-bs-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Query Screens:</h6>
+                        <a class="collapse-item" href="/Admin/UserQuery/Index">View Queries</a>
+                        <div class="collapse-divider"></div>
+                    </div>
+                </div>
+            </li>
+
+
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCharts"
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCharts"
                    aria-expanded="true" aria-controls="collapseCharts">
                     <i class="fa-solid fa-chart-simple"></i>
                     <span>Charts</span>
