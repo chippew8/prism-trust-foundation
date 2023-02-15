@@ -19,5 +19,11 @@ namespace prism_trust_foundation.Services
             {
                 _context.itemRequests.Add(x);
             }
+        public itemRequest? GetItemReqById(int id)
+        {
+            itemRequest? itemId = _context.itemRequests.FirstOrDefault(i => i.productId.Equals(id));
+            return itemId;
         }
+    }
+
     }

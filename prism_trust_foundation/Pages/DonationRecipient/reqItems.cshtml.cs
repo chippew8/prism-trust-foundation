@@ -14,14 +14,16 @@ namespace prism_trust_foundation.Pages.DonationRecipient
             private readonly InventoryService _inventoryService;
             private readonly cartService _cartServices;
             private readonly itemRequestService _itemRequestService;
+        private readonly IHttpContextAccessor _contxt;
             private readonly ILogger<IndexModel> _logger;
             public List<Inventory> Products { get; set; }
             public List<cart> MyCart { get; set; }
-            public reqItemsModel( cartService cartServices, itemRequestService itemRequestService, InventoryService inventoryService)
+            public reqItemsModel( cartService cartServices, itemRequestService itemRequestService, InventoryService inventoryService, IHttpContextAccessor httpContextAccessor)
             {
             _inventoryService =  inventoryService;
                 _cartServices = cartServices;
                 _itemRequestService = itemRequestService;
+            _contxt = httpContextAccessor;
             }
 
 
@@ -45,6 +47,10 @@ namespace prism_trust_foundation.Pages.DonationRecipient
             }
             public IActionResult OnGetBuyNow(string id)
             {
+
+            var email = _contxt.HttpContext.Session.GetString("Email");
+
+
                 var newCart = _cartServices.CheckProductById(id);
                 if (newCart == null)
                 {
@@ -53,7 +59,7 @@ namespace prism_trust_foundation.Pages.DonationRecipient
                         Id = (_cartServices.GetAll().Count() + 1).ToString(),
                         productId = id,
                         quantity = 1,
-                        userId = "1"
+                        userId = email
                     }
                         );
 
@@ -67,7 +73,7 @@ namespace prism_trust_foundation.Pages.DonationRecipient
                     _cartServices.UpdateCart(newCart);
 
                 }
-                return RedirectToPage("Index");
+                return RedirectToPage("reqItems");
             }
 
             public IActionResult OnGetSubmitReq(string id)
@@ -90,12 +96,12 @@ namespace prism_trust_foundation.Pages.DonationRecipient
                 _cartServices.removeAll();
 
 
-                Console.WriteLine("Failed");
+               
 
 
 
 
-                return RedirectToPage("Index");
+                return RedirectToPage("reqItems");
             }
 
         }

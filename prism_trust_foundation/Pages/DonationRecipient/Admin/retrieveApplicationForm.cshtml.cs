@@ -9,11 +9,13 @@ namespace prism_trust_foundation.Pages.DonationRecipient.Admin
     {
         private readonly UserService _userService;
         private readonly AuthDbContext _context;
+        private readonly InventoryService _inventoryService;
         
-        public retrieveApplicationFormModel(UserService userService, AuthDbContext context)
+        public retrieveApplicationFormModel(UserService userService, AuthDbContext context, InventoryService inventoryService)
         {
             _userService = userService;
             _context = context;
+            _inventoryService = inventoryService;
         }
         public List<donationRecipient> dRlist { get; set; }
 
