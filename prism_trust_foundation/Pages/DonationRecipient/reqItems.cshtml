@@ -2,6 +2,7 @@
 @model prism_trust_foundation.Pages.DonationRecipient.reqItemsModel
 @{
     ViewData["Title"] = "Request Items";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 <html>
 <head>
@@ -10,71 +11,81 @@
 </head>
 <body>
 
-    <h3>Product List</h3>
-    <table border="1">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Photo</th>
-            <th>Price</th>
-            <th>Action</th>
-        </tr>
-        @foreach (var product in Model.Products)
-        {
-            <tr align="center">
-                <td>@product.Id</td>
-                <td>@product.Name</td>
-              
-                <td>
-                    <a asp-page="Index" asp-page-handler="buynow" asp-route-id="@product.Id">Buy Now</a>
-                </td>
-            </tr>
-        }
-    </table>
- 
+    @if (Model.Products == null)
+    {
 
-        @if(Model.MyCart.Count() == 0){
+        <div>Out of stock!</div>
 
 
-
-
-        }
-        else{
+    }
+    else
+    {
+        <h3>Product List</h3>
         <table border="1">
             <tr>
-                <th>Action</th>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Photo</th>
-                <th>Price</th>
+                <th>Category</th>
+                <th>Quantity</th>
+
+            </tr>
+
+            @foreach (var product in Model.Products)
+            {
+                <tr align="center">
+                    <td>@product.InventoryId</td>
+                    <td>@product.Name</td>
+
+                    <td>
+                        <a asp-page="reqItems" asp-page-handler="buynow" asp-route-id="@product.InventoryId">Buy Now</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+
+    @if (Model.MyCart == null)
+    {
+
+
+
+
+    }
+    else
+    {
+        <table border="1">
+            <tr>
+
+                <th>Item Name</th>
+
                 <th>Quantity </th>
-                <th>Sub Total</th>
-                    </tr>
+
+            </tr>
             @foreach (var item in Model.MyCart)
             {
-                
-                <tr align="center">
+
+                <tr>
                     <td>@item.productId</td>
-                    
+
 
                     <td>@Model.FindbyId(item.productId).Name</td>
-                    
+
                     <td>@item.quantity</td>
-                    @*<td>@Model.FindbyId(item.productId).Price</td>*@
+
                     <td align="center">
-                        <a asp-page="cart" asp-page-handler="delete" asp-route-id="@item.productId">x</a>
+                        <a asp-page="reqItems" asp-page-handler="delete" asp-route-id="@item.productId">x</a>
                     </td>
 
-                    
+
 
                 </tr>
             }
-           
-            </table>
-        <a asp-page="Index" asp-page-handler="submitreq" asp-route-id="1">Submit</a>
-        }
 
-    
+        </table>
+        <a asp-page="reqItems" asp-page-handler="submitreq" asp-route-id="@Model.HttpContext.Session.GetString("Email")">Submit</a>
+    }
+
+
 
 </body>
 </html>
