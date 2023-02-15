@@ -48,7 +48,13 @@
                             </ul>
                         </li>
                         <li><a href="/BookTimeSlot">Events</a></li>
-                        <li><a href="#">Require Assistance</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Require Assistance</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#">Donation Recipient</a></li>
+                                <li><a href="/Query/Index">Query Page</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown">
                             <a href="#"><span><img src="@contxt.HttpContext.Session.GetString("Url")" width="40px" height="40px" /></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
@@ -74,7 +80,13 @@
                             </ul>
                         </li>
                         <li><a href="/Login">Events</a></li>
-                        <li><a href="/Login">Require Assistance</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Require Assistance</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="/Login">Donation Recipient</a></li>
+                                <li><a href="/Login">Query Page</a></li>
+                            </ul>
+                        </li>
                         @*<li><a href="/Login"><img src="/Picture/User.png" width="40px" height="40px" /></a></li>*@
                         <li><a href="/Login" style="font-weight:600; font-size:30px">Login</a></li>
                         <li><a href="/Register" style="font-weight:600; font-size:30px">Register</a></li>
